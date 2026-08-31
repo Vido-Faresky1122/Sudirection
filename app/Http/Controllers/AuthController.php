@@ -8,12 +8,20 @@ class AuthController extends Controller
 {
     public function loginView()
     {
-        return view('auth.login');
+        $title = 'Login - Sudirection';
+
+        return view('auth.login', [
+            'title' => $title
+        ]);
     }
 
     public function registerView()
     {
-        return view('auth.register');
+        $title = 'Register - Sudirection';
+
+        return view('auth.register', [
+            'title' => $title
+        ]);
     }
 
     public function registerPost()
