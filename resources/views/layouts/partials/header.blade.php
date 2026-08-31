@@ -1,16 +1,16 @@
-<header class="bg-[#16213A] text-white">
-    <nav>
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="flex h-16 items-center justify-between">
-                <div class="flex items-center">
-                    <a href="{{ url('/') }}" class="text-lg font-semibold">Sudirection</a>
-                </div>
-                <div class="hidden md:flex space-x-4">
-                    <a href="{{ url('/') }}" class="hover:text-gray-300">Home</a>
-                    <a href="{{ url('/about-us') }}" class="hover:text-gray-300">About Us</a>
-                    <a href="{{ url('/contact') }}" class="hover:text-gray-300">Contact</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-</header>
+<nav class="max-w-7xl mx-auto px-8 h-16 flex items-center justify-between font-semibold text-sm tracking-wider">
+    <div class="flex items-center space-x-8">
+        <a href="#"
+            class="text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] relative inline-block overflow-hidden transition-transform duration-300 hover:scale-105 before:absolute before:inset-0 before:-translate-x-full before:bg-linear-to-r before:from-transparent before:via-white/80 before:to-transparent hover:before:transition-transform hover:before:duration-1000 hover:before:translate-x-full">HOME</a>
+        <a href="#"
+            class="text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] relative inline-block overflow-hidden transition-transform duration-300 hover:scale-105 before:absolute before:inset-0 before:-translate-x-full before:bg-linear-to-r before:from-transparent before:via-white/80 before:to-transparent hover:before:transition-transform hover:before:duration-1000 hover:before:translate-x-full">ABOUT
+            US</a>
+    </div>
+
+    <div class="flex items-center space-x-8">
+        <a href="#"
+            class="text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] relative inline-block overflow-hidden transition-transform duration-300 hover:scale-105 before:absolute before:inset-0 before:-translate-x-full before:bg-linear-to-r before:from-transparent before:via-white/80 before:to-transparent hover:before:transition-transform hover:before:duration-1000 hover:before:translate-x-full">DIRECTIONAI</a>
+        <a href="#"
+            class="text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] relative inline-block overflow-hidden transition-transform duration-300 hover:scale-105 before:absolute before:inset-0 before:-translate-x-full before:bg-linear-to-r before:from-transparent before:via-white/80 before:to-transparent hover:before:transition-transform hover:before:duration-1000 hover:before:translate-x-full">PROFILE</a>
+    </div>
+</nav>
