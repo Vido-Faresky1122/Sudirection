@@ -10,7 +10,7 @@ class PlaceController extends Controller
     {
         $title = 'Places - Sudirection';
 
-        return view('place.index', [
+        return view('places.index', [
             'title' => $title
         ]);
     }
@@ -19,7 +19,7 @@ class PlaceController extends Controller
     {
         $title = 'Create Place - Sudirection';
 
-        return view('place.create', [
+        return view('places.create', [
             'title' => $title
         ]);
     }
@@ -33,7 +33,7 @@ class PlaceController extends Controller
     {
         $title = 'Place Details - Sudirection';
 
-        return view('place.show', [
+        return view('places.show', [
             'title' => $title
         ]);
     }
@@ -42,7 +42,7 @@ class PlaceController extends Controller
     {
         $title = 'Edit Place - Sudirection';
 
-        return view('place.edit', [
+        return view('places.edit', [
             'title' => $title
         ]);
     }
