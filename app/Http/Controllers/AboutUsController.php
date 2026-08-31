@@ -8,6 +8,10 @@ class AboutUsController extends Controller
 {
     public function index()
     {
-        return view('about-us');
+        $title = 'About Us - Sudirection';
+
+        return view('about-us', [
+            'title' => $title
+        ]);
     }
 }

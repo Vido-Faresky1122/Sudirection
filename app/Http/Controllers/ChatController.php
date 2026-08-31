@@ -11,7 +11,11 @@ class ChatController extends Controller
 {
     public function index()
     {
-        return view('chat');
+        $title = 'SudirectionAI - Sudirection';
+
+        return view('chat', [
+            'title' => $title
+        ]);
     }
 
     public function sendMessage(Request $request)

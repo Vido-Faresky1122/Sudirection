@@ -8,21 +8,46 @@ class UserController extends Controller
 {
     public function index()
     {
-        return view('profile.user.index');
+        $title = 'User Profile - Sudirection';
+
+        return view('profile.user.index', [
+            'title' => $title
+        ]);
     }
 
     public function showFavoritesPlaces()
     {
-        return view('profile.user.favorites.places');
+        $title = 'Favorite Places - Sudirection';
+
+        return view('profile.user.favorites.places', [
+            'title' => $title
+        ]);
     }
 
     public function showFavoritesAccommodations()
     {
-        return view('profile.user.favorites.accommodations');
+        $title = 'Favorite Accommodations - Sudirection';
+
+        return view('profile.user.favorites.accommodations', [
+            'title' => $title
+        ]);
     }
 
     public function showHistoriesPlaces()
     {
-        return view('profile.user.histories.experiences');
+        $title = 'Place Histories - Sudirection';
+
+        return view('profile.user.histories.experiences', [
+            'title' => $title
+        ]);
+    }
+
+    public function showHistoriesAccommodations()
+    {
+        $title = 'Accommodation Histories - Sudirection';
+
+        return view('profile.user.histories.accommodations', [
+            'title' => $title
+        ]);
     }
 }

@@ -8,12 +8,20 @@ class AccommodationController extends Controller
 {
     public function index()
     {
-        return view('accommodations.index');
+        $title = 'Accommodations - Sudirection';
+
+        return view('accommodations.index',[
+            'title' => $title
+        ]);
     }
 
     public function create()
     {
-        return view('accommodations.create');
+        $title = 'Create Accommodation - Sudirection';
+
+        return view('accommodations.create', [
+            'title' => $title
+        ]);
     }
 
     public function store()
@@ -23,12 +31,20 @@ class AccommodationController extends Controller
 
     public function show($id)
     {
-        return view('accommodations.show');
+        $title = 'Accommodation Details - Sudirection';
+
+        return view('accommodations.show', [
+            'title' => $title
+        ]);
     }
 
     public function edit($id)
     {
-        return view('accommodations.edit');
+        $title = 'Edit Accommodation - Sudirection';
+
+        return view('accommodations.edit', [
+            'title' => $title
+        ]);
     }
 
     public function update($id)

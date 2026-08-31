@@ -11,7 +11,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
 });
 
 Route::prefix('places')->name('places.')->group(function () {
@@ -54,17 +54,17 @@ Route::prefix('users')->name('users.')->group(function () {
     Route::get('/favorites/accommodations', [UserController::class, 'showFavoritesAccommodations'])->name('favorites.accommodations');
 
     Route::get('/histories/places', [UserController::class, 'showHistoriesPlaces'])->name('histories.places');
+
+    Route::get('/histories/accommodations', [UserController::class, 'showHistoriesAccommodations'])->name('histories.accommodations');
 });
 
 Route::get('/about-us', [AboutUsController::class, 'index'])->name('about-us');
-
-Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/profile/admin', [AdminController::class, 'index'])->name('profile.admin');
 
 Route::prefix('login')->name('login.')->group(function () {
     Route::get('/', [AuthController::class, 'loginView'])->name('view');
-    
+
     Route::post('/', [AuthController::class, 'loginPost'])->name('post');
 });
 

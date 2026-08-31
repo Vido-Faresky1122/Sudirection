@@ -8,12 +8,20 @@ class PlaceController extends Controller
 {
     public function index()
     {
-        return view('place.index');
+        $title = 'Places - Sudirection';
+
+        return view('place.index', [
+            'title' => $title
+        ]);
     }
 
     public function create()
     {
-        return view('place.create');
+        $title = 'Create Place - Sudirection';
+
+        return view('place.create', [
+            'title' => $title
+        ]);
     }
 
     public function store()
@@ -23,12 +31,20 @@ class PlaceController extends Controller
 
     public function show($id)
     {
-        return view('place.show');
+        $title = 'Place Details - Sudirection';
+
+        return view('place.show', [
+            'title' => $title
+        ]);
     }
 
     public function edit($id)
     {
-        return view('place.edit');
+        $title = 'Edit Place - Sudirection';
+
+        return view('place.edit', [
+            'title' => $title
+        ]);
     }
 
     public function update($id)
