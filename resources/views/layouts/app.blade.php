@@ -9,14 +9,17 @@
     <style>
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0f172a;
         }
+
     </style>
 </head>
 
-<body class="bg-blue-50 min-h-screen flex flex-col">
+<body class="bg-transparent min-h-screen flex flex-col">
 
     {{-- Header Start--}}
-    <header class="sticky top-0 z-50 w-full backdrop-blur-md bg-slate-100/40 border-b border-white/10 shadow-lg">
+    <header
+        class="sticky mix-blend-difference top-0 z-50 w-full backdrop-blur-md bg-transparent border-b border-white/10 shadow-lg">
         @include('layouts.partials.header')
     </header>
     {{-- Header End --}}
