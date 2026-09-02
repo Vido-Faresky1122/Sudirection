@@ -12,9 +12,7 @@
                     First Timer?
                 </h1>
                 <p class="text-white text-lg leading-relaxed drop-shadow">
-                    Buat akun dan temukan destinasi menakjubkan,
-                    pengalaman tak terlupakan, dan petualangan baru
-                    di seluruh dunia.
+                    Create an account and discover amazing destinations, unforgettable experiences, and new adventures around the world.
                 </p>
             </div>
 
