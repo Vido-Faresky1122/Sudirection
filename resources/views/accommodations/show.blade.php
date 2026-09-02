@@ -57,16 +57,29 @@
                     <h1 class="text-3xl md:text-5xl font-black tracking-tight text-white uppercase">Grace Hotel, Auberge
                         Resorts Collection</h1>
 
-                    <div class="flex flex-wrap items-center gap-4 text-xs">
-                        <div class="flex items-center gap-1 text-yellow-400 font-bold">
-                            <span>★ 4.8</span>
-                            <span class="text-slate-400 font-normal">(2,547 reviews)</span>
+                    <div class="flex items-center gap-4 text-xs">
+
+                        <div
+                            class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0a1f18] border border-[#14532d] text-emerald-400 font-semibold">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                            <span class="text-white font-bold">Available</span>
                         </div>
-                        <span
-                            class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[11px] font-semibold">
-                            • Open Now
-                        </span>
-                        <span class="text-slate-400">08:00 AM - 10:00 PM</span>
+
+                        <span class="text-slate-400 text-sm">Concierge 24/7</span>
+
+                        <div class="h-4 w-px bg-slate-700/60"></div>
+
+                        <div
+                            class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-linear-to-r from-[#6b8e5d] to-[#2d4d43] text-white font-medium shadow-sm">
+                            <div class="w-5 h-5 rounded-full bg-[#183634] flex items-center justify-center">
+                                <svg class="w-3 h-3 text-[#5eead4]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 3v18m-6-6l6 6 6-6M5 9c2-2 5-3 7-3s5 1 7 3" />
+                                </svg>
+                            </div>
+                            <span class="font-bold">Resort</span>
+                        </div>
+
                     </div>
 
                     <div class="flex items-center gap-2 text-xs text-slate-400 pt-2 border-t border-slate-800">
@@ -75,7 +88,7 @@
                                 d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
                                 clip-rule="evenodd" />
                         </svg>
-                        <span>Grace Hotel, Thira, South Aegean, Greece</span>
+                        <span>Imerovigli, Santorini 847 00, Greece</span>
                     </div>
                 </div>
 
