@@ -115,50 +115,6 @@
                                 class="w-full p-4 bg-[#121829] border border-white/5 rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all resize-none flex-1"></textarea>
                         </div>
 
-                        <div class="space-y-4 pt-2">
-                            <label class="block text-[11px] font-bold tracking-wider uppercase text-gray-400">
-                                Amenities
-                            </label>
-
-                            <div class="grid grid-cols-2 gap-4 text-xs font-medium text-gray-300">
-                                <div class="space-y-3">
-                                    <label class="flex items-center space-x-3 cursor-pointer select-none">
-                                        <input type="checkbox"
-                                            class="w-4 h-4 rounded border-gray-700 bg-[#121829] text-cyan-500 focus:ring-0 focus:ring-offset-0" />
-                                        <span>Infinity Pool</span>
-                                    </label>
-                                    <label class="flex items-center space-x-3 cursor-pointer select-none">
-                                        <input type="checkbox"
-                                            class="w-4 h-4 rounded border-gray-700 bg-[#121829] text-cyan-500 focus:ring-0 focus:ring-offset-0" />
-                                        <span>Sea View</span>
-                                    </label>
-                                    <label class="flex items-center space-x-3 cursor-pointer select-none">
-                                        <input type="checkbox"
-                                            class="w-4 h-4 rounded border-gray-700 bg-[#121829] text-cyan-500 focus:ring-0 focus:ring-offset-0" />
-                                        <span>Private Kitchen</span>
-                                    </label>
-                                </div>
-
-                                <div class="space-y-3">
-                                    <label class="flex items-center space-x-3 cursor-pointer select-none">
-                                        <input type="checkbox"
-                                            class="w-4 h-4 rounded border-gray-700 bg-[#121829] text-cyan-500 focus:ring-0 focus:ring-offset-0" />
-                                        <span>Free Wi-Fi</span>
-                                    </label>
-                                    <label class="flex items-center space-x-3 cursor-pointer select-none">
-                                        <input type="checkbox"
-                                            class="w-4 h-4 rounded border-gray-700 bg-[#121829] text-cyan-500 focus:ring-0 focus:ring-offset-0" />
-                                        <span>Air Conditioning</span>
-                                    </label>
-                                    <label class="flex items-center space-x-3 cursor-pointer select-none">
-                                        <input type="checkbox"
-                                            class="w-4 h-4 rounded border-gray-700 bg-[#121829] text-cyan-500 focus:ring-0 focus:ring-offset-0" />
-                                        <span>Parking Space</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                     <div class="lg:col-span-2 flex justify-end">
                         <button type="submit"
