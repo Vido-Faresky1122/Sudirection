@@ -56,18 +56,6 @@
 
                     <h1 class="text-3xl md:text-5xl font-black tracking-tight text-white uppercase">SANTORINI</h1>
 
-                    <div class="flex flex-wrap items-center gap-4 text-xs">
-                        <div class="flex items-center gap-1 text-yellow-400 font-bold">
-                            <span>★ 4.8</span>
-                            <span class="text-slate-400 font-normal">(2,547 reviews)</span>
-                        </div>
-                        <span
-                            class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[11px] font-semibold">
-                            • Open Now
-                        </span>
-                        <span class="text-slate-400">08:00 AM - 10:00 PM</span>
-                    </div>
-
                     <div class="flex items-center gap-2 text-xs text-slate-400 pt-2 border-t border-slate-800">
                         <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd"
@@ -107,7 +95,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
                 <div
-                    class="lg:col-span-2 bg-[#0e1629]/80 backdrop-blur-md border border-slate-800 rounded-2xl p-6 md:p-8 space-y-4 shadow-xl">
+                    class="lg:col-span-3 bg-[#0e1629]/80 backdrop-blur-md border border-slate-800 rounded-2xl p-6 md:p-8 space-y-4 shadow-xl">
                     <h3 class="text-lg font-bold text-white">About Santorini</h3>
                     <p class="text-xs md:text-sm text-slate-300 leading-relaxed">
                         Santorini is one of the Cyclades islands in the Aegean Sea. It was devastated by a volcanic eruption
@@ -126,57 +114,6 @@
                         <div class="flex items-center gap-2">
                             <span class="text-slate-400">Price:</span>
                             <span class="font-bold text-white">$$$ • Premium</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-[#0e1629]/80 backdrop-blur-md border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl">
-                    <h3 class="text-sm font-bold text-white">Available Facilities</h3>
-                    <div class="space-y-2.5">
-                        <div
-                            class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-slate-800/50 border border-slate-700/50 text-xs text-slate-300">
-                            <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071a10 10 0 0114.142 0M1.414 8.414a15 15 0 0121.172 0" />
-                            </svg>
-                            <span>Free High-speed WiFi</span>
-                        </div>
-                        <div
-                            class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-slate-800/50 border border-slate-700/50 text-xs text-slate-300">
-                            <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                            </svg>
-                            <span>Secure Public Parking</span>
-                        </div>
-                        <div
-                            class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-slate-800/50 border border-slate-700/50 text-xs text-slate-300">
-                            <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" />
-                            </svg>
-                            <span>Cliffside Restaurants</span>
-                        </div>
-                        <div
-                            class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-slate-800/50 border border-slate-700/50 text-xs text-slate-300">
-                            <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                            </svg>
-                            <span>Public Restrooms</span>
-                        </div>
-                        <div
-                            class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-slate-800/50 border border-slate-700/50 text-xs text-slate-300">
-                            <svg class="w-4 h-4 text-cyan-400 shrink-0" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                            </svg>
-                            <span>Wheelchair Accessible</span>
                         </div>
                     </div>
                 </div>

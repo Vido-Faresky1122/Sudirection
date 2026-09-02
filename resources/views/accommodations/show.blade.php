@@ -133,12 +133,6 @@
                     </p>
                     <div class="pt-4 flex flex-wrap items-center justify-between gap-4 border-t border-slate-800 text-xs">
                         <div class="flex items-center gap-2">
-                            <span class="text-slate-400">Place Type:</span>
-                            <span
-                                class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-medium">Tourist
-                                Attraction</span>
-                        </div>
-                        <div class="flex items-center gap-2">
                             <span class="text-slate-400">Price:</span>
                             <span class="font-bold text-white">$$$ • Premium</span>
                         </div>

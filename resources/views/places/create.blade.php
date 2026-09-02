@@ -82,27 +82,6 @@
                             </div>
                         </div>
 
-                        <div class="space-y-2">
-                            <label class="block text-[11px] font-bold tracking-wider uppercase text-gray-400">
-                                Price Per Night (USD)
-                            </label>
-                            <div class="relative">
-                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-sm text-gray-400">$</span>
-                                <input type="text" placeholder="0.00"
-                                    class="w-full pl-8 pr-4 py-3.5 bg-[#121829] border border-white/5 rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
-                            </div>
-                        </div>
-
-                        <div class="space-y-4 pt-2">
-                            <label class="block text-[11px] font-bold tracking-wider uppercase text-gray-400">
-                                Contact Information
-                            </label>
-                            <input type="email" placeholder="Email address"
-                                class="w-full px-4 py-3.5 bg-[#121829] border border-white/5 rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
-                            <input type="tel" placeholder="Phone number"
-                                class="w-full px-4 py-3.5 bg-[#121829] border border-white/5 rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
-                        </div>
-
                     </div>
 
                     <div class="space-y-6 flex flex-col justify-between">
