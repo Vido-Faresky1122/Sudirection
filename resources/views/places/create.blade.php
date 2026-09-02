@@ -52,12 +52,13 @@
                 </h1>
 
                 <form class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+                    @csrf
 
                     <div class="space-y-6">
 
                         <div class="space-y-2">
                             <label class="block text-[11px] font-bold tracking-wider uppercase text-gray-400">
-                                Accommodation Name
+                                Place Name
                             </label>
                             <input type="text" placeholder="e.g. Sunset Villa Santorini"
                                 class="w-full px-4 py-3.5 bg-[#121829] border border-white/5 rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
@@ -159,7 +160,12 @@
                         </div>
 
                     </div>
-
+                    <div class="lg:col-span-2 flex justify-end">
+                        <button type="submit"
+                            class="btn-shimmer px-15 py-4 bg-cyan-500 text-md text-white rounded-full font-bold btn-shimmer">
+                            Create Place
+                        </button>
+                    </div>
                 </form>
             </div>
 
