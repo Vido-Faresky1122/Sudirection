@@ -223,173 +223,232 @@
                     <h2 class="text-2xl font-black uppercase tracking-tight text-white">YOU MAY ALSO LIKE</h2>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
                     <a href="#"
-                        class="group relative h-64 rounded-2xl overflow-hidden shadow-lg bg-cover bg-center transition-all duration-300 hover:-translate-y-1 block">
-                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                            style="background-image: url('{{ asset('assets/images/tokyo-tower.png') }}');"></div>
-                        <div class="absolute inset-0 bg-linear-to-t from-[#0088cc]/90 via-black/20 to-transparent"></div>
-
-                        <button type="button"
-                            class="absolute top-4 right-4 text-white/80 hover:text-white transition-colors z-10"
-                            onclick="event.stopPropagation();">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-                            </svg>
-                        </button>
-
-                        <div class="absolute bottom-4 inset-x-5 text-white flex justify-between items-end">
-                            <div class="space-y-1">
-                                <span
-                                    class="text-[11px] uppercase tracking-wider font-semibold opacity-90 flex items-center gap-1">
-                                    <svg class="w-3 h-3 text-cyan-300" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9z" />
-                                    </svg>
-                                    Japan
-                                </span>
-                                <h3 class="text-2xl font-bold uppercase tracking-tight">Tokyo</h3>
-                                <p class="text-xs opacity-80 max-w-xs line-clamp-1">Experience tradition and the future</p>
-                                <div class="flex items-center space-x-1 text-xs pt-1">
-                                    <span class="text-yellow-400">★</span>
-                                    <span class="font-bold">4.8</span>
-                                </div>
-                            </div>
-
-                            <div
-                                class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-white group-hover:text-cyan-600 transition-all">
+                        class="group relative h-64 rounded-2xl overflow-hidden border border-white/10 flex shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/50">
+                        <div class="w-1/2 relative overflow-hidden">
+                            <img src="{{ asset('assets/images/mbs.png') }}"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                alt="Marina Bay Sanda">
+                        </div>
+                        <div class="w-1/2 bg-[#0099d8] p-4 flex flex-col justify-between text-white relative">
+                            <button type="button" onclick="event.stopPropagation();"
+                                class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                        d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
                                 </svg>
+                            </button>
+                            <div>
+                                <h3 class="text-base font-bold leading-tight group-hover:text-cyan-100 transition-colors">
+                                    Marina Bay Sanda</h3>
+                                <p class="text-[10px] text-white/80">Singapore</p>
+                            </div>
+                            <div class="space-y-3">
+                                <span
+                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1b3b6f] text-[10px] font-semibold">
+                                    <svg class="w-3 h-3 text-cyan-300" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                    </svg>
+                                    Hotel
+                                </span>
+                                <div
+                                    class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
+                                    View Stay ➔
+                                </div>
                             </div>
                         </div>
                     </a>
 
                     <a href="#"
-                        class="group relative h-64 rounded-2xl overflow-hidden shadow-lg bg-cover bg-center transition-all duration-300 hover:-translate-y-1 block">
-                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                            style="background-image: url('{{ asset('assets/images/Grace Hotel.png') }}');"></div>
-                        <div class="absolute inset-0 bg-linear-to-t from-[#0088cc]/90 via-black/20 to-transparent"></div>
-
-                        <button type="button"
-                            class="absolute top-4 right-4 text-white/80 hover:text-white transition-colors z-10"
-                            onclick="event.stopPropagation();">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-                            </svg>
-                        </button>
-
-                        <div class="absolute bottom-4 inset-x-5 text-white flex justify-between items-end">
-                            <div class="space-y-1">
-                                <span
-                                    class="text-[11px] uppercase tracking-wider font-semibold opacity-90 flex items-center gap-1">
-                                    <svg class="w-3 h-3 text-cyan-300" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9z" />
-                                    </svg>
-                                    Greece
-                                </span>
-                                <h3 class="text-2xl font-bold uppercase tracking-tight">Grace Hotel</h3>
-                                <p class="text-xs opacity-80 max-w-xs line-clamp-1">Enjoy spectacular view of the Aegean Sea
-                                </p>
-                                <div class="flex items-center space-x-1 text-xs pt-1">
-                                    <span class="text-yellow-400">★</span>
-                                    <span class="font-bold">4.7</span>
-                                </div>
-                            </div>
-
-                            <div
-                                class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-white group-hover:text-cyan-600 transition-all">
+                        class="group relative h-64 rounded-2xl overflow-hidden border border-white/10 flex shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/50">
+                        <div class="w-1/2 relative overflow-hidden">
+                            <img src="{{ asset('assets/images/fsr.png') }}"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                alt="Four Seasons Resort">
+                        </div>
+                        <div class="w-1/2 bg-[#0099d8] p-4 flex flex-col justify-between text-white relative">
+                            <button type="button" onclick="event.stopPropagation();"
+                                class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                        d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
                                 </svg>
+                            </button>
+                            <div>
+                                <h3 class="text-base font-bold leading-tight group-hover:text-cyan-100 transition-colors">
+                                    Four Seasons Resort</h3>
+                                <p class="text-[10px] text-white/80">Bali, Indonesia</p>
+                            </div>
+                            <div class="space-y-3">
+                                <span
+                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#274838] text-[10px] font-semibold">
+                                    <svg class="w-3 h-3 text-emerald-300" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 3v18m-6-6l6 6 6-6M5 9c2-2 5-3 7-3s5 1 7 3" />
+                                    </svg>
+                                    Resort
+                                </span>
+                                <div
+                                    class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
+                                    View Stay ➔
+                                </div>
                             </div>
                         </div>
                     </a>
 
                     <a href="#"
-                        class="group relative h-64 rounded-2xl overflow-hidden shadow-lg bg-cover bg-center transition-all duration-300 hover:-translate-y-1 block">
-                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                            style="background-image: url('{{ asset('assets/images/seoul.png') }}');"></div>
-                        <div class="absolute inset-0 bg-linear-to-t from-[#0088cc]/90 via-black/20 to-transparent"></div>
-
-                        <button type="button"
-                            class="absolute top-4 right-4 text-white/80 hover:text-white transition-colors z-10"
-                            onclick="event.stopPropagation();">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-                            </svg>
-                        </button>
-
-                        <div class="absolute bottom-4 inset-x-5 text-white flex justify-between items-end">
-                            <div class="space-y-1">
-                                <span
-                                    class="text-[11px] uppercase tracking-wider font-semibold opacity-90 flex items-center gap-1">
-                                    <svg class="w-3 h-3 text-cyan-300" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9z" />
-                                    </svg>
-                                    South Korea
-                                </span>
-                                <h3 class="text-2xl font-bold uppercase tracking-tight">Seoul</h3>
-                                <p class="text-xs opacity-80 max-w-xs line-clamp-1">Experience tradition and the future</p>
-                                <div class="flex items-center space-x-1 text-xs pt-1">
-                                    <span class="text-yellow-400">★</span>
-                                    <span class="font-bold">4.6</span>
-                                </div>
-                            </div>
-
-                            <div
-                                class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-white group-hover:text-cyan-600 transition-all">
+                        class="group relative h-64 rounded-2xl overflow-hidden border border-white/10 flex shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/50">
+                        <div class="w-1/2 relative overflow-hidden">
+                            <img src="{{ asset('assets/images/theritz.png') }}"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                alt="The Ritz">
+                        </div>
+                        <div class="w-1/2 bg-[#0099d8] p-4 flex flex-col justify-between text-white relative">
+                            <button type="button" onclick="event.stopPropagation();"
+                                class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                        d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
                                 </svg>
+                            </button>
+                            <div>
+                                <h3 class="text-base font-bold leading-tight group-hover:text-cyan-100 transition-colors">
+                                    The Ritz</h3>
+                                <p class="text-[10px] text-white/80">Paris, France</p>
+                            </div>
+                            <div class="space-y-3">
+                                <span
+                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1b3b6f] text-[10px] font-semibold">
+                                    <svg class="w-3 h-3 text-cyan-300" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                    </svg>
+                                    Hotel
+                                </span>
+                                <div
+                                    class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
+                                    View Stay ➔
+                                </div>
                             </div>
                         </div>
                     </a>
 
                     <a href="#"
-                        class="group relative h-64 rounded-2xl overflow-hidden shadow-lg bg-cover bg-center transition-all duration-300 hover:-translate-y-1 block">
-                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                            style="background-image: url('{{ asset('assets/images/bern.png') }}');"></div>
-                        <div class="absolute inset-0 bg-linear-to-t from-[#0088cc]/90 via-black/20 to-transparent"></div>
-
-                        <button type="button"
-                            class="absolute top-4 right-4 text-white/80 hover:text-white transition-colors z-10"
-                            onclick="event.stopPropagation();">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-                            </svg>
-                        </button>
-
-                        <div class="absolute bottom-4 inset-x-5 text-white flex justify-between items-end">
-                            <div class="space-y-1">
-                                <span
-                                    class="text-[11px] uppercase tracking-wider font-semibold opacity-90 flex items-center gap-1">
-                                    <svg class="w-3 h-3 text-cyan-300" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9z" />
-                                    </svg>
-                                    Switzerland
-                                </span>
-                                <h3 class="text-2xl font-bold uppercase tracking-tight">Bern</h3>
-                                <p class="text-xs opacity-80 max-w-xs line-clamp-1">Relax among breathtaking mountains</p>
-                                <div class="flex items-center space-x-1 text-xs pt-1">
-                                    <span class="text-yellow-400">★</span>
-                                    <span class="font-bold">4.5</span>
-                                </div>
-                            </div>
-
-                            <div
-                                class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-white group-hover:text-cyan-600 transition-all">
+                        class="group relative h-64 rounded-2xl overflow-hidden border border-white/10 flex shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/50">
+                        <div class="w-1/2 relative overflow-hidden">
+                            <img src="{{ asset('assets/images/mbs.png') }}"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                alt="Marina Bay Sanda">
+                        </div>
+                        <div class="w-1/2 bg-[#0099d8] p-4 flex flex-col justify-between text-white relative">
+                            <button type="button" onclick="event.stopPropagation();"
+                                class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                        d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
                                 </svg>
+                            </button>
+                            <div>
+                                <h3 class="text-base font-bold leading-tight group-hover:text-cyan-100 transition-colors">
+                                    Marina Bay Sanda</h3>
+                                <p class="text-[10px] text-white/80">Singapore</p>
+                            </div>
+                            <div class="space-y-3">
+                                <span
+                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1b3b6f] text-[10px] font-semibold">
+                                    <svg class="w-3 h-3 text-cyan-300" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                    </svg>
+                                    Hotel
+                                </span>
+                                <div
+                                    class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
+                                    View Stay ➔
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#"
+                        class="group relative h-64 rounded-2xl overflow-hidden border border-white/10 flex shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/50">
+                        <div class="w-1/2 relative overflow-hidden">
+                            <img src="{{ asset('assets/images/fsr.png') }}"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                alt="Four Seasons Resort">
+                        </div>
+                        <div class="w-1/2 bg-[#0099d8] p-4 flex flex-col justify-between text-white relative">
+                            <button type="button" onclick="event.stopPropagation();"
+                                class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                                </svg>
+                            </button>
+                            <div>
+                                <h3 class="text-base font-bold leading-tight group-hover:text-cyan-100 transition-colors">
+                                    Four Seasons Resort</h3>
+                                <p class="text-[10px] text-white/80">Bali, Indonesia</p>
+                            </div>
+                            <div class="space-y-3">
+                                <span
+                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#274838] text-[10px] font-semibold">
+                                    <svg class="w-3 h-3 text-emerald-300" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 3v18m-6-6l6 6 6-6M5 9c2-2 5-3 7-3s5 1 7 3" />
+                                    </svg>
+                                    Resort
+                                </span>
+                                <div
+                                    class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
+                                    View Stay ➔
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#"
+                        class="group relative h-64 rounded-2xl overflow-hidden border border-white/10 flex shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/50">
+                        <div class="w-1/2 relative overflow-hidden">
+                            <img src="{{ asset('assets/images/theritz.png') }}"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                alt="The Ritz">
+                        </div>
+                        <div class="w-1/2 bg-[#0099d8] p-4 flex flex-col justify-between text-white relative">
+                            <button type="button" onclick="event.stopPropagation();"
+                                class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                                </svg>
+                            </button>
+                            <div>
+                                <h3 class="text-base font-bold leading-tight group-hover:text-cyan-100 transition-colors">
+                                    The Ritz</h3>
+                                <p class="text-[10px] text-white/80">Paris, France</p>
+                            </div>
+                            <div class="space-y-3">
+                                <span
+                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1b3b6f] text-[10px] font-semibold">
+                                    <svg class="w-3 h-3 text-cyan-300" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                    </svg>
+                                    Hotel
+                                </span>
+                                <div
+                                    class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
+                                    View Stay ➔
+                                </div>
                             </div>
                         </div>
                     </a>
