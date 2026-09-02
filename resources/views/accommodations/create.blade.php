@@ -66,6 +66,28 @@
 
                         <div class="space-y-2">
                             <label class="block text-[11px] font-bold tracking-wider uppercase text-gray-400">
+                                Accommodation Type
+                            </label>
+                            <div class="relative">
+                                <select
+                                    class="w-full px-4 py-3.5 bg-[#121829] border border-white/5 rounded-xl text-sm text-gray-300 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all appearance-none cursor-pointer">
+                                    <option value="" disabled selected class="text-gray-500">Select accommodation type...
+                                    </option>
+                                    <option value="hotel" class="bg-[#121829] text-white">Hotel</option>
+                                    <option value="resort" class="bg-[#121829] text-white">Resort</option>
+                                    <option value="villas" class="bg-[#121829] text-white">Villas</option>
+                                    <option value="apartment" class="bg-[#121829] text-white">Apartment</option>
+                                </select>
+                                <svg class="w-4 h-4 text-gray-400 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="block text-[11px] font-bold tracking-wider uppercase text-gray-400">
                                 Location
                             </label>
                             <div class="relative">
@@ -162,7 +184,7 @@
                     </div>
                     <div class="lg:col-span-2 flex justify-end">
                         <button type="submit"
-                            class="btn-shimmer px-15 py-4 bg-cyan-500 text-md text-white rounded-full font-bold btn-shimmer">
+                            class="btn-shimmer px-15 py-4 bg-cyan-500 text-md text-white rounded-full font-bold">
                             Create Accommodation
                         </button>
                     </div>
