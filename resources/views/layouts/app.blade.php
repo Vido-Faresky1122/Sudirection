@@ -32,7 +32,7 @@
 
     {{-- Footer Start --}}
     <footer class="relative w-full text-white overflow-hidden bg-cover bg-center min-h-125 "
-        style="background-image: url('{{ asset('storage/assets/mount-footer.png') }}');">
+        style="background-image: url('{{ asset('assets/images/mount-footer.png') }}');">
         @include('layouts.partials.footer')
     </footer>
     {{-- Footer End --}}

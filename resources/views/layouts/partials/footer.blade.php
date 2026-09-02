@@ -2,7 +2,7 @@
 
 <div
     class="absolute right-0 top-0 bottom-0 w-1/3 z-10 hidden lg:flex items-center justify-end pointer-events-none pr-8">
-    <img src="{{ asset('storage/assets/airplane-footer.png') }}" alt="Airplane"
+    <img src="{{ asset('assets/images/airplane-footer.png') }}" alt="Airplane"
         class="h-full w-auto max-h-125 object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-300" />
 </div>
 
