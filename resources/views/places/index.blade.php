@@ -27,8 +27,8 @@
         </p>
 
         <div class="pt-2">
-          <div class="inline-flex items-center space-x-3 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold text-white cursor-pointer btn-shimmer">
-            <span>Search</span>
+          <div class="inline-flex items-center space-x-3 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold text-white cursor-pointer btn-shimmer">  
+          <span>Search</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
             </svg>
