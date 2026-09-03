@@ -18,4 +18,10 @@
     .link-shimmer {
         @apply relative inline-block overflow-hidden transition-transform duration-300 hover:scale-105 before:absolute before:inset-0 before:-translate-x-full before:bg-linear-to-r before:from-transparent before:via-white/80 before:to-transparent hover:before:translate-x-full hover:before:transition-transform hover:before:duration-1000;
     }
+
+    .glass {
+        @apply bg-white/20 
+           backdrop-blur-md 
+           backdrop-saturate-150;
+    }
 }
