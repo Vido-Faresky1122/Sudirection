@@ -62,6 +62,8 @@
                             </label>
                             <input type="text" placeholder="e.g. Sunset Villa Santorini"
                                 class="w-full px-4 py-3.5 bg-[#121829] border border-white/5 rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
+                            <input type="text" placeholder="Tagline"
+                                class="w-full px-4 py-3.5 bg-[#121829] border border-white/5 rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
                         </div>
 
                         <div class="space-y-2">
@@ -69,6 +71,10 @@
                                 Location
                             </label>
                             <div class="relative">
+                                <input type="text" placeholder="Country"
+                                    class="w-full pl-4 pr-10 py-3.5 bg-[#121829] border border-white/5 rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
+                                <input type="text" placeholder="City"
+                                    class="w-full pl-4 pr-10 py-3.5 bg-[#121829] border border-white/5 rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
                                 <input type="text" placeholder="Search for destination..."
                                     class="w-full pl-4 pr-10 py-3.5 bg-[#121829] border border-white/5 rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
                                 <svg xmlns="http://www.w3.org/2000/svg"
