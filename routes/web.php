@@ -46,17 +46,7 @@ Route::prefix('accommodations')->name('accommodations.')->group(function () {
     Route::delete('/{id}', [AccommodationController::class, 'destroy'])->name('destroy')->whereNumber('id');
 });
 
-Route::prefix('users')->name('users.')->group(function () {
-    Route::get('/', [UserController::class, 'index'])->name('index');
-
-    Route::get('/favorites/places', [UserController::class, 'showFavoritesPlaces'])->name('favorites.places');
-
-    Route::get('/favorites/accommodations', [UserController::class, 'showFavoritesAccommodations'])->name('favorites.accommodations');
-
-    Route::get('/histories/places', [UserController::class, 'showHistoriesPlaces'])->name('histories.places');
-
-    Route::get('/histories/accommodations', [UserController::class, 'showHistoriesAccommodations'])->name('histories.accommodations');
-});
+Route::get('/profile/users', [UserController::class, 'show'])->name('profile.users.index');
 
 Route::get('/about-us', [AboutUsController::class, 'index'])->name('about-us');
 
