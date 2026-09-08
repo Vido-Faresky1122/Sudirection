@@ -1,64 +1,70 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="relative min-h-screen bg-cover bg-center bg-fixed"
+    <div class="relative min-h-screen w-full flex items-center justify-center p-8 bg-cover bg-center overflow-hidden font-sans text-white"
         style="background-image: url('{{ asset('assets/images/admin-bg.png') }}');">
-        <div class="absolute inset-0 bg-black/30"></div>
 
-        <div
-            class="relative z-10 flex flex-col md:flex-row items-stretch justify-center gap-10 px-6 md:px-16 py-20 max-w-6xl mx-auto">
+        <div class="absolute inset-0 bg-slate-900/30 backdrop-blur-md"></div>
 
-            {{-- Card Profile Admin --}}
+        <div class="relative z-10 w-full max-w-5xl flex flex-col md:flex-row items-stretch justify-center gap-12">
+
             <div
-                class="w-full max-w-md flex flex-col bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[32px] p-10 shadow-2xl">
+                class="w-full max-w-md bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[40px] px-8 md:px-10 py-12 shadow-2xl flex flex-col justify-between">
 
-                <div class="flex items-center gap-5 mb-8">
-                    <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center overflow-hidden shrink-0">
-                        <svg class="w-12 h-12 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+                <div class="flex items-center gap-5">
+                    <div
+                        class="w-16 h-16 rounded-full bg-white/20 border border-white/30 flex items-center justify-center shrink-0">
+                        <svg class="w-10 h-10 text-slate-200" fill="currentColor" viewBox="0 0 24 24">
                             <path
-                                d="M12 12c2.7 0 4.9-2.2 4.9-4.9S14.7 2.2 12 2.2 7.1 4.4 7.1 7.1 9.3 12 12 12zm0 2.2c-3.3 0-9.8 1.6-9.8 4.9v2.7h19.6v-2.7c0-3.3-6.5-4.9-9.8-4.9z" />
+                                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                         </svg>
                     </div>
+
                     <div>
-                        <p class="text-white text-xl font-semibold">{{ $admin->name ?? 'Sudianto Faresky' }}</p>
-                        <p class="text-white/60 text-base">{{ $admin->role ?? 'Admin' }}</p>
+                        <h2 class="text-xl font-medium tracking-wide text-white">{{ $admin->name ?? 'Sudianto Faresky' }}
+                        </h2>
+                        <p class="text-xs text-slate-300 font-light">{{ $admin->role ?? 'Admin' }}</p>
                     </div>
                 </div>
 
-                <div class="space-y-4 mb-8 flex-1">
-                    <div class="flex items-center text-sm">
-                        <span class="w-28 text-white/80">Username</span>
-                        <span class="text-white/60 mr-3">:</span>
-                        <span class="text-white">{{ $admin->username ?? 'Amos Mikhael' }}</span>
+                <div class="space-y-6 text-sm font-light text-slate-200 my-8">
+                    <div class="flex items-center">
+                        <span class="w-28 shrink-0">Username</span>
+                        <span class="w-6 text-center">:</span>
+                        <span class="font-normal text-white">{{ $admin->username ?? 'Amos Mikhael' }}</span>
                     </div>
-                    <div class="flex items-center text-sm">
-                        <span class="w-28 text-white/80">Email</span>
-                        <span class="text-white/60 mr-3">:</span>
-                        <span class="text-white">{{ $admin->email ?? 'Amosganteng@gmail.com' }}</span>
+
+                    <div class="flex items-center">
+                        <span class="w-28 shrink-0">Email</span>
+                        <span class="w-6 text-center">:</span>
+                        <span class="font-normal text-white">{{ $admin->email ?? 'Amosganteng@gmail.com' }}</span>
                     </div>
-                    <div class="flex items-center text-sm">
-                        <span class="w-28 text-white/80">Password</span>
-                        <span class="text-white/60 mr-3">:</span>
-                        <span class="text-white">**********</span>
+
+                    <div class="flex items-center">
+                        <span class="w-28 shrink-0">Password</span>
+                        <span class="w-6 text-center">:</span>
+                        <span class="font-normal text-white tracking-widest">••••••••••</span>
                     </div>
                 </div>
 
-                <a href="/admin/profile/customize"
-                    class="btn-shimmer block text-center w-full py-3.5 rounded-full bg-black/40 text-white font-medium">
-                    Customize
-                </a>
+                <div>
+                    <a href="/admin/profile/customize"
+                        class="block w-full py-3.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-normal text-sm hover:bg-white/20 transition-all shadow-md text-center">
+                        Customize
+                    </a>
+                </div>
+
             </div>
 
-            {{-- Card Other Users --}}
             <div
-                class="w-full max-w-md flex flex-col bg-white/10 backdrop-blur-2xl border border-white/20 rounded-4xl shadow-2xl overflow-hidden">
+                class="w-full max-w-md bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[40px] px-8 md:px-10 py-12 shadow-2xl flex flex-col justify-between">
 
-                <div class="text-center py-6 bg-white/10 border-b border-white/20">
-                    <p class="text-white text-lg font-semibold">Other Users</p>
-                </div>
+                <div>
+                    <div class="text-center pb-6 mb-6 border-b border-white/10">
+                        <h3 class="text-lg font-medium tracking-wide text-white">Other Users</h3>
+                    </div>
 
-                <div class="p-10 flex flex-col flex-1">
-                    <div class="space-y-6 flex-1">
+                    <div class="space-y-6">
                         @forelse ($otherUsers ?? [
                                 ['name' => 'Vido Faresky', 'role' => 'Developer'],
                                 ['name' => 'Davin Aurelio Yu', 'role' => 'President'],
@@ -66,29 +72,34 @@
                             ] as $user)
                             <div class="flex items-center gap-5">
                                 <div
-                                    class="w-16 h-16 rounded-full bg-white flex items-center justify-center overflow-hidden shrink-0">
-                                    <svg class="w-10 h-10 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+                                    class="w-12 h-12 rounded-full bg-white/20 border border-white/30 flex items-center justify-center shrink-0">
+                                    <svg class="w-7 h-7 text-slate-200" fill="currentColor" viewBox="0 0 24 24">
                                         <path
-                                            d="M12 12c2.7 0 4.9-2.2 4.9-4.9S14.7 2.2 12 2.2 7.1 4.4 7.1 7.1 9.3 12 12 12zm0 2.2c-3.3 0-9.8 1.6-9.8 4.9v2.7h19.6v-2.7c0-3.3-6.5-4.9-9.8-4.9z" />
+                                            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                                     </svg>
                                 </div>
+
                                 <div>
-                                    <p class="text-white font-medium text-base">{{ $user['name'] }}</p>
-                                    <p class="text-white/60 text-sm">{{ $user['role'] }}</p>
+                                    <p class="text-sm font-normal text-white">{{ $user['name'] }}</p>
+                                    <p class="text-xs text-slate-300 font-light">{{ $user['role'] }}</p>
                                 </div>
                             </div>
                         @empty
-                            <p class="text-white/60 text-sm text-center">Belum ada user lain.</p>
+                            <p class="text-xs text-slate-300 font-light text-center py-4">Belum ada user lain.</p>
                         @endforelse
                     </div>
+                </div>
 
+                <div class="pt-8">
                     <a href="/admin/users"
-                        class="btn-shimmer block text-center w-full py-3.5 rounded-full bg-black/40 text-white font-medium transition mt-6">
+                        class="block w-full py-3.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-normal text-sm hover:bg-white/20 transition-all shadow-md text-center">
                         See All
                     </a>
                 </div>
+
             </div>
 
         </div>
+
     </div>
 @endsection
