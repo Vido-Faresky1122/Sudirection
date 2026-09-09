@@ -10,9 +10,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 
-Route::get('/', function () {
-    return view('landing');
-});
+Route::get('/', [HomeController::class, 'index'])->name('landing');
 
 Route::prefix('places')->name('places.')->group(function () {
     Route::get('/', [PlaceController::class, 'index'])->name('index');
