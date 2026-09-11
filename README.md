@@ -123,20 +123,12 @@ If the project includes seeders:
 php artisan migrate --seed
 ```
 
-### 9. Run the Frontend
-
-```bash
-npm run dev
-```
-
-Keep this terminal running during development.
-
-### 10. Start the Laravel Server
+### 9. Start the Laravel Server
 
 Open another terminal and run:
 
 ```bash
-php artisan serve
+composer run dev
 ```
 
 The website will be available at:
@@ -278,20 +270,12 @@ Jika project memiliki seeder:
 php artisan migrate --seed
 ```
 
-### 9. Jalankan Frontend
-
-```bash
-npm run dev
-```
-
-Biarkan terminal ini tetap berjalan selama proses development.
-
 ### 10. Jalankan Laravel
 
 Buka terminal baru kemudian jalankan:
 
 ```bash
-php artisan serve
+composer run dev
 ```
 
 Website dapat diakses melalui:
