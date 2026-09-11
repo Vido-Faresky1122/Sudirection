@@ -10,20 +10,20 @@ Our name is Sudirection Team and we are web developers from Indonesia 🇮🇩
 
 ## 🚀 About Us
 
-✨ Creating bugs since 2025
-📚 We are currently learning web development, back-end development & UI/UX
-🎯 Goal: Build an intuitive, elegant, and interactive travel & destination discovery website
+✨ Creating bugs since 2025 <br>
+📚 We are currently learning web development, back-end development & UI/UX <br>
+🎯 Goal: Build an intuitive, elegant, and interactive travel & destination discovery website <br>
 🎲 Fun fact: We spend more time fixing bugs than writing code 😅
 
 ---
 
 ## ✨ Features
 
-✅ Interactive landing page with travel destination hero section
-✅ Destination & tourist attraction discovery
-✅ Accommodations directory across regions
-✅ Local guide & itinerary planning cards
-✅ Smooth animations & responsive design for desktop & mobile
+✅ Interactive landing page with travel destination hero section <br>
+✅ Destination & tourist attraction discovery <br>
+✅ Accommodations directory across regions <br>
+✅ Local guide & itinerary planning cards <br>
+✅ Smooth animations & responsive design for desktop & mobile <br>
 ✅ Clean, modern, and user-friendly UI/UX
 
 ---
@@ -165,20 +165,20 @@ Nama kami adalah Tim Sudirection dan kami adalah pengembang web dari Indonesia �
 
 ## 🚀 Tentang Kami
 
-✨ Membuat bug sejak 2025
-📚 Saat ini kami sedang belajar pengembangan web, pengembangan back-end & UI/UX
-🎯 Tujuan: Membangun platform e-travel dan rekomendasi destinasi wisata terbaik
+✨ Membuat bug sejak 2025 <br>
+📚 Saat ini kami sedang belajar pengembangan web, pengembangan back-end & UI/UX <br>
+🎯 Tujuan: Membangun platform e-travel dan rekomendasi destinasi wisata terbaik <br>
 🎲 Fun fact: Kami lebih sering memperbaiki bug daripada menulis kode 😅
 
 ---
 
 ## ✨ Fitur
 
-✅ Halaman utama interaktif dengan tema penerbangan & destinasi wisata
-✅ Fitur eksplorasi tempat & objek wisata (*Tourist Attractions*)
-✅ Direktori akomodasi di berbagai penjuru dunia
-✅ Kartu interaktif untuk panduan lokal (*Local Guide*) & perencanaan perjalanan
-✅ Animasi halus serta tampilan responsif di desktop & mobile
+✅ Halaman utama interaktif dengan tema penerbangan & destinasi wisata <br>
+✅ Fitur eksplorasi tempat & objek wisata (*Tourist Attractions*) <br>
+✅ Direktori akomodasi di berbagai penjuru dunia <br>
+✅ Kartu interaktif untuk panduan lokal (*Local Guide*) & perencanaan perjalanan <br>
+✅ Animasi halus serta tampilan responsif di desktop & mobile <br>
 ✅ Desain UI/UX yang modern, bersih, dan intuitif
 
 ---
