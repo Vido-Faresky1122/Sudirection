@@ -53,7 +53,7 @@ Our name is Sudirection Team and we are web developers from Indonesia 🇮🇩
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/sudirection.git
+git clone https://github.com/Vido-Faresky1122/Sudirection.git
 ```
 
 ### 2. Enter the Project Directory
@@ -208,7 +208,7 @@ Nama kami adalah Tim Sudirection dan kami adalah pengembang web dari Indonesia �
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/your-username/sudirection.git
+git clone https://github.com/Vido-Faresky1122/Sudirection.git
 ```
 
 ### 2. Masuk ke Folder Project
