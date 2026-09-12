@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="w-full bg-[#ecf9ff] text-slate-800 font-sans">
+<div class="relative overflow-hidden w-full bg-[#ecf9ff] text-slate-800 font-sans">
+
+  <div class="ambience-glow pointer-events-none absolute inset-0 z-0"></div>
 
   <section class="relative w-full min-h-137.5 md:min-h-162.5 bg-cover bg-center flex items-center overflow-hidden"
            style="background-image: url('{{ asset('assets/images/esb-ny-amrik.png') }}');">
@@ -178,7 +180,7 @@
     </div>
 
     <div class="mt-10 flex justify-center">
-      <button type="button" class="btn-shimmer px-8 py-3 rounded-full bg-[#39d0ff] text-white font-bold text-xs uppercase tracking-wider">
+      <button type="button" class="btn-shimmer px-8 py-3 rounded-full bg-[#39d0ff]/80 backdrop-blur-md border border-cyan-300/30 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-cyan-500/20">
         Discover more places
       </button>
     </div>
@@ -278,7 +280,7 @@
     </div>
 
     <div class="mt-12 flex justify-center">
-      <button type="button" class="btn-shimmer px-8 py-3 rounded-full bg-[#39d0ff] text-white font-bold text-xs uppercase tracking-wider">
+      <button type="button" class="btn-shimmer px-8 py-3 rounded-full bg-[#39d0ff]/80 backdrop-blur-md border border-cyan-300/30 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-cyan-500/20">
         View all stays
       </button>
     </div>

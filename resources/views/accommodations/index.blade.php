@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="w-full bg-[#070b19] text-white font-sans min-h-screen relative overflow-x-hidden">
+    <div class="relative overflow-hidden w-full bg-[#070b19] text-white font-sans min-h-screen">
+
+        <div class="ambience-glow pointer-events-none absolute inset-0 z-0"></div>
 
         <section class="relative w-full h-162.5 bg-cover bg-center flex items-center justify-between px-8 md:px-16"
             style="background-image: url('{{ asset('assets/images/hhi.png') }}');">
@@ -197,7 +199,7 @@
 
                 <div class="mt-12 flex justify-center">
                     <button type="button"
-                        class="btn-shimmer px-8 py-3 rounded-full bg-[#39d0ff] text-white font-bold text-xs uppercase tracking-wider">
+                        class="btn-shimmer px-8 py-3 rounded-full bg-[#39d0ff]/80 backdrop-blur-md border border-cyan-300/30 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-cyan-500/20">
                         View all destinations
                     </button>
                 </div>
@@ -223,7 +225,7 @@
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 alt="Marina Bay Sanda">
                         </div>
-                        <div class="w-1/2 bg-[#0099d8] p-4 flex flex-col justify-between text-white relative">
+                        <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
                                 class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -238,7 +240,7 @@
                             </div>
                             <div class="space-y-3">
                                 <span
-                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1b3b6f] text-[10px] font-semibold">
+                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1b3b6f]/70 text-[10px] font-semibold backdrop-blur-sm">
                                     <svg class="w-3 h-3 text-cyan-300" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -261,7 +263,7 @@
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 alt="Four Seasons Resort">
                         </div>
-                        <div class="w-1/2 bg-[#0099d8] p-4 flex flex-col justify-between text-white relative">
+                        <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
                                 class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -276,7 +278,7 @@
                             </div>
                             <div class="space-y-3">
                                 <span
-                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#274838] text-[10px] font-semibold">
+                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#274838]/70 text-[10px] font-semibold backdrop-blur-sm">
                                     <svg class="w-3 h-3 text-emerald-300" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -299,7 +301,7 @@
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 alt="The Ritz">
                         </div>
-                        <div class="w-1/2 bg-[#0099d8] p-4 flex flex-col justify-between text-white relative">
+                        <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
                                 class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -314,7 +316,7 @@
                             </div>
                             <div class="space-y-3">
                                 <span
-                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1b3b6f] text-[10px] font-semibold">
+                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1b3b6f]/70 text-[10px] font-semibold backdrop-blur-sm">
                                     <svg class="w-3 h-3 text-cyan-300" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -337,7 +339,7 @@
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 alt="Marina Bay Sanda">
                         </div>
-                        <div class="w-1/2 bg-[#0099d8] p-4 flex flex-col justify-between text-white relative">
+                        <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
                                 class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -352,7 +354,7 @@
                             </div>
                             <div class="space-y-3">
                                 <span
-                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1b3b6f] text-[10px] font-semibold">
+                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1b3b6f]/70 text-[10px] font-semibold backdrop-blur-sm">
                                     <svg class="w-3 h-3 text-cyan-300" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -375,7 +377,7 @@
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 alt="Four Seasons Resort">
                         </div>
-                        <div class="w-1/2 bg-[#0099d8] p-4 flex flex-col justify-between text-white relative">
+                        <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
                                 class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -390,7 +392,7 @@
                             </div>
                             <div class="space-y-3">
                                 <span
-                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#274838] text-[10px] font-semibold">
+                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#274838]/70 text-[10px] font-semibold backdrop-blur-sm">
                                     <svg class="w-3 h-3 text-emerald-300" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -413,7 +415,7 @@
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 alt="The Ritz">
                         </div>
-                        <div class="w-1/2 bg-[#0099d8] p-4 flex flex-col justify-between text-white relative">
+                        <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
                                 class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -428,7 +430,7 @@
                             </div>
                             <div class="space-y-3">
                                 <span
-                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1b3b6f] text-[10px] font-semibold">
+                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1b3b6f]/70 text-[10px] font-semibold backdrop-blur-sm">
                                     <svg class="w-3 h-3 text-cyan-300" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -448,7 +450,7 @@
 
                 <div class="mt-12 flex justify-center">
                     <button type="button"
-                        class="btn-shimmer px-8 py-3 rounded-full bg-[#39d0ff] text-white font-bold text-xs uppercase tracking-wider">
+                        class="btn-shimmer px-8 py-3 rounded-full bg-[#39d0ff]/80 backdrop-blur-md border border-cyan-300/30 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-cyan-500/20">
                         View all stays
                     </button>
                 </div>
@@ -469,7 +471,7 @@
 
                     <a href="#"
                         class="flex items-center gap-3 px-6 py-4 rounded-full bg-linear-to-r from-[#295b96] to-[#1e3e68] hover:from-[#336cb2] hover:to-[#254d80] text-white shadow-md transition-all transform hover:-translate-y-0.5">
-                        <div class="w-8 h-8 rounded-full bg-[#173254] flex items-center justify-center shrink-0">
+                        <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center shrink-0">
                             <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -480,7 +482,7 @@
 
                     <a href="#"
                         class="flex items-center gap-3 px-6 py-4 rounded-full bg-linear-to-r from-[#59784e] to-[#2c473b] hover:from-[#698e5c] hover:to-[#365749] text-white shadow-md transition-all transform hover:-translate-y-0.5">
-                        <div class="w-8 h-8 rounded-full bg-[#1b3528] flex items-center justify-center shrink-0">
+                        <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center shrink-0">
                             <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M12 3v18m-6-6l6 6 6-6M5 9c2-2 5-3 7-3s5 1 7 3" />
@@ -491,7 +493,7 @@
 
                     <a href="#"
                         class="flex items-center gap-3 px-6 py-4 rounded-full bg-linear-to-r from-[#875932] to-[#402b1f] hover:from-[#9c673a] hover:to-[#4e3526] text-white shadow-md transition-all transform hover:-translate-y-0.5">
-                        <div class="w-8 h-8 rounded-full bg-[#2b1b12] flex items-center justify-center shrink-0">
+                        <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center shrink-0">
                             <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
@@ -502,7 +504,7 @@
 
                     <a href="#"
                         class="flex items-center gap-3 px-6 py-4 rounded-full bg-linear-to-r from-[#4d4c8b] to-[#252454] hover:from-[#5b5a9e] hover:to-[#2e2d66] text-white shadow-md transition-all transform hover:-translate-y-0.5">
-                        <div class="w-8 h-8 rounded-full bg-[#1a193d] flex items-center justify-center shrink-0">
+                        <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center shrink-0">
                             <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />

@@ -11,7 +11,7 @@
         <div class="relative z-10 w-full max-w-5xl flex flex-col md:flex-row items-center justify-center gap-12">
 
             <div
-                class="w-full max-w-md h-[480px] bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[40px] px-8 md:px-10 py-12 shadow-2xl flex flex-col justify-between shrink-0">
+                class="w-full max-w-md h-[480px] glass-ios rounded-[40px] px-8 md:px-10 py-12 flex flex-col justify-between shrink-0">
 
                 <div class="flex items-center gap-5">
                     <div
@@ -66,7 +66,7 @@
                 </a>
 
                 <div
-                    class="w-full h-full bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[40px] px-8 md:px-10 py-12 shadow-2xl block overflow-hidden">
+                    class="w-full h-full glass-ios rounded-[40px] px-8 md:px-10 py-12 block overflow-hidden">
 
                     <div class="flex border-b border-white/20 mb-6">
                         <a href="{{ route('profile.users.index', ['tab' => request('tab', 'favorites'), 'type' => 'accommodations']) }}"

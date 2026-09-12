@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="w-full bg-[#070b19] text-white font-sans min-h-screen">
+    <div class="relative overflow-hidden w-full bg-[#070b19] text-white font-sans min-h-screen">
+
+        <div class="ambience-glow pointer-events-none absolute inset-0 z-0"></div>
 
         <section class="relative w-full h-112.5 md:h-137.5 bg-cover bg-center overflow-hidden flex items-end pb-8"
             style="background-image: url('{{ asset('assets/images/santorini.png') }}');">
@@ -40,12 +42,12 @@
             </div>
         </section>
 
-        <section class="max-w-7xl mx-auto px-8 py-8 space-y-8">
+        <section class="relative z-10 max-w-7xl mx-auto px-8 py-8 space-y-8">
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
                 <div
-                    class="lg:col-span-2 bg-[#0e1629]/80 backdrop-blur-md border border-slate-800 rounded-2xl p-6 md:p-8 space-y-4 shadow-xl">
+                    class="lg:col-span-2 glass-ios rounded-2xl p-6 md:p-8 space-y-4">
                     <div class="flex flex-wrap items-center gap-2 text-xs font-semibold text-cyan-400">
                         <span>Island</span>
                         <span>•</span>
@@ -67,7 +69,7 @@
                 </div>
 
                 <div
-                    class="bg-[#0e1629]/80 backdrop-blur-md border border-slate-800 rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-xl">
+                    class="glass-ios rounded-2xl p-6 flex flex-col justify-between space-y-4">
                     <div class="space-y-3">
                         <h3 class="text-sm font-semibold text-slate-300">Ready to explore?</h3>
                         <a href="#"
@@ -79,7 +81,7 @@
                             Get Direction
                         </a>
                         <button type="button"
-                            class="w-full py-3 px-4 rounded-xl bg-slate-800/80 btn-shimmer border border-slate-700 text-xs font-semibold flex items-center justify-center gap-2">
+                            class="w-full py-3 px-4 rounded-xl bg-white/5 backdrop-blur-md hover:bg-white/10 btn-shimmer border border-white/15 text-xs font-semibold flex items-center justify-center gap-2">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
@@ -95,7 +97,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
                 <div
-                    class="lg:col-span-3 bg-[#0e1629]/80 backdrop-blur-md border border-slate-800 rounded-2xl p-6 md:p-8 space-y-4 shadow-xl">
+                    class="lg:col-span-3 glass-ios rounded-2xl p-6 md:p-8 space-y-4">
                     <h3 class="text-lg font-bold text-white">About Santorini</h3>
                     <p class="text-xs md:text-sm text-slate-300 leading-relaxed">
                         Santorini is one of the Cyclades islands in the Aegean Sea. It was devastated by a volcanic eruption
@@ -162,7 +164,7 @@
                             </div>
 
                             <div
-                                class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-white group-hover:text-cyan-600 transition-all">
+                                class="glass-avatar w-8 h-8 rounded-full flex items-center justify-center text-white group-hover:bg-white group-hover:text-cyan-600 transition-all">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -205,7 +207,7 @@
                             </div>
 
                             <div
-                                class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-white group-hover:text-cyan-600 transition-all">
+                                class="glass-avatar w-8 h-8 rounded-full flex items-center justify-center text-white group-hover:bg-white group-hover:text-cyan-600 transition-all">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -247,7 +249,7 @@
                             </div>
 
                             <div
-                                class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-white group-hover:text-cyan-600 transition-all">
+                                class="glass-avatar w-8 h-8 rounded-full flex items-center justify-center text-white group-hover:bg-white group-hover:text-cyan-600 transition-all">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -289,7 +291,7 @@
                             </div>
 
                             <div
-                                class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-white group-hover:text-cyan-600 transition-all">
+                                class="glass-avatar w-8 h-8 rounded-full flex items-center justify-center text-white group-hover:bg-white group-hover:text-cyan-600 transition-all">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M14 5l7 7m0 0l-7 7m7-7H3" />

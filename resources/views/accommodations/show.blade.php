@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="w-full bg-[#070b19] text-white font-sans min-h-screen">
+    <div class="relative overflow-hidden w-full bg-[#070b19] text-white font-sans min-h-screen">
+
+        <div class="ambience-glow pointer-events-none absolute inset-0 z-0"></div>
 
         <section class="relative w-full h-112.5 md:h-137.5 bg-cover bg-center overflow-hidden flex items-end pb-8"
             style="background-image: url('{{ asset('assets/images/gracehotel.png') }}');">
@@ -40,12 +42,12 @@
             </div>
         </section>
 
-        <section class="max-w-7xl mx-auto px-8 py-8 space-y-8">
+        <section class="relative z-10 max-w-7xl mx-auto px-8 py-8 space-y-8">
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
                 <div
-                    class="lg:col-span-2 bg-[#0e1629]/80 backdrop-blur-md border border-slate-800 rounded-2xl p-6 md:p-8 space-y-4 shadow-xl">
+                    class="lg:col-span-2 glass-ios rounded-2xl p-6 md:p-8 space-y-4">
                     <div class="flex flex-wrap items-center gap-2 text-xs font-semibold text-cyan-400">
                         <span>Luxury Hotel</span>
                         <span>•</span>
@@ -60,7 +62,7 @@
                     <div class="flex items-center gap-4 text-xs">
 
                         <div
-                            class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0a1f18] border border-[#14532d] text-emerald-400 font-semibold">
+                            class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-400 font-semibold backdrop-blur-sm">
                             <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
                             <span class="text-white font-bold">Available</span>
                         </div>
@@ -70,8 +72,8 @@
                         <div class="h-4 w-px bg-slate-700/60"></div>
 
                         <div
-                            class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-linear-to-r from-[#6b8e5d] to-[#2d4d43] text-white font-medium shadow-sm">
-                            <div class="w-5 h-5 rounded-full bg-[#183634] flex items-center justify-center">
+                            class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-linear-to-r from-emerald-600/70 to-[#2d4d43]/80 text-white font-medium shadow-sm backdrop-blur-md">
+                            <div class="w-5 h-5 rounded-full bg-black/20 backdrop-blur-sm flex items-center justify-center">
                                 <svg class="w-3 h-3 text-[#5eead4]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M12 3v18m-6-6l6 6 6-6M5 9c2-2 5-3 7-3s5 1 7 3" />
@@ -93,7 +95,7 @@
                 </div>
 
                 <div
-                    class="bg-[#0e1629]/80 backdrop-blur-md border border-slate-800 rounded-2xl p-6 flex flex-col justify-between space-y-4 shadow-xl">
+                    class="glass-ios rounded-2xl p-6 flex flex-col justify-between space-y-4">
                     <div class="space-y-3">
                         <h3 class="text-sm font-semibold text-slate-300">Ready to explore?</h3>
                         <a href="#"
@@ -105,7 +107,7 @@
                             Get Direction
                         </a>
                         <button type="button"
-                            class="w-full py-3 px-4 rounded-xl bg-slate-800/80 btn-shimmer border border-slate-700 text-xs font-semibold flex items-center justify-center gap-2">
+                            class="w-full py-3 px-4 rounded-xl bg-white/5 backdrop-blur-md hover:bg-white/10 btn-shimmer border border-white/15 text-xs font-semibold flex items-center justify-center gap-2">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
@@ -121,7 +123,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
                 <div
-                    class="lg:col-span-2 bg-[#0e1629]/80 backdrop-blur-md border border-slate-800 rounded-2xl p-6 md:p-8 space-y-4 shadow-xl">
+                    class="lg:col-span-2 glass-ios rounded-2xl p-6 md:p-8 space-y-4">
                     <h3 class="text-lg font-bold text-white">About Grace Hotel</h3>
                     <p class="text-xs md:text-sm text-slate-300 leading-relaxed">
                         Grace Hotel is one of the Cyclades islands in the Aegean Sea. It was devastated by a volcanic
@@ -139,12 +141,12 @@
                     </div>
                 </div>
 
-                <div class="bg-[#0e1629]/80 backdrop-blur-md border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl">
+                <div class="glass-ios rounded-2xl p-6 space-y-4">
                     <h3 class="text-base font-bold text-white">Included Facilities</h3>
                     <div class="space-y-3">
 
                         <div
-                            class="flex items-center gap-3 px-4 py-3.5 rounded-2xl bg-[#131b2e] border border-slate-700/40 text-sm text-slate-200">
+                            class="flex items-center gap-3 px-4 py-3.5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-slate-200">
                             <svg class="w-5 h-5 text-cyan-400 shrink-0" fill="none" stroke="currentColor"
                                 viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -154,7 +156,7 @@
                         </div>
 
                         <div
-                            class="flex items-center gap-3 px-4 py-3.5 rounded-2xl bg-[#131b2e] border border-slate-700/40 text-sm text-slate-200">
+                            class="flex items-center gap-3 px-4 py-3.5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-slate-200">
                             <svg class="w-5 h-5 text-cyan-400 shrink-0" fill="none" stroke="currentColor"
                                 viewBox="0 0 24 24">
                                 <circle cx="12" cy="12" r="9" stroke-width="2" />
@@ -165,7 +167,7 @@
                         </div>
 
                         <div
-                            class="flex items-center gap-3 px-4 py-3.5 rounded-2xl bg-[#131b2e] border border-slate-700/40 text-sm text-slate-200">
+                            class="flex items-center gap-3 px-4 py-3.5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-slate-200">
                             <svg class="w-5 h-5 text-cyan-400 shrink-0" fill="none" stroke="currentColor"
                                 viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -175,7 +177,7 @@
                         </div>
 
                         <div
-                            class="flex items-center gap-3 px-4 py-3.5 rounded-2xl bg-[#131b2e] border border-slate-700/40 text-sm text-slate-200">
+                            class="flex items-center gap-3 px-4 py-3.5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-slate-200">
                             <svg class="w-5 h-5 text-cyan-400 shrink-0" fill="none" stroke="currentColor"
                                 viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -185,7 +187,7 @@
                         </div>
 
                         <div
-                            class="flex items-center gap-3 px-4 py-3.5 rounded-2xl bg-[#131b2e] border border-slate-700/40 text-sm text-slate-200">
+                            class="flex items-center gap-3 px-4 py-3.5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-slate-200">
                             <svg class="w-5 h-5 text-cyan-400 shrink-0" fill="none" stroke="currentColor"
                                 viewBox="0 0 24 24">
                                 <circle cx="12" cy="12" r="9" stroke-width="2" />
@@ -196,7 +198,7 @@
                         </div>
 
                         <div
-                            class="flex items-center gap-3 px-4 py-3.5 rounded-2xl bg-[#131b2e] border border-slate-700/40 text-sm text-slate-200">
+                            class="flex items-center gap-3 px-4 py-3.5 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 text-sm text-slate-200">
                             <svg class="w-5 h-5 text-cyan-400 shrink-0" fill="none" stroke="currentColor"
                                 viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -226,7 +228,7 @@
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 alt="Marina Bay Sanda">
                         </div>
-                        <div class="w-1/2 bg-[#0099d8] p-4 flex flex-col justify-between text-white relative">
+                        <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
                                 class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -241,7 +243,7 @@
                             </div>
                             <div class="space-y-3">
                                 <span
-                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1b3b6f] text-[10px] font-semibold">
+                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1b3b6f]/70 text-[10px] font-semibold backdrop-blur-sm">
                                     <svg class="w-3 h-3 text-cyan-300" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -264,7 +266,7 @@
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 alt="Four Seasons Resort">
                         </div>
-                        <div class="w-1/2 bg-[#0099d8] p-4 flex flex-col justify-between text-white relative">
+                        <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
                                 class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -279,7 +281,7 @@
                             </div>
                             <div class="space-y-3">
                                 <span
-                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#274838] text-[10px] font-semibold">
+                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#274838]/70 text-[10px] font-semibold backdrop-blur-sm">
                                     <svg class="w-3 h-3 text-emerald-300" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -302,7 +304,7 @@
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 alt="The Ritz">
                         </div>
-                        <div class="w-1/2 bg-[#0099d8] p-4 flex flex-col justify-between text-white relative">
+                        <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
                                 class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -317,7 +319,7 @@
                             </div>
                             <div class="space-y-3">
                                 <span
-                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1b3b6f] text-[10px] font-semibold">
+                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1b3b6f]/70 text-[10px] font-semibold backdrop-blur-sm">
                                     <svg class="w-3 h-3 text-cyan-300" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -340,7 +342,7 @@
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 alt="Marina Bay Sanda">
                         </div>
-                        <div class="w-1/2 bg-[#0099d8] p-4 flex flex-col justify-between text-white relative">
+                        <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
                                 class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -355,7 +357,7 @@
                             </div>
                             <div class="space-y-3">
                                 <span
-                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1b3b6f] text-[10px] font-semibold">
+                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1b3b6f]/70 text-[10px] font-semibold backdrop-blur-sm">
                                     <svg class="w-3 h-3 text-cyan-300" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -378,7 +380,7 @@
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 alt="Four Seasons Resort">
                         </div>
-                        <div class="w-1/2 bg-[#0099d8] p-4 flex flex-col justify-between text-white relative">
+                        <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
                                 class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -393,7 +395,7 @@
                             </div>
                             <div class="space-y-3">
                                 <span
-                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#274838] text-[10px] font-semibold">
+                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#274838]/70 text-[10px] font-semibold backdrop-blur-sm">
                                     <svg class="w-3 h-3 text-emerald-300" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -416,7 +418,7 @@
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 alt="The Ritz">
                         </div>
-                        <div class="w-1/2 bg-[#0099d8] p-4 flex flex-col justify-between text-white relative">
+                        <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
                                 class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -431,7 +433,7 @@
                             </div>
                             <div class="space-y-3">
                                 <span
-                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1b3b6f] text-[10px] font-semibold">
+                                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1b3b6f]/70 text-[10px] font-semibold backdrop-blur-sm">
                                     <svg class="w-3 h-3 text-cyan-300" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
