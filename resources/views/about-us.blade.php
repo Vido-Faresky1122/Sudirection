@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 {{-- ============ HERO + MISSION + OFFER SECTION (satu background menyatu) ============ --}}
@@ -7,6 +7,7 @@
     style="background-image: url('{{ asset('assets/images/about-us-bg1.png') }}');"
 >
     <div class="absolute inset-0 bg-linear-to-b from-black/50 via-black/50 to-white"></div>
+    <div class="glass-photo absolute inset-0"></div>
  
     <div class="relative z-10 px-6 md:px-10 pt-16 pb-32">
  
@@ -27,7 +28,7 @@
             <div class="flex-1 max-w-lg">
                 <h2 class="text-white text-3xl font-bold mb-5">Our Mission</h2>
                 <p class="text-white/80 text-sm leading-relaxed mb-6">
-                    At SUDIRECTION, we believe that travel is more than just visiting a place—it's about
+                    At SUDIRECTION, we believe that travel is more than just visiting a placeâ€”it's about
                     the connection you make with the world. Our platform is designed to provide travelers
                     with the most reliable information, from hidden natural wonders to the most comfortable
                     stays.
@@ -145,6 +146,7 @@
     style="background-image: url('{{ asset('assets/images/Section.png') }}');"
 >
     <div class="absolute inset-0 bg-black/10"></div>
+    <div class="glass-photo absolute inset-0"></div>
  
     <div class="relative z-10 max-w-2xl mx-auto">
         <svg class="w-8 h-8 mx-auto mb-4 text-sky-500" fill="currentColor" viewBox="0 0 24 24">

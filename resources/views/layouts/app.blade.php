@@ -9,12 +9,11 @@
     <style>
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #0f172a;
         }
     </style>
 </head>
 
-<body class="bg-transparent min-h-screen flex flex-col">
+<body class="app-bg min-h-screen flex flex-col">
 
     {{-- Header Start--}}
     <header

@@ -1,7 +1,7 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
-    <div class="relative overflow-hidden w-full bg-[#070b19] text-white font-sans min-h-screen">
+    <div class="relative overflow-hidden w-full bg-transparent text-white font-sans min-h-screen">
 
         <div class="ambience-glow pointer-events-none absolute inset-0 z-0"></div>
 
@@ -9,27 +9,32 @@
             style="background-image: url('{{ asset('assets/images/gracehotel.png') }}');">
 
             <div class="absolute inset-0 bg-linear-to-t from-[#070b19] via-transparent to-black/30"></div>
+            <div class="glass-photo absolute inset-0"></div>
 
             <div class="relative z-10 max-w-7xl mx-auto px-8 w-full flex items-center gap-3 overflow-x-auto pb-2">
                 <div
-                    class="w-20 h-14 md:w-28 md:h-18 rounded-lg overflow-hidden border-2 border-cyan-400 shrink-0 shadow-md">
+                    class="relative w-20 h-14 md:w-28 md:h-18 rounded-lg overflow-hidden border-2 border-cyan-400 shrink-0 shadow-md">
                     <img src="{{ asset('assets/images/gracehotel-1.png') }}" class="w-full h-full object-cover"
                         alt="Grace Hotel 1">
+                    <div class="glass-photo absolute inset-0"></div>
                 </div>
                 <div
-                    class="w-20 h-14 md:w-28 md:h-18 rounded-lg overflow-hidden border border-white/30 shrink-0 shadow-md opacity-80 hover:opacity-100 transition-opacity">
+                    class="relative w-20 h-14 md:w-28 md:h-18 rounded-lg overflow-hidden border border-white/30 shrink-0 shadow-md opacity-80 hover:opacity-100 transition-opacity">
                     <img src="{{ asset('assets/images/gracehotel-2.png') }}" class="w-full h-full object-cover"
                         alt="Grace Hotel 2">
+                    <div class="glass-photo absolute inset-0"></div>
                 </div>
                 <div
-                    class="w-20 h-14 md:w-28 md:h-18 rounded-lg overflow-hidden border border-white/30 shrink-0 shadow-md opacity-80 hover:opacity-100 transition-opacity">
+                    class="relative w-20 h-14 md:w-28 md:h-18 rounded-lg overflow-hidden border border-white/30 shrink-0 shadow-md opacity-80 hover:opacity-100 transition-opacity">
                     <img src="{{ asset('assets/images/gracehotel-3.png') }}" class="w-full h-full object-cover"
                         alt="Grace Hotel 3">
+                    <div class="glass-photo absolute inset-0"></div>
                 </div>
                 <div
-                    class="w-20 h-14 md:w-28 md:h-18 rounded-lg overflow-hidden border border-white/30 shrink-0 shadow-md opacity-80 hover:opacity-100 transition-opacity">
+                    class="relative w-20 h-14 md:w-28 md:h-18 rounded-lg overflow-hidden border border-white/30 shrink-0 shadow-md opacity-80 hover:opacity-100 transition-opacity">
                     <img src="{{ asset('assets/images/gracehotel-4.png') }}" class="w-full h-full object-cover"
                         alt="Grace Hotel 4">
+                    <div class="glass-photo absolute inset-0"></div>
                 </div>
                 <button
                     class="px-4 py-2.5 rounded-lg bg-black/60 backdrop-blur-md border border-white/20 text-xs font-semibold text-white flex items-center gap-2 shrink-0 hover:bg-black/80 transition-all">
@@ -50,9 +55,9 @@
                     class="lg:col-span-2 glass-ios rounded-2xl p-6 md:p-8 space-y-4">
                     <div class="flex flex-wrap items-center gap-2 text-xs font-semibold text-cyan-400">
                         <span>Luxury Hotel</span>
-                        <span>•</span>
+                        <span>â€¢</span>
                         <span>Boutique</span>
-                        <span>•</span>
+                        <span>â€¢</span>
                         <span>Infinity Pool</span>
                     </div>
 
@@ -136,7 +141,7 @@
                     <div class="pt-4 flex flex-wrap items-center justify-between gap-4 border-t border-slate-800 text-xs">
                         <div class="flex items-center gap-2">
                             <span class="text-slate-400">Price:</span>
-                            <span class="font-bold text-white">$$$ • Premium</span>
+                            <span class="font-bold text-white">$$$ â€¢ Premium</span>
                         </div>
                     </div>
                 </div>
@@ -227,6 +232,7 @@
                             <img src="{{ asset('assets/images/mbs.png') }}"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 alt="Marina Bay Sanda">
+                            <div class="glass-photo absolute inset-0"></div>
                         </div>
                         <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
@@ -253,7 +259,7 @@
                                 </span>
                                 <div
                                     class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
-                                    View Stay ➔
+                                    View Stay âž”
                                 </div>
                             </div>
                         </div>
@@ -265,6 +271,7 @@
                             <img src="{{ asset('assets/images/fsr.png') }}"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 alt="Four Seasons Resort">
+                            <div class="glass-photo absolute inset-0"></div>
                         </div>
                         <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
@@ -291,7 +298,7 @@
                                 </span>
                                 <div
                                     class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
-                                    View Stay ➔
+                                    View Stay âž”
                                 </div>
                             </div>
                         </div>
@@ -303,6 +310,7 @@
                             <img src="{{ asset('assets/images/theritz.png') }}"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 alt="The Ritz">
+                            <div class="glass-photo absolute inset-0"></div>
                         </div>
                         <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
@@ -329,7 +337,7 @@
                                 </span>
                                 <div
                                     class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
-                                    View Stay ➔
+                                    View Stay âž”
                                 </div>
                             </div>
                         </div>
@@ -341,6 +349,7 @@
                             <img src="{{ asset('assets/images/mbs.png') }}"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 alt="Marina Bay Sanda">
+                            <div class="glass-photo absolute inset-0"></div>
                         </div>
                         <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
@@ -367,7 +376,7 @@
                                 </span>
                                 <div
                                     class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
-                                    View Stay ➔
+                                    View Stay âž”
                                 </div>
                             </div>
                         </div>
@@ -379,6 +388,7 @@
                             <img src="{{ asset('assets/images/fsr.png') }}"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 alt="Four Seasons Resort">
+                            <div class="glass-photo absolute inset-0"></div>
                         </div>
                         <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
@@ -405,7 +415,7 @@
                                 </span>
                                 <div
                                     class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
-                                    View Stay ➔
+                                    View Stay âž”
                                 </div>
                             </div>
                         </div>
@@ -417,6 +427,7 @@
                             <img src="{{ asset('assets/images/theritz.png') }}"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 alt="The Ritz">
+                            <div class="glass-photo absolute inset-0"></div>
                         </div>
                         <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
@@ -443,7 +454,7 @@
                                 </span>
                                 <div
                                     class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
-                                    View Stay ➔
+                                    View Stay âž”
                                 </div>
                             </div>
                         </div>

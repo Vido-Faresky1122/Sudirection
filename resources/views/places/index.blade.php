@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
 <div class="relative overflow-hidden w-full bg-[#ecf9ff] text-slate-800 font-sans">
@@ -9,6 +9,7 @@
            style="background-image: url('{{ asset('assets/images/esb-ny-amrik.png') }}');">
     
     <div class="absolute inset-0 bg-linear-to-r from-slate-900/80 via-slate-900/40 to-transparent"></div>
+    <div class="glass-photo absolute inset-0"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-8 w-full py-20 flex justify-between items-center">
       <div class="max-w-2xl text-white space-y-6">
@@ -65,6 +66,7 @@
         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
              style="background-image: url('{{ asset('assets/images/tokyo-tower.png') }}');"></div>
         <div class="absolute inset-0 bg-linear-to-t from-[#0088cc]/90 via-black/20 to-transparent"></div>
+        <div class="glass-photo absolute inset-0"></div>
         
         <button type="button" class="absolute top-4 right-4 text-white/80 hover:text-white transition-colors z-10" onclick="event.stopPropagation();">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
@@ -79,7 +81,7 @@
             <h3 class="text-2xl font-bold uppercase tracking-tight">Tokyo</h3>
             <p class="text-xs opacity-80 max-w-xs line-clamp-1">Experience tradition and the future</p>
             <div class="flex items-center space-x-1 text-xs pt-1">
-              <span class="text-yellow-400">★</span>
+              <span class="text-yellow-400">â˜…</span>
               <span class="font-bold">4.8</span>
             </div>
           </div>
@@ -94,6 +96,7 @@
         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
              style="background-image: url('{{ asset('assets/images/santorini.png') }}');"></div>
         <div class="absolute inset-0 bg-linear-to-t from-[#0088cc]/90 via-black/20 to-transparent"></div>
+        <div class="glass-photo absolute inset-0"></div>
         
         <button type="button" class="absolute top-4 right-4 text-white/80 hover:text-white transition-colors z-10" onclick="event.stopPropagation();">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
@@ -108,7 +111,7 @@
             <h3 class="text-2xl font-bold uppercase tracking-tight">SANTORINI</h3>
             <p class="text-xs opacity-80 max-w-xs line-clamp-1">Enjoy spectacular view of the Aegean Sea</p>
             <div class="flex items-center space-x-1 text-xs pt-1">
-              <span class="text-yellow-400">★</span>
+              <span class="text-yellow-400">â˜…</span>
               <span class="font-bold">4.7</span>
             </div>
           </div>
@@ -123,6 +126,7 @@
         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
              style="background-image: url('{{ asset('assets/images/seoul.png') }}');"></div>
         <div class="absolute inset-0 bg-linear-to-t from-[#0088cc]/90 via-black/20 to-transparent"></div>
+        <div class="glass-photo absolute inset-0"></div>
         
         <button type="button" class="absolute top-4 right-4 text-white/80 hover:text-white transition-colors z-10" onclick="event.stopPropagation();">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
@@ -137,7 +141,7 @@
             <h3 class="text-2xl font-bold uppercase tracking-tight">Seoul</h3>
             <p class="text-xs opacity-80 max-w-xs line-clamp-1">Experience tradition and the future</p>
             <div class="flex items-center space-x-1 text-xs pt-1">
-              <span class="text-yellow-400">★</span>
+              <span class="text-yellow-400">â˜…</span>
               <span class="font-bold">4.6</span>
             </div>
           </div>
@@ -152,6 +156,7 @@
         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
              style="background-image: url('{{ asset('assets/images/bern.png') }}');"></div>
         <div class="absolute inset-0 bg-linear-to-t from-[#0088cc]/90 via-black/20 to-transparent"></div>
+        <div class="glass-photo absolute inset-0"></div>
         
         <button type="button" class="absolute top-4 right-4 text-white/80 hover:text-white transition-colors z-10" onclick="event.stopPropagation();">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg>
@@ -166,7 +171,7 @@
             <h3 class="text-2xl font-bold uppercase tracking-tight">Bern</h3>
             <p class="text-xs opacity-80 max-w-xs line-clamp-1">Relax among breathtaking mountains</p>
             <div class="flex items-center space-x-1 text-xs pt-1">
-              <span class="text-yellow-400">★</span>
+              <span class="text-yellow-400">â˜…</span>
               <span class="font-bold">4.5</span>
             </div>
           </div>
@@ -201,7 +206,7 @@
           </span>
           <h4 class="text-lg font-extrabold">Eiffel Tower</h4>
           <div class="flex items-center space-x-1 text-xs">
-            <span class="text-yellow-400">★</span>
+            <span class="text-yellow-400">â˜…</span>
             <span class="font-bold">4.7</span>
             <span class="text-slate-400 text-[10px]">(12.4k)</span>
           </div>
@@ -223,7 +228,7 @@
           </span>
           <h4 class="text-lg font-extrabold">Statue of Liberty</h4>
           <div class="flex items-center space-x-1 text-xs">
-            <span class="text-yellow-400">★</span>
+            <span class="text-yellow-400">â˜…</span>
             <span class="font-bold">4.7</span>
             <span class="text-slate-400 text-[10px]">(9.8k)</span>
           </div>
@@ -245,7 +250,7 @@
           </span>
           <h4 class="text-lg font-extrabold">Tanah Lot</h4>
           <div class="flex items-center space-x-1 text-xs">
-            <span class="text-yellow-400">★</span>
+            <span class="text-yellow-400">â˜…</span>
             <span class="font-bold">4.6</span>
             <span class="text-slate-400 text-[10px]">(11.5k)</span>
           </div>
@@ -267,7 +272,7 @@
           </span>
           <h4 class="text-lg font-extrabold">Mount Bromo</h4>
           <div class="flex items-center space-x-1 text-xs">
-            <span class="text-yellow-400">★</span>
+            <span class="text-yellow-400">â˜…</span>
             <span class="font-bold">4.9</span>
             <span class="text-slate-400 text-[10px]">(7.5k)</span>
           </div>

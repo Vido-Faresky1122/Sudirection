@@ -1,13 +1,14 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
-    <div class="relative overflow-hidden w-full bg-[#070b19] text-white font-sans min-h-screen">
+    <div class="relative overflow-hidden w-full bg-transparent text-white font-sans min-h-screen">
 
         <div class="ambience-glow pointer-events-none absolute inset-0 z-0"></div>
 
         <section class="relative w-full h-162.5 bg-cover bg-center flex items-center justify-between px-8 md:px-16"
             style="background-image: url('{{ asset('assets/images/hhi.png') }}');">
             <div class="absolute inset-0 bg-linear-to-r from-black/80 via-black/40 to-transparent"></div>
+            <div class="glass-photo absolute inset-0"></div>
 
             <div class="relative z-10 max-w-2xl space-y-6">
                 <div
@@ -65,6 +66,7 @@
                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             alt="Tokyo">
                         <div class="absolute inset-0 bg-linear-to-t from-[#005580]/90 via-black/20 to-transparent"></div>
+                        <div class="glass-photo absolute inset-0"></div>
                         <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end text-white">
                             <div>
                                 <h3 class="text-xl font-bold">Tokyo</h3>
@@ -72,7 +74,7 @@
                             </div>
                             <div
                                 class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-xs group-hover:bg-cyan-400 group-hover:text-black transition-all">
-                                ➔</div>
+                                âž”</div>
                         </div>
                     </a>
 
@@ -82,6 +84,7 @@
                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             alt="New York">
                         <div class="absolute inset-0 bg-linear-to-t from-[#005580]/90 via-black/20 to-transparent"></div>
+                        <div class="glass-photo absolute inset-0"></div>
                         <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end text-white">
                             <div>
                                 <h3 class="text-xl font-bold">New York</h3>
@@ -89,7 +92,7 @@
                             </div>
                             <div
                                 class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-xs group-hover:bg-cyan-400 group-hover:text-black transition-all">
-                                ➔</div>
+                                âž”</div>
                         </div>
                     </a>
 
@@ -99,6 +102,7 @@
                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             alt="Chong Qing">
                         <div class="absolute inset-0 bg-linear-to-t from-[#005580]/90 via-black/20 to-transparent"></div>
+                        <div class="glass-photo absolute inset-0"></div>
                         <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end text-white">
                             <div>
                                 <h3 class="text-xl font-bold">Chong Qing</h3>
@@ -106,7 +110,7 @@
                             </div>
                             <div
                                 class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-xs group-hover:bg-cyan-400 group-hover:text-black transition-all">
-                                ➔</div>
+                                âž”</div>
                         </div>
                     </a>
 
@@ -116,6 +120,7 @@
                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             alt="Seoul">
                         <div class="absolute inset-0 bg-linear-to-t from-[#005580]/90 via-black/20 to-transparent"></div>
+                        <div class="glass-photo absolute inset-0"></div>
                         <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end text-white">
                             <div>
                                 <h3 class="text-xl font-bold">Seoul</h3>
@@ -123,7 +128,7 @@
                             </div>
                             <div
                                 class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-xs group-hover:bg-cyan-400 group-hover:text-black transition-all">
-                                ➔</div>
+                                âž”</div>
                         </div>
                     </a>
 
@@ -133,6 +138,7 @@
                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             alt="Bali">
                         <div class="absolute inset-0 bg-linear-to-t from-[#005580]/90 via-black/20 to-transparent"></div>
+                        <div class="glass-photo absolute inset-0"></div>
                         <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end text-white">
                             <div>
                                 <h3 class="text-xl font-bold">Bali</h3>
@@ -140,7 +146,7 @@
                             </div>
                             <div
                                 class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-xs group-hover:bg-cyan-400 group-hover:text-black transition-all">
-                                ➔</div>
+                                âž”</div>
                         </div>
                     </a>
 
@@ -150,6 +156,7 @@
                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             alt="Rome">
                         <div class="absolute inset-0 bg-linear-to-t from-[#005580]/90 via-black/20 to-transparent"></div>
+                        <div class="glass-photo absolute inset-0"></div>
                         <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end text-white">
                             <div>
                                 <h3 class="text-xl font-bold">Rome</h3>
@@ -157,7 +164,7 @@
                             </div>
                             <div
                                 class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-xs group-hover:bg-cyan-400 group-hover:text-black transition-all">
-                                ➔</div>
+                                âž”</div>
                         </div>
                     </a>
 
@@ -167,6 +174,7 @@
                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             alt="Dubai">
                         <div class="absolute inset-0 bg-linear-to-t from-[#005580]/90 via-black/20 to-transparent"></div>
+                        <div class="glass-photo absolute inset-0"></div>
                         <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end text-white">
                             <div>
                                 <h3 class="text-xl font-bold">Dubai</h3>
@@ -174,7 +182,7 @@
                             </div>
                             <div
                                 class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-xs group-hover:bg-cyan-400 group-hover:text-black transition-all">
-                                ➔</div>
+                                âž”</div>
                         </div>
                     </a>
 
@@ -184,6 +192,7 @@
                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             alt="Switzerland">
                         <div class="absolute inset-0 bg-linear-to-t from-[#005580]/90 via-black/20 to-transparent"></div>
+                        <div class="glass-photo absolute inset-0"></div>
                         <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end text-white">
                             <div>
                                 <h3 class="text-xl font-bold">Switzerland</h3>
@@ -191,7 +200,7 @@
                             </div>
                             <div
                                 class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-xs group-hover:bg-cyan-400 group-hover:text-black transition-all">
-                                ➔</div>
+                                âž”</div>
                         </div>
                     </a>
 
@@ -224,6 +233,7 @@
                             <img src="{{ asset('assets/images/mbs.png') }}"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 alt="Marina Bay Sanda">
+                            <div class="glass-photo absolute inset-0"></div>
                         </div>
                         <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
@@ -250,7 +260,7 @@
                                 </span>
                                 <div
                                     class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
-                                    View Stay ➔
+                                    View Stay âž”
                                 </div>
                             </div>
                         </div>
@@ -262,6 +272,7 @@
                             <img src="{{ asset('assets/images/fsr.png') }}"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 alt="Four Seasons Resort">
+                            <div class="glass-photo absolute inset-0"></div>
                         </div>
                         <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
@@ -288,7 +299,7 @@
                                 </span>
                                 <div
                                     class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
-                                    View Stay ➔
+                                    View Stay âž”
                                 </div>
                             </div>
                         </div>
@@ -300,6 +311,7 @@
                             <img src="{{ asset('assets/images/theritz.png') }}"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 alt="The Ritz">
+                            <div class="glass-photo absolute inset-0"></div>
                         </div>
                         <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
@@ -326,7 +338,7 @@
                                 </span>
                                 <div
                                     class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
-                                    View Stay ➔
+                                    View Stay âž”
                                 </div>
                             </div>
                         </div>
@@ -338,6 +350,7 @@
                             <img src="{{ asset('assets/images/mbs.png') }}"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 alt="Marina Bay Sanda">
+                            <div class="glass-photo absolute inset-0"></div>
                         </div>
                         <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
@@ -364,7 +377,7 @@
                                 </span>
                                 <div
                                     class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
-                                    View Stay ➔
+                                    View Stay âž”
                                 </div>
                             </div>
                         </div>
@@ -376,6 +389,7 @@
                             <img src="{{ asset('assets/images/fsr.png') }}"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 alt="Four Seasons Resort">
+                            <div class="glass-photo absolute inset-0"></div>
                         </div>
                         <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
@@ -402,7 +416,7 @@
                                 </span>
                                 <div
                                     class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
-                                    View Stay ➔
+                                    View Stay âž”
                                 </div>
                             </div>
                         </div>
@@ -414,6 +428,7 @@
                             <img src="{{ asset('assets/images/theritz.png') }}"
                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 alt="The Ritz">
+                            <div class="glass-photo absolute inset-0"></div>
                         </div>
                         <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
@@ -440,7 +455,7 @@
                                 </span>
                                 <div
                                     class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
-                                    View Stay ➔
+                                    View Stay âž”
                                 </div>
                             </div>
                         </div>
@@ -456,7 +471,7 @@
                 </div>
         </section>
 
-        <section class="relative w-full py-16 bg-white text-slate-800">
+        <section class="relative w-full py-16 bg-white/10 backdrop-blur-xl border-t border-white/10 text-white">
             <div class="absolute -top-4 left-1/2 -translate-x-1/2 text-cyan-400">
                 <svg class="w-8 h-8 rotate-90" fill="currentColor" viewBox="0 0 24 24">
                     <path
@@ -465,12 +480,12 @@
             </div>
 
             <div class="max-w-7xl mx-auto px-8 space-y-10">
-                <h2 class="text-3xl font-black text-center tracking-tight text-slate-800">Browse by type</h2>
+                <h2 class="text-3xl font-black text-center tracking-tight text-white">Browse by type</h2>
 
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
 
                     <a href="#"
-                        class="flex items-center gap-3 px-6 py-4 rounded-full bg-linear-to-r from-[#295b96] to-[#1e3e68] hover:from-[#336cb2] hover:to-[#254d80] text-white shadow-md transition-all transform hover:-translate-y-0.5">
+                        class="flex items-center gap-3 px-6 py-4 rounded-full bg-linear-to-r from-[#295b96]/85 to-[#1e3e68]/85 backdrop-blur-md border border-white/20 hover:from-[#336cb2]/90 hover:to-[#254d80]/90 text-white shadow-md transition-all transform hover:-translate-y-0.5">
                         <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center shrink-0">
                             <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -481,7 +496,7 @@
                     </a>
 
                     <a href="#"
-                        class="flex items-center gap-3 px-6 py-4 rounded-full bg-linear-to-r from-[#59784e] to-[#2c473b] hover:from-[#698e5c] hover:to-[#365749] text-white shadow-md transition-all transform hover:-translate-y-0.5">
+                        class="flex items-center gap-3 px-6 py-4 rounded-full bg-linear-to-r from-[#59784e]/85 to-[#2c473b]/85 backdrop-blur-md border border-white/20 hover:from-[#698e5c]/90 hover:to-[#365749]/90 text-white shadow-md transition-all transform hover:-translate-y-0.5">
                         <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center shrink-0">
                             <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -492,7 +507,7 @@
                     </a>
 
                     <a href="#"
-                        class="flex items-center gap-3 px-6 py-4 rounded-full bg-linear-to-r from-[#875932] to-[#402b1f] hover:from-[#9c673a] hover:to-[#4e3526] text-white shadow-md transition-all transform hover:-translate-y-0.5">
+                        class="flex items-center gap-3 px-6 py-4 rounded-full bg-linear-to-r from-[#875932]/85 to-[#402b1f]/85 backdrop-blur-md border border-white/20 hover:from-[#9c673a]/90 hover:to-[#4e3526]/90 text-white shadow-md transition-all transform hover:-translate-y-0.5">
                         <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center shrink-0">
                             <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -503,7 +518,7 @@
                     </a>
 
                     <a href="#"
-                        class="flex items-center gap-3 px-6 py-4 rounded-full bg-linear-to-r from-[#4d4c8b] to-[#252454] hover:from-[#5b5a9e] hover:to-[#2e2d66] text-white shadow-md transition-all transform hover:-translate-y-0.5">
+                        class="flex items-center gap-3 px-6 py-4 rounded-full bg-linear-to-r from-[#4d4c8b]/85 to-[#252454]/85 backdrop-blur-md border border-white/20 hover:from-[#5b5a9e]/90 hover:to-[#2e2d66]/90 text-white shadow-md transition-all transform hover:-translate-y-0.5">
                         <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center shrink-0">
                             <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

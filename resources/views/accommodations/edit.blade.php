@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="relative overflow-hidden min-h-screen bg-[#070b19] text-white p-8 md:p-12 font-sans">
+    <div class="relative overflow-hidden min-h-screen bg-transparent text-white p-8 md:p-12 font-sans">
 
         <div class="ambience-glow pointer-events-none absolute inset-0 z-0"></div>
 

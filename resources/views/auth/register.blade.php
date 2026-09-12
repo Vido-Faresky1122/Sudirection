@@ -5,7 +5,7 @@
 @section('content')
     <div class="relative min-h-screen bg-cover bg-center bg-fixed"
         style="background-image: url('{{ asset('assets/images/register-mount.png') }}');">
-        <div class="absolute inset-0 bg-black/10"></div>
+        <div class="absolute inset-0 bg-black/20 backdrop-blur-md"></div>
 
         <div class="relative z-10 flex flex-col md:flex-row items-center justify-center gap-28 px-6     md:px-16 py-20 max-w-7xl mx-auto">
 

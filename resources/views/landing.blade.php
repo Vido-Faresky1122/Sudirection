@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
     <style>
@@ -67,6 +67,7 @@
             <section class="relative min-h-screen w-full bg-cover bg-center flex flex-col justify-between p-8 md:p-16"
                 style="background-image: url('{{ asset('assets/images/dubai-land.png') }}');">
                 <div class="absolute inset-0 bg-slate-900/20"></div>
+                <div class="glass-photo absolute inset-0"></div>
 
                 <div class="relative z-20 max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-start pt-12">
                     <div class="text-white space-y-4 max-w-xl">
@@ -86,6 +87,7 @@
                             <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                                 style="background-image: url('{{ asset('assets/images/displace-land.png') }}');"></div>
                             <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-all"></div>
+                            <div class="glass-photo absolute inset-0"></div>
                             <span class="absolute bottom-3 left-3 text-xs font-semibold text-white z-10">Discover
                                 Places</span>
                         </a>
@@ -94,6 +96,7 @@
                             <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                                 style="background-image: url('{{ asset('assets/images/airplane-land.png') }}');"></div>
                             <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-all"></div>
+                            <div class="glass-photo absolute inset-0"></div>
                             <span class="absolute bottom-3 left-3 text-xs font-semibold text-white z-10">Explore
                                 Destination</span>
                         </a>
@@ -102,6 +105,7 @@
                             <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                                 style="background-image: url('{{ asset('assets/images/accomm-land.png') }}');"></div>
                             <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-all"></div>
+                            <div class="glass-photo absolute inset-0"></div>
                             <span
                                 class="absolute bottom-3 left-3 text-xs font-semibold text-white z-10">Accommodations</span>
                         </a>
@@ -110,6 +114,7 @@
                             <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                                 style="background-image: url('{{ asset('assets/images/souvenir-land.png') }}');"></div>
                             <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-all"></div>
+                            <div class="glass-photo absolute inset-0"></div>
                             <span class="absolute bottom-3 left-3 text-xs font-semibold text-white z-10">Souvenir</span>
                         </a>
                     </div>
@@ -121,6 +126,7 @@
                 style="background-image: url('{{ asset('assets/images/bridge-land.png') }}');">
 
                 <div class="absolute inset-0 bg-slate-950/30"></div>
+                <div class="glass-photo absolute inset-0"></div>
 
                 {{-- Container dibuat max-w-4xl agar tiap kartu lebih kurus/ramping --}}
                 <div
@@ -205,6 +211,7 @@
                 style="background-image: url('{{ asset('assets/images/inairplane-land.png') }}');">
 
                 <div class="absolute inset-0 bg-slate-950/10"></div>
+                <div class="glass-photo absolute inset-0"></div>
 
                 {{-- Streak Awan --}}
                 <div class="absolute inset-0 pointer-events-none z-10 overflow-hidden">
@@ -266,6 +273,7 @@
                         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                             style="background-image: url('{{ asset('assets/images/accomm-land.png') }}');"></div>
                         <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="glass-photo absolute inset-0"></div>
                         <div class="absolute bottom-4 left-5 text-white z-10">
                             <h3 class="font-bold text-xl group-hover:text-sky-300 transition-colors">JAPAN</h3>
                             <p class="text-xs text-slate-300">11,200 accommodations</p>
@@ -277,6 +285,7 @@
                         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                             style="background-image: url('{{ asset('assets/images/bridge-land.png') }}');"></div>
                         <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="glass-photo absolute inset-0"></div>
                         <div class="absolute bottom-4 left-5 text-white z-10">
                             <h3 class="font-bold text-xl group-hover:text-sky-300 transition-colors">AMERICA</h3>
                             <p class="text-xs text-slate-300">18,500 accommodations</p>
@@ -288,6 +297,7 @@
                         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                             style="background-image: url('{{ asset('assets/images/dubai-land.png') }}');"></div>
                         <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="glass-photo absolute inset-0"></div>
                         <div class="absolute bottom-4 left-5 text-white z-10">
                             <h3 class="font-bold text-xl group-hover:text-sky-300 transition-colors">CHINA</h3>
                             <p class="text-xs text-slate-300">22,100 accommodations</p>
@@ -299,6 +309,7 @@
                         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                             style="background-image: url('{{ asset('assets/images/airplane-land.png') }}');"></div>
                         <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="glass-photo absolute inset-0"></div>
                         <div class="absolute bottom-4 left-5 text-white z-10">
                             <h3 class="font-bold text-xl group-hover:text-sky-300 transition-colors">KOREA</h3>
                             <p class="text-xs text-slate-300">9,800 accommodations</p>
@@ -310,6 +321,7 @@
                         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                             style="background-image: url('{{ asset('assets/images/displace-land.png') }}');"></div>
                         <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="glass-photo absolute inset-0"></div>
                         <div class="absolute bottom-4 left-5 text-white z-10">
                             <h3 class="font-bold text-xl group-hover:text-sky-300 transition-colors">FRANCE</h3>
                             <p class="text-xs text-slate-300">14,300 accommodations</p>
@@ -321,6 +333,7 @@
                         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                             style="background-image: url('{{ asset('assets/images/souvenir-land.png') }}');"></div>
                         <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="glass-photo absolute inset-0"></div>
                         <div class="absolute bottom-4 left-5 text-white z-10">
                             <h3 class="font-bold text-xl group-hover:text-sky-300 transition-colors">AUSTRALIA</h3>
                             <p class="text-xs text-slate-300">12,600 accommodations</p>
@@ -375,6 +388,7 @@
                         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                             style="background-image: url('{{ asset('assets/images/dubai-land.png') }}');"></div>
                         <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="glass-photo absolute inset-0"></div>
                         <div class="absolute bottom-4 left-5 text-white z-10">
                             <h3 class="font-bold text-xl group-hover:text-sky-300 transition-colors">BALI</h3>
                             <p class="text-xs text-slate-300">Indonesia</p>
@@ -389,6 +403,7 @@
                         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                             style="background-image: url('{{ asset('assets/images/displace-land.png') }}');"></div>
                         <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="glass-photo absolute inset-0"></div>
                         <div class="absolute bottom-4 left-5 text-white z-10">
                             <h3 class="font-bold text-xl group-hover:text-sky-300 transition-colors">PARIS</h3>
                             <p class="text-xs text-slate-300">France</p>
@@ -403,6 +418,7 @@
                         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                             style="background-image: url('{{ asset('assets/images/accomm-land.png') }}');"></div>
                         <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="glass-photo absolute inset-0"></div>
                         <div class="absolute bottom-4 left-5 text-white z-10">
                             <h3 class="font-bold text-xl group-hover:text-sky-300 transition-colors">TOKYO</h3>
                             <p class="text-xs text-slate-300">Japan</p>
@@ -417,6 +433,7 @@
                         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                             style="background-image: url('{{ asset('assets/images/bridge-land.png') }}');"></div>
                         <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="glass-photo absolute inset-0"></div>
                         <div class="absolute bottom-4 left-5 text-white z-10">
                             <h3 class="font-bold text-xl group-hover:text-sky-300 transition-colors">SANTORINI</h3>
                             <p class="text-xs text-slate-300">Greece</p>
@@ -431,6 +448,7 @@
                         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                             style="background-image: url('{{ asset('assets/images/airplane-land.png') }}');"></div>
                         <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="glass-photo absolute inset-0"></div>
                         <div class="absolute bottom-4 left-5 text-white z-10">
                             <h3 class="font-bold text-xl group-hover:text-sky-300 transition-colors">DUBAI</h3>
                             <p class="text-xs text-slate-300">UAE</p>
@@ -445,6 +463,7 @@
                         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                             style="background-image: url('{{ asset('assets/images/souvenir-land.png') }}');"></div>
                         <div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="glass-photo absolute inset-0"></div>
                         <div class="absolute bottom-4 left-5 text-white z-10">
                             <h3 class="font-bold text-xl group-hover:text-sky-300 transition-colors">MALDIVES</h3>
                             <p class="text-xs text-slate-300">Sri Lanka</p>
