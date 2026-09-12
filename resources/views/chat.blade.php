@@ -1,4 +1,4 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('hide_footer', true)
 
@@ -88,7 +88,7 @@
 </div>
 
 {{-- Sticky Floating Input Bar (Selalu Menempel di Bawah Layar) --}}
-<div class="fixed bottom-0 inset-x-0 bg-linear-to-t from-[#0f172a] via-[#0f172a]/95 to-transparent pt-6 pb-4 z-40">
+<div class="fixed bottom-0 inset-x-0 bg-linear-to-t from-[#0b1026]/95 via-[#0e1629]/70 to-transparent backdrop-blur-md pt-6 pb-4 z-40">
     <div class="max-w-5xl mx-auto px-4 md:px-8">
         <form id="chat-form" class="relative flex items-center">
             <input type="text" id="user-input" maxlength="2000"
@@ -214,7 +214,7 @@
     function buildLocationCard(data) {
         const directionUrl = 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(data.name || '');
         const image = data.image
-            ? `<img src="${escapeHtml(data.image)}" class="w-full h-44 object-cover" alt="${escapeHtml(data.name || 'Tempat')}" onerror="this.style.display='none'">`
+            ? `<div class="relative overflow-hidden"><img src="${escapeHtml(data.image)}" class="w-full h-44 object-cover" alt="${escapeHtml(data.name || 'Tempat')}" onerror="this.style.display='none'"><div class="glass-photo absolute inset-0"></div></div>`
             : `<div class="w-full h-44 flex items-center justify-center bg-white/5 backdrop-blur-md">
                    ${ICONS.mapPin}
                </div>`;

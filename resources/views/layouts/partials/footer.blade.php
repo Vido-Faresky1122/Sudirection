@@ -1,4 +1,4 @@
-<div class="absolute inset-0 bg-[#0072ce]/75"></div>
+<div class="absolute inset-0 bg-[#0072ce]/60 backdrop-blur-md"></div>
 
 <div
     class="absolute right-0 top-0 bottom-0 w-1/3 z-10 hidden lg:flex items-center justify-end pointer-events-none pr-8">

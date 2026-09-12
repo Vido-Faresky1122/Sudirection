@@ -1,7 +1,7 @@
-@extends('layouts.app')
+﻿@extends('layouts.app')
 
 @section('content')
-    <div class="relative overflow-hidden w-full bg-[#070b19] text-white font-sans min-h-screen">
+    <div class="relative overflow-hidden w-full bg-transparent text-white font-sans min-h-screen">
 
         <div class="ambience-glow pointer-events-none absolute inset-0 z-0"></div>
 
@@ -9,27 +9,32 @@
             style="background-image: url('{{ asset('assets/images/santorini.png') }}');">
 
             <div class="absolute inset-0 bg-linear-to-t from-[#070b19] via-transparent to-black/30"></div>
+            <div class="glass-photo absolute inset-0"></div>
 
             <div class="relative z-10 max-w-7xl mx-auto px-8 w-full flex items-center gap-3 overflow-x-auto pb-2">
                 <div
-                    class="w-20 h-14 md:w-28 md:h-18 rounded-lg overflow-hidden border-2 border-cyan-400 shrink-0 shadow-md">
+                    class="relative w-20 h-14 md:w-28 md:h-18 rounded-lg overflow-hidden border-2 border-cyan-400 shrink-0 shadow-md">
                     <img src="{{ asset('assets/images/santorini-1.png') }}" class="w-full h-full object-cover"
                         alt="Santorini 1">
+                    <div class="glass-photo absolute inset-0"></div>
                 </div>
                 <div
-                    class="w-20 h-14 md:w-28 md:h-18 rounded-lg overflow-hidden border border-white/30 shrink-0 shadow-md opacity-80 hover:opacity-100 transition-opacity">
+                    class="relative w-20 h-14 md:w-28 md:h-18 rounded-lg overflow-hidden border border-white/30 shrink-0 shadow-md opacity-80 hover:opacity-100 transition-opacity">
                     <img src="{{ asset('assets/images/santorini-2.png') }}" class="w-full h-full object-cover"
                         alt="Santorini 2">
+                    <div class="glass-photo absolute inset-0"></div>
                 </div>
                 <div
-                    class="w-20 h-14 md:w-28 md:h-18 rounded-lg overflow-hidden border border-white/30 shrink-0 shadow-md opacity-80 hover:opacity-100 transition-opacity">
+                    class="relative w-20 h-14 md:w-28 md:h-18 rounded-lg overflow-hidden border border-white/30 shrink-0 shadow-md opacity-80 hover:opacity-100 transition-opacity">
                     <img src="{{ asset('assets/images/santorini-3.png') }}" class="w-full h-full object-cover"
                         alt="Santorini 3">
+                    <div class="glass-photo absolute inset-0"></div>
                 </div>
                 <div
-                    class="w-20 h-14 md:w-28 md:h-18 rounded-lg overflow-hidden border border-white/30 shrink-0 shadow-md opacity-80 hover:opacity-100 transition-opacity">
+                    class="relative w-20 h-14 md:w-28 md:h-18 rounded-lg overflow-hidden border border-white/30 shrink-0 shadow-md opacity-80 hover:opacity-100 transition-opacity">
                     <img src="{{ asset('assets/images/santorini-4.png') }}" class="w-full h-full object-cover"
                         alt="Santorini 4">
+                    <div class="glass-photo absolute inset-0"></div>
                 </div>
                 <button
                     class="px-4 py-2.5 rounded-lg bg-black/60 backdrop-blur-md border border-white/20 text-xs font-semibold text-white flex items-center gap-2 shrink-0 hover:bg-black/80 transition-all">
@@ -50,9 +55,9 @@
                     class="lg:col-span-2 glass-ios rounded-2xl p-6 md:p-8 space-y-4">
                     <div class="flex flex-wrap items-center gap-2 text-xs font-semibold text-cyan-400">
                         <span>Island</span>
-                        <span>•</span>
+                        <span>â€¢</span>
                         <span>Beach</span>
-                        <span>•</span>
+                        <span>â€¢</span>
                         <span>Cultural Heritage</span>
                     </div>
 
@@ -115,7 +120,7 @@
                         </div>
                         <div class="flex items-center gap-2">
                             <span class="text-slate-400">Price:</span>
-                            <span class="font-bold text-white">$$$ • Premium</span>
+                            <span class="font-bold text-white">$$$ â€¢ Premium</span>
                         </div>
                     </div>
                 </div>
@@ -136,6 +141,7 @@
                         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
                             style="background-image: url('{{ asset('assets/images/tokyo-tower.png') }}');"></div>
                         <div class="absolute inset-0 bg-linear-to-t from-[#0088cc]/90 via-black/20 to-transparent"></div>
+                        <div class="glass-photo absolute inset-0"></div>
 
                         <button type="button"
                             class="absolute top-4 right-4 text-white/80 hover:text-white transition-colors z-10"
@@ -158,7 +164,7 @@
                                 <h3 class="text-2xl font-bold uppercase tracking-tight">Tokyo</h3>
                                 <p class="text-xs opacity-80 max-w-xs line-clamp-1">Experience tradition and the future</p>
                                 <div class="flex items-center space-x-1 text-xs pt-1">
-                                    <span class="text-yellow-400">★</span>
+                                    <span class="text-yellow-400">â˜…</span>
                                     <span class="font-bold">4.8</span>
                                 </div>
                             </div>
@@ -178,6 +184,7 @@
                         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
                             style="background-image: url('{{ asset('assets/images/santorini.png') }}');"></div>
                         <div class="absolute inset-0 bg-linear-to-t from-[#0088cc]/90 via-black/20 to-transparent"></div>
+                        <div class="glass-photo absolute inset-0"></div>
 
                         <button type="button"
                             class="absolute top-4 right-4 text-white/80 hover:text-white transition-colors z-10"
@@ -201,7 +208,7 @@
                                 <p class="text-xs opacity-80 max-w-xs line-clamp-1">Enjoy spectacular view of the Aegean Sea
                                 </p>
                                 <div class="flex items-center space-x-1 text-xs pt-1">
-                                    <span class="text-yellow-400">★</span>
+                                    <span class="text-yellow-400">â˜…</span>
                                     <span class="font-bold">4.7</span>
                                 </div>
                             </div>
@@ -221,6 +228,7 @@
                         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
                             style="background-image: url('{{ asset('assets/images/seoul.png') }}');"></div>
                         <div class="absolute inset-0 bg-linear-to-t from-[#0088cc]/90 via-black/20 to-transparent"></div>
+                        <div class="glass-photo absolute inset-0"></div>
 
                         <button type="button"
                             class="absolute top-4 right-4 text-white/80 hover:text-white transition-colors z-10"
@@ -243,7 +251,7 @@
                                 <h3 class="text-2xl font-bold uppercase tracking-tight">Seoul</h3>
                                 <p class="text-xs opacity-80 max-w-xs line-clamp-1">Experience tradition and the future</p>
                                 <div class="flex items-center space-x-1 text-xs pt-1">
-                                    <span class="text-yellow-400">★</span>
+                                    <span class="text-yellow-400">â˜…</span>
                                     <span class="font-bold">4.6</span>
                                 </div>
                             </div>
@@ -263,6 +271,7 @@
                         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
                             style="background-image: url('{{ asset('assets/images/bern.png') }}');"></div>
                         <div class="absolute inset-0 bg-linear-to-t from-[#0088cc]/90 via-black/20 to-transparent"></div>
+                        <div class="glass-photo absolute inset-0"></div>
 
                         <button type="button"
                             class="absolute top-4 right-4 text-white/80 hover:text-white transition-colors z-10"
@@ -285,7 +294,7 @@
                                 <h3 class="text-2xl font-bold uppercase tracking-tight">Bern</h3>
                                 <p class="text-xs opacity-80 max-w-xs line-clamp-1">Relax among breathtaking mountains</p>
                                 <div class="flex items-center space-x-1 text-xs pt-1">
-                                    <span class="text-yellow-400">★</span>
+                                    <span class="text-yellow-400">â˜…</span>
                                     <span class="font-bold">4.5</span>
                                 </div>
                             </div>
