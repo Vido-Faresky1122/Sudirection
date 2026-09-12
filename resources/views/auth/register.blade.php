@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('hide_footer', true)
+
 @section('content')
     <div class="relative min-h-screen bg-cover bg-center bg-fixed"
         style="background-image: url('{{ asset('assets/images/register-mount.png') }}');">
