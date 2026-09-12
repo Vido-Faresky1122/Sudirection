@@ -55,9 +55,9 @@
                     class="lg:col-span-2 glass-ios rounded-2xl p-6 md:p-8 space-y-4">
                     <div class="flex flex-wrap items-center gap-2 text-xs font-semibold text-cyan-400">
                         <span>Island</span>
-                        <span>â€¢</span>
+                        <span>•</span>
                         <span>Beach</span>
-                        <span>â€¢</span>
+                        <span>•</span>
                         <span>Cultural Heritage</span>
                     </div>
 
@@ -120,7 +120,7 @@
                         </div>
                         <div class="flex items-center gap-2">
                             <span class="text-slate-400">Price:</span>
-                            <span class="font-bold text-white">$$$ â€¢ Premium</span>
+                            <span class="font-bold text-white">$$$ • Premium</span>
                         </div>
                     </div>
                 </div>
@@ -164,7 +164,7 @@
                                 <h3 class="text-2xl font-bold uppercase tracking-tight">Tokyo</h3>
                                 <p class="text-xs opacity-80 max-w-xs line-clamp-1">Experience tradition and the future</p>
                                 <div class="flex items-center space-x-1 text-xs pt-1">
-                                    <span class="text-yellow-400">â˜…</span>
+                                    <span class="text-yellow-400">★</span>
                                     <span class="font-bold">4.8</span>
                                 </div>
                             </div>
@@ -208,7 +208,7 @@
                                 <p class="text-xs opacity-80 max-w-xs line-clamp-1">Enjoy spectacular view of the Aegean Sea
                                 </p>
                                 <div class="flex items-center space-x-1 text-xs pt-1">
-                                    <span class="text-yellow-400">â˜…</span>
+                                    <span class="text-yellow-400">★</span>
                                     <span class="font-bold">4.7</span>
                                 </div>
                             </div>
@@ -251,7 +251,7 @@
                                 <h3 class="text-2xl font-bold uppercase tracking-tight">Seoul</h3>
                                 <p class="text-xs opacity-80 max-w-xs line-clamp-1">Experience tradition and the future</p>
                                 <div class="flex items-center space-x-1 text-xs pt-1">
-                                    <span class="text-yellow-400">â˜…</span>
+                                    <span class="text-yellow-400">★</span>
                                     <span class="font-bold">4.6</span>
                                 </div>
                             </div>
@@ -294,7 +294,7 @@
                                 <h3 class="text-2xl font-bold uppercase tracking-tight">Bern</h3>
                                 <p class="text-xs opacity-80 max-w-xs line-clamp-1">Relax among breathtaking mountains</p>
                                 <div class="flex items-center space-x-1 text-xs pt-1">
-                                    <span class="text-yellow-400">â˜…</span>
+                                    <span class="text-yellow-400">★</span>
                                     <span class="font-bold">4.5</span>
                                 </div>
                             </div>

@@ -81,7 +81,7 @@
             <h3 class="text-2xl font-bold uppercase tracking-tight">Tokyo</h3>
             <p class="text-xs opacity-80 max-w-xs line-clamp-1">Experience tradition and the future</p>
             <div class="flex items-center space-x-1 text-xs pt-1">
-              <span class="text-yellow-400">â˜…</span>
+              <span class="text-yellow-400">★</span>
               <span class="font-bold">4.8</span>
             </div>
           </div>
@@ -111,7 +111,7 @@
             <h3 class="text-2xl font-bold uppercase tracking-tight">SANTORINI</h3>
             <p class="text-xs opacity-80 max-w-xs line-clamp-1">Enjoy spectacular view of the Aegean Sea</p>
             <div class="flex items-center space-x-1 text-xs pt-1">
-              <span class="text-yellow-400">â˜…</span>
+              <span class="text-yellow-400">★</span>
               <span class="font-bold">4.7</span>
             </div>
           </div>
@@ -141,7 +141,7 @@
             <h3 class="text-2xl font-bold uppercase tracking-tight">Seoul</h3>
             <p class="text-xs opacity-80 max-w-xs line-clamp-1">Experience tradition and the future</p>
             <div class="flex items-center space-x-1 text-xs pt-1">
-              <span class="text-yellow-400">â˜…</span>
+              <span class="text-yellow-400">★</span>
               <span class="font-bold">4.6</span>
             </div>
           </div>
@@ -171,7 +171,7 @@
             <h3 class="text-2xl font-bold uppercase tracking-tight">Bern</h3>
             <p class="text-xs opacity-80 max-w-xs line-clamp-1">Relax among breathtaking mountains</p>
             <div class="flex items-center space-x-1 text-xs pt-1">
-              <span class="text-yellow-400">â˜…</span>
+              <span class="text-yellow-400">★</span>
               <span class="font-bold">4.5</span>
             </div>
           </div>
@@ -206,7 +206,7 @@
           </span>
           <h4 class="text-lg font-extrabold">Eiffel Tower</h4>
           <div class="flex items-center space-x-1 text-xs">
-            <span class="text-yellow-400">â˜…</span>
+            <span class="text-yellow-400">★</span>
             <span class="font-bold">4.7</span>
             <span class="text-slate-400 text-[10px]">(12.4k)</span>
           </div>
@@ -228,7 +228,7 @@
           </span>
           <h4 class="text-lg font-extrabold">Statue of Liberty</h4>
           <div class="flex items-center space-x-1 text-xs">
-            <span class="text-yellow-400">â˜…</span>
+            <span class="text-yellow-400">★</span>
             <span class="font-bold">4.7</span>
             <span class="text-slate-400 text-[10px]">(9.8k)</span>
           </div>
@@ -250,7 +250,7 @@
           </span>
           <h4 class="text-lg font-extrabold">Tanah Lot</h4>
           <div class="flex items-center space-x-1 text-xs">
-            <span class="text-yellow-400">â˜…</span>
+            <span class="text-yellow-400">★</span>
             <span class="font-bold">4.6</span>
             <span class="text-slate-400 text-[10px]">(11.5k)</span>
           </div>
@@ -272,7 +272,7 @@
           </span>
           <h4 class="text-lg font-extrabold">Mount Bromo</h4>
           <div class="flex items-center space-x-1 text-xs">
-            <span class="text-yellow-400">â˜…</span>
+            <span class="text-yellow-400">★</span>
             <span class="font-bold">4.9</span>
             <span class="text-slate-400 text-[10px]">(7.5k)</span>
           </div>

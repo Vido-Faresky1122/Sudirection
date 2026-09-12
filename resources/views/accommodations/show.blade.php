@@ -55,9 +55,9 @@
                     class="lg:col-span-2 glass-ios rounded-2xl p-6 md:p-8 space-y-4">
                     <div class="flex flex-wrap items-center gap-2 text-xs font-semibold text-cyan-400">
                         <span>Luxury Hotel</span>
-                        <span>â€¢</span>
+                        <span>•</span>
                         <span>Boutique</span>
-                        <span>â€¢</span>
+                        <span>•</span>
                         <span>Infinity Pool</span>
                     </div>
 
@@ -141,7 +141,7 @@
                     <div class="pt-4 flex flex-wrap items-center justify-between gap-4 border-t border-slate-800 text-xs">
                         <div class="flex items-center gap-2">
                             <span class="text-slate-400">Price:</span>
-                            <span class="font-bold text-white">$$$ â€¢ Premium</span>
+                            <span class="font-bold text-white">$$$ • Premium</span>
                         </div>
                     </div>
                 </div>

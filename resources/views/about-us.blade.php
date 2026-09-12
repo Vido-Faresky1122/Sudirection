@@ -28,7 +28,7 @@
             <div class="flex-1 max-w-lg">
                 <h2 class="text-white text-3xl font-bold mb-5">Our Mission</h2>
                 <p class="text-white/80 text-sm leading-relaxed mb-6">
-                    At SUDIRECTION, we believe that travel is more than just visiting a placeâ€”it's about
+                    At SUDIRECTION, we believe that travel is more than just visiting a place-it's about
                     the connection you make with the world. Our platform is designed to provide travelers
                     with the most reliable information, from hidden natural wonders to the most comfortable
                     stays.
