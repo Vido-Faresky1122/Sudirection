@@ -52,7 +52,7 @@
         </div>
  
         {{-- What We Offer --}}
-        <div class="max-w-4xl mx-auto bg-white/10 backdrop-blur-2xl border border-white/20 rounded-4xl p-10 md:p-14 shadow-2xl">
+        <div class="max-w-4xl mx-auto glass-ios rounded-4xl p-10 md:p-14">
  
             <div class="text-center mb-12">
                 <h2 class="text-white text-3xl font-bold mb-3">What We Offer</h2>
@@ -155,7 +155,7 @@
         </p>
         <a
             href="/join"
-            class="inline-block px-8 py-3 rounded-full bg-linear-to-r from-sky-400 to-sky-600 text-white font-semibold shadow-lg hover:opacity-90 transition"
+            class="inline-block px-8 py-3 rounded-full bg-linear-to-r from-sky-400/85 to-sky-600/85 backdrop-blur-md border border-white/20 text-white font-semibold shadow-lg hover:opacity-90 transition"
         >
             Join the Journey
         </a>

@@ -39,7 +39,7 @@
 <div class="min-h-[calc(100dvh-4rem)] max-w-5xl w-full mx-auto px-4 md:px-8 pt-6 md:pt-8 pb-28 flex flex-col gap-6">
 
     {{-- Banner Top --}}
-    <section class="relative bg-slate-900/60 border border-white/10 rounded-2xl p-6 md:p-8 text-center shadow-lg overflow-hidden">
+    <section class="relative bg-slate-900/60 backdrop-blur-2xl backdrop-saturate-150 border border-white/10 rounded-2xl p-6 md:p-8 text-center shadow-lg overflow-hidden">
         <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-80 h-44 bg-sky-500/20 blur-3xl rounded-full pointer-events-none"></div>
         <div class="relative">
             <div class="mx-auto mb-3 w-11 h-11 rounded-2xl bg-sky-500/15 border border-sky-500/30 flex items-center justify-center shadow-lg">
@@ -53,19 +53,19 @@
             {{-- Suggestion Chips --}}
             <div class="flex flex-wrap justify-center gap-2 text-xs">
                 <button type="button" onclick="sendQuickPrompt('Find nearby restaurants')"
-                    class="bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-slate-300 hover:text-white px-3 py-1.5 rounded-full transition">
+                    class="glass-chip text-slate-200 hover:text-white px-3 py-1.5 rounded-full">
                     Find nearby restaurants
                 </button>
                 <button type="button" onclick="sendQuickPrompt('Find a cafe for studying')"
-                    class="bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-slate-300 hover:text-white px-3 py-1.5 rounded-full transition">
+                    class="glass-chip text-slate-200 hover:text-white px-3 py-1.5 rounded-full">
                     Find a cafe for studying
                 </button>
                 <button type="button" onclick="sendQuickPrompt('Find the nearest hospital')"
-                    class="bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-slate-300 hover:text-white px-3 py-1.5 rounded-full transition">
+                    class="glass-chip text-slate-200 hover:text-white px-3 py-1.5 rounded-full">
                     Find the nearest hospital
                 </button>
                 <button type="button" onclick="sendQuickPrompt('How do I get to school?')"
-                    class="bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-slate-300 hover:text-white px-3 py-1.5 rounded-full transition">
+                    class="glass-chip text-slate-200 hover:text-white px-3 py-1.5 rounded-full">
                     How do I get to school?
                 </button>
             </div>
@@ -73,7 +73,7 @@
     </section>
 
     {{-- Chat History (memanjang mengikuti konten, halaman yang di-scroll) --}}
-    <div id="chat-box" class="flex-1 flex flex-col gap-6 bg-slate-900/40 border border-white/10 rounded-2xl p-4 md:p-6">
+    <div id="chat-box" class="flex-1 flex flex-col gap-6 bg-slate-900/40 backdrop-blur-2xl backdrop-saturate-150 border border-white/10 rounded-2xl p-4 md:p-6">
 
         {{-- Empty State --}}
         <div id="empty-state" class="m-auto text-center py-10 px-4">
@@ -92,10 +92,10 @@
     <div class="max-w-5xl mx-auto px-4 md:px-8">
         <form id="chat-form" class="relative flex items-center">
             <input type="text" id="user-input" maxlength="2000"
-                class="w-full bg-slate-900/80 border border-slate-700/70 text-white placeholder-slate-500 text-sm rounded-full pl-5 pr-14 py-3.5 focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 shadow-xl disabled:opacity-60 disabled:cursor-not-allowed transition"
+                class="w-full bg-white/5 backdrop-blur-md border border-white/15 text-white placeholder-slate-500 text-sm rounded-full pl-5 pr-14 py-3.5 focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 shadow-xl disabled:opacity-60 disabled:cursor-not-allowed transition"
                 placeholder="Ask something..." required autocomplete="off">
             <button type="submit" id="btn-send" aria-label="Kirim pesan"
-                class="absolute right-2 bg-sky-500 hover:bg-sky-600 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed text-white rounded-full w-10 h-10 flex items-center justify-center transition shadow-md">
+                class="absolute right-2 bg-sky-500/85 hover:bg-sky-600 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed text-white rounded-full border border-white/20 w-10 h-10 flex items-center justify-center transition shadow-md backdrop-blur-md">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/>
                 </svg>
@@ -156,7 +156,7 @@
         row.className = 'flex flex-col items-end w-full';
 
         const bubble = document.createElement('div');
-        bubble.className = 'bg-sky-500 text-white text-xs md:text-sm px-4 py-3 rounded-2xl rounded-tr-none max-w-[85%] sm:max-w-[75%] md:max-w-[65%] shadow-lg';
+        bubble.className = 'bg-sky-500/85 backdrop-blur-md border border-white/20 text-white text-xs md:text-sm px-4 py-3 rounded-2xl rounded-tr-none max-w-[85%] sm:max-w-[75%] md:max-w-[65%] shadow-lg';
 
         const p = document.createElement('p');
         p.className = 'whitespace-pre-line break-words';
@@ -183,7 +183,7 @@
 
     function buildAiAvatar() {
         const avatar = document.createElement('div');
-        avatar.className = 'mt-1 shrink-0 w-7 h-7 rounded-xl bg-sky-500/15 border border-sky-500/30 flex items-center justify-center shadow';
+        avatar.className = 'mt-1 shrink-0 w-7 h-7 rounded-xl bg-sky-500/15 backdrop-blur-sm border border-sky-500/30 flex items-center justify-center shadow';
         avatar.innerHTML = ICONS.stars;
         return avatar;
     }
@@ -193,7 +193,7 @@
         row.className = 'flex items-start gap-3 w-full';
 
         const bubble = document.createElement('div');
-        bubble.className = 'bg-slate-900/90 border border-slate-700/70 text-slate-200 text-xs md:text-sm px-4 py-3 rounded-2xl rounded-tl-none max-w-[85%] sm:max-w-[80%] md:max-w-[70%] shadow';
+        bubble.className = 'bg-slate-900/75 backdrop-blur-md border border-slate-700/60 text-slate-200 text-xs md:text-sm px-4 py-3 rounded-2xl rounded-tl-none max-w-[85%] sm:max-w-[80%] md:max-w-[70%] shadow';
         bubble.innerHTML = buildAiHeader();
 
         const p = document.createElement('p');
@@ -215,7 +215,7 @@
         const directionUrl = 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(data.name || '');
         const image = data.image
             ? `<img src="${escapeHtml(data.image)}" class="w-full h-44 object-cover" alt="${escapeHtml(data.name || 'Tempat')}" onerror="this.style.display='none'">`
-            : `<div class="w-full h-44 flex items-center justify-center bg-slate-800/60">
+            : `<div class="w-full h-44 flex items-center justify-center bg-white/5 backdrop-blur-md">
                    ${ICONS.mapPin}
                </div>`;
 
@@ -226,18 +226,18 @@
         wrap.className = 'flex flex-col w-full gap-3 max-w-[85%] sm:max-w-[80%] md:max-w-[75%]';
 
         wrap.innerHTML = `
-            <div class="bg-slate-900/90 border border-slate-700/70 text-slate-200 text-xs md:text-sm px-4 py-3 rounded-2xl rounded-tl-none shadow">
+            <div class="bg-slate-900/75 backdrop-blur-md border border-slate-700/60 text-slate-200 text-xs md:text-sm px-4 py-3 rounded-2xl rounded-tl-none shadow">
                 ${buildAiHeader()}
                 <p class="whitespace-pre-line break-words">${escapeHtml(data.text || 'Saya menemukan beberapa pilihan. Berikut rekomendasinya:')}</p>
                 <span class="text-[10px] text-slate-500 block mt-1">${escapeHtml(getTime())}</span>
             </div>
 
-            <div class="bg-slate-900/90 border border-slate-700/70 rounded-2xl overflow-hidden shadow-lg">
+            <div class="bg-slate-900/75 backdrop-blur-md border border-slate-700/60 rounded-2xl overflow-hidden shadow-lg">
                 ${image}
                 <div class="p-4 space-y-3">
                     <div class="flex justify-between items-center gap-2">
                         <h3 class="font-semibold text-sm text-white break-words">${escapeHtml(data.name || 'Tempat')}</h3>
-                        <span class="shrink-0 bg-sky-950 text-sky-400 border border-sky-500/30 text-[10px] px-2 py-0.5 rounded-full">${escapeHtml(data.category || 'Tempat')}</span>
+                        <span class="shrink-0 bg-sky-500/15 backdrop-blur-sm text-sky-400 border border-sky-500/30 text-[10px] px-2 py-0.5 rounded-full">${escapeHtml(data.category || 'Tempat')}</span>
                     </div>
                     <div class="flex items-center text-[11px] text-slate-300 gap-1 flex-wrap">
                         ${ICONS.starGold}
@@ -245,16 +245,16 @@
                         <span class="text-slate-500">(${escapeHtml(data.reviews || '1,240')} reviews) &bull; ${escapeHtml(data.distance || '0.6 km away')}</span>
                     </div>
                     <div class="flex justify-between items-center text-[11px] border-t border-slate-800 pt-2 flex-wrap gap-2">
-                        <span class="bg-emerald-950 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full text-[10px]">${escapeHtml(data.status || 'Open Now')}</span>
+                        <span class="bg-emerald-500/15 backdrop-blur-sm text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full text-[10px]">${escapeHtml(data.status || 'Open Now')}</span>
                         <span class="text-slate-500">${escapeHtml(data.hours || '06:00 AM - 10:00 PM')}</span>
                     </div>
                     <div class="grid grid-cols-2 gap-2 pt-1">
                         <a href="${escapeHtml(data.maps_url || '#')}" target="_blank" rel="noopener noreferrer"
-                           class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs py-2 rounded-xl text-center border border-slate-700 transition">
+                           class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-slate-200 text-xs py-2 rounded-xl text-center border border-white/15 transition">
                             View Place
                         </a>
                         <a href="${escapeHtml(directionUrl)}" target="_blank" rel="noopener noreferrer"
-                           class="bg-sky-500 hover:bg-sky-600 text-white text-xs py-2 rounded-xl text-center flex items-center justify-center gap-1 transition shadow">
+                           class="bg-sky-500/85 hover:bg-sky-600 backdrop-blur-md text-white text-xs py-2 rounded-xl text-center border border-white/20 flex items-center justify-center gap-1 transition shadow">
                             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/>
                             </svg>
@@ -276,7 +276,7 @@
         row.className = 'flex items-start gap-3 w-full';
 
         const card = document.createElement('div');
-        card.className = 'bg-slate-900/90 border border-slate-700/70 rounded-2xl p-4 max-w-[85%] sm:max-w-[80%] md:max-w-[70%] w-full space-y-3 shadow';
+        card.className = 'bg-slate-900/75 backdrop-blur-md border border-slate-700/60 rounded-2xl p-4 max-w-[85%] sm:max-w-[80%] md:max-w-[70%] w-full space-y-3 shadow';
         card.innerHTML = buildAiHeader();
 
         const p = document.createElement('p');
@@ -285,7 +285,7 @@
 
         const btn = document.createElement('button');
         btn.type = 'button';
-        btn.className = 'flex items-center justify-center gap-1 w-full bg-sky-500 hover:bg-sky-600 text-white text-xs py-2 rounded-xl text-center transition';
+        btn.className = 'flex items-center justify-center gap-1 w-full bg-sky-500/85 hover:bg-sky-600 backdrop-blur-md text-white text-xs py-2 rounded-xl text-center border border-white/20 transition';
         btn.innerHTML = ICONS.refreshSm;
         btn.appendChild(document.createTextNode(' Coba Lagi'));
         btn.addEventListener('click', () => sendQuickPrompt(lastQuery));
@@ -302,7 +302,7 @@
         row.className = 'flex items-start gap-3 w-full';
 
         const card = document.createElement('div');
-        card.className = 'bg-slate-900/90 border border-orange-700/40 rounded-2xl p-4 max-w-[85%] sm:max-w-[80%] md:max-w-[70%] w-full space-y-3 shadow';
+        card.className = 'bg-slate-900/75 backdrop-blur-md border border-orange-700/40 rounded-2xl p-4 max-w-[85%] sm:max-w-[80%] md:max-w-[70%] w-full space-y-3 shadow';
         card.innerHTML = buildAiHeader();
 
         const box = document.createElement('div');
@@ -326,7 +326,7 @@
         row.className = 'flex items-start gap-3 w-full';
 
         const bubble = document.createElement('div');
-        bubble.className = 'bg-slate-900/90 border border-slate-700/70 px-4 py-3 rounded-2xl rounded-tl-none shadow flex items-center gap-1.5';
+        bubble.className = 'bg-slate-900/75 backdrop-blur-md border border-slate-700/60 px-4 py-3 rounded-2xl rounded-tl-none shadow flex items-center gap-1.5';
         bubble.innerHTML = '<span class="typing-dot bg-sky-500"></span><span class="typing-dot bg-sky-500"></span><span class="typing-dot bg-sky-500"></span>';
 
         row.appendChild(buildAiAvatar());

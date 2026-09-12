@@ -1,466 +1,581 @@
-Saya sedang mengembangkan fitur CHATBOT AI pada project Laravel.
+# Glassmorphism UI Restyling — STYLE ONLY
 
-TUGAS UTAMA:
-Saya ingin kamu memperbaiki dan mengembangkan chatbot ini secara menyeluruh, baik dari sisi BACKEND maupun FRONTEND, dengan tetap mengikuti struktur project yang sudah ada.
+## 🎯 TUJUAN UTAMA
 
-==================================================
-BATASAN FILE — SANGAT PENTING
-==================================================
+Saya ingin mengubah **style visual** dari tampilan website yang sudah ada menjadi **Glassmorphism**.
 
-Kamu HANYA BOLEH membuat perubahan pada 3 file berikut:
+### ⚠️ ATURAN PALING PENTING
 
-1. chat.blade.php
-2. ChatController.php
-3. DirectionAgent.php
+> **JANGAN MENGUBAH BENTUK, LAYOUT, STRUKTUR, POSISI, ATAU UKURAN TAMPILAN YANG SUDAH ADA.**
 
-JANGAN mengubah, membuat, menghapus, atau memindahkan file lain.
+Yang boleh diubah **HANYA VISUAL STYLE-NYA**.
 
-JANGAN membuat:
-- file CSS baru
-- file JavaScript baru
-- layout Blade baru
-- component Blade baru
-- controller baru
-- route baru
-- migration baru
-- model baru
-- config baru
-- middleware baru
-- file .env baru
+Artinya, hasil akhir harus tetap memiliki **bentuk dan layout yang sama persis seperti sebelumnya**, tetapi tampilannya terasa seperti UI Glassmorphism modern.
 
-Jika ada sesuatu yang biasanya membutuhkan file lain, implementasikan di dalam 3 file yang diizinkan atau gunakan fitur yang SUDAH tersedia di project.
+---
 
-Jika project sudah mempunyai layout Blade yang dapat digunakan, gunakan layout tersebut TANPA mengubah file layout-nya.
+# 🚫 DILARANG MENGUBAH
 
-==================================================
-REFERENSI DESAIN
-==================================================
+Jangan melakukan perubahan terhadap:
 
-Saya akan memberikan 2 foto/screenshot sebagai referensi desain.
+* Layout halaman
+* Struktur HTML/Blade
+* Urutan elemen
+* Posisi elemen
+* Ukuran elemen
+* Width / height yang sudah ada
+* Padding utama
+* Margin utama
+* Gap antar elemen
+* Grid structure
+* Flex structure
+* Jumlah kolom
+* Sidebar
+* Navbar
+* Header
+* Footer
+* Posisi tombol
+* Posisi input
+* Posisi card
+* Bentuk section
+* Flow halaman
+* Responsive breakpoint yang sudah ada
+* Responsive behavior
+* Functionality
+* JavaScript logic
+* Controller
+* Route
+* Database
+* API
+* Data yang ditampilkan
+* Nama variable
+* Nama component
+* Nama route
+* Business logic
 
-WAJIB:
-- Analisis kedua gambar terlebih dahulu.
-- Gunakan gambar sebagai acuan utama tampilan.
-- Jangan sekadar meniru secara kasar.
-- Perhatikan:
-  - layout
-  - spacing
-  - typography
-  - ukuran elemen
-  - border radius
-  - warna
-  - card
-  - navbar/header
-  - chat bubble
-  - input chat
-  - tombol
-  - icon
-  - background
-  - responsive behavior
-  - hierarchy visual
+### Jangan melakukan redesign.
 
-Tujuan akhirnya adalah membuat halaman chatbot yang terlihat modern, bersih, profesional, dan konsisten dengan referensi yang saya berikan.
+Jangan menganggap tugas ini sebagai kesempatan untuk membuat UI baru.
 
-Jangan menggunakan desain generik AI chatbot jika tidak sesuai dengan screenshot.
+**Tampilan lama adalah acuan utama.**
 
-==================================================
-TEKNOLOGI FRONTEND
-==================================================
+---
+
+# ✅ YANG BOLEH DIUBAH
+
+Fokus hanya pada:
+
+* Background color
+* Background gradient
+* Transparency
+* Opacity
+* `backdrop-blur`
+* Border color
+* Border opacity
+* Box shadow
+* Text color
+* Placeholder color
+* Button color
+* Card surface
+* Input surface
+* Hover color
+* Focus color
+* Glow effect yang sangat ringan
+* Blur effect
+* Glass effect
+* Subtle gradient
+* Visual hierarchy melalui warna dan efek
+
+Jika memungkinkan, gunakan **Tailwind CSS utility classes**.
+
+---
+
+# 🪟 GLASSMORPHISM STYLE
+
+Gunakan karakteristik Glassmorphism berikut:
+
+### 1. Transparent Surface
+
+Gunakan background semi-transparent.
+
+Contoh:
+
+```html
+bg-white/10
+bg-white/5
+bg-black/10
+bg-black/20
+```
+
+Sesuaikan dengan background dan tema yang sudah digunakan oleh website.
+
+---
+
+### 2. Backdrop Blur
 
 Gunakan:
 
-- Laravel Blade
-- Tailwind CSS
-- Vanilla JavaScript
+```html
+backdrop-blur
+backdrop-blur-sm
+backdrop-blur-md
+backdrop-blur-lg
+```
 
-Jangan menggunakan framework frontend tambahan seperti:
-- React
-- Vue
-- Angular
-- Alpine.js
+Prioritaskan:
 
-kecuali project yang sudah ada memang menggunakan Alpine dan benar-benar diperlukan.
+```html
+backdrop-blur-md
+```
 
-Prioritaskan utility class Tailwind.
+atau
 
-Jangan membuat file CSS eksternal.
+```html
+backdrop-blur-lg
+```
 
-Jika membutuhkan CSS khusus, gunakan <style> di dalam chat.blade.php.
+Tetapi jangan berlebihan.
 
-==================================================
-CHATBOT FRONTEND
-==================================================
+---
 
-Chatbot harus mempunyai:
+### 3. Glass Border
 
-1. Area chat
-2. Pesan user
-3. Pesan AI
-4. Input message
-5. Tombol send
-6. Loading state ketika AI sedang memproses
-7. Error state
-8. Auto scroll ke pesan terbaru
-9. Enter untuk mengirim pesan
-10. Shift + Enter untuk membuat baris baru jika menggunakan textarea
-11. Tombol send disabled ketika request sedang diproses
-12. Tampilan responsive untuk:
-    - desktop
-    - tablet
-    - mobile
+Gunakan border transparan tipis.
 
-Pesan user dan AI harus mempunyai visual yang berbeda.
+Contoh:
 
-Jangan menampilkan:
+```html
+border border-white/10
+```
 
-AI: undefined
+atau:
 
-Jika response kosong, tampilkan fallback yang masuk akal.
+```html
+border border-white/20
+```
 
-==================================================
-JAVASCRIPT CHAT
-==================================================
+Border harus terlihat halus dan tidak terlalu mencolok.
 
-Gunakan fetch() untuk mengirim request ke backend yang SUDAH digunakan project.
+---
 
-Jangan mengubah route yang sudah ada hanya karena ingin membuat struktur baru.
+### 4. Soft Shadow
 
-Request harus mengirim:
+Gunakan shadow yang lembut.
 
-{
-    message: "pesan user"
+Contoh:
+
+```html
+shadow-lg
+shadow-xl
+```
+
+Jika diperlukan, gunakan shadow dengan opacity rendah.
+
+Hindari shadow yang terlalu berat.
+
+---
+
+### 5. Rounded Corners
+
+**JANGAN mengubah tingkat rounded yang sudah ada.**
+
+Jika elemen sebelumnya menggunakan:
+
+```html
+rounded-lg
+```
+
+tetap gunakan:
+
+```html
+rounded-lg
+```
+
+Jika sebelumnya:
+
+```html
+rounded-xl
+```
+
+tetap:
+
+```html
+rounded-xl
+```
+
+Jangan mengganti bentuk elemen hanya demi Glassmorphism.
+
+---
+
+# 🎨 PRINSIP WARNA
+
+Jangan mengganti identitas warna utama website secara ekstrem.
+
+Jika website sudah memiliki warna utama:
+
+* Pertahankan warna tersebut.
+* Gunakan warna tersebut dalam versi transparent.
+* Gunakan opacity untuk menciptakan efek glass.
+* Gunakan gradient hanya jika membantu menciptakan efek Glassmorphism.
+
+Contoh:
+
+```html
+bg-blue-500/10
+border-blue-400/20
+text-blue-100
+```
+
+Bukan mengganti seluruh tema menjadi warna baru.
+
+---
+
+# 🧩 TAILWIND COMPONENT STYLE
+
+Jika terdapat komponen yang digunakan berulang kali, prioritaskan penggunaan style/component yang reusable.
+
+Contoh konsep:
+
+```html
+<div class="glass-panel">
+```
+
+dengan style:
+
+```css
+.glass-panel {
+    @apply bg-white/10 backdrop-blur-md border border-white/10 shadow-lg;
 }
+```
 
-Response backend saat berhasil menggunakan format:
+Namun:
 
-{
-    "status": "success",
-    "response": "jawaban AI"
-}
+> Jangan membuat perubahan arsitektur besar hanya untuk membuat component tersebut.
 
-Frontend WAJIB membaca:
+Jika project menggunakan Blade dan sudah memiliki component system, gunakan component yang sudah tersedia.
 
-data.response
+Jika tidak ada component system, cukup gunakan utility class Tailwind secara langsung atau buat utility sederhana jika benar-benar diperlukan.
+
+---
+
+# 🧱 PRIORITAS KOMPONEN
+
+Terapkan Glassmorphism secara konsisten pada:
+
+### Cards
+
+Contoh:
+
+```html
+bg-white/10
+backdrop-blur-md
+border
+border-white/10
+shadow-lg
+```
+
+### Input
+
+Contoh:
+
+```html
+bg-white/5
+backdrop-blur-sm
+border
+border-white/10
+```
+
+Focus:
+
+```html
+focus:border-white/30
+focus:ring-1
+focus:ring-white/20
+```
+
+### Button
+
+Tetap mempertahankan:
+
+* ukuran
+* posisi
+* bentuk
+* padding
+
+Hanya ubah visual style.
+
+Contoh:
+
+```html
+bg-white/10
+backdrop-blur-md
+border border-white/10
+hover:bg-white/20
+```
+
+### Navigation
+
+Tetap pertahankan layout navbar.
+
+Tambahkan visual:
+
+```html
+bg-white/5
+backdrop-blur-lg
+border-b border-white/10
+```
+
+### Modal / Overlay
+
+Jika sudah ada modal, jangan mengubah ukuran atau posisinya.
+
+Gunakan:
+
+```html
+bg-black/40
+backdrop-blur-sm
+```
+
+Untuk panel modal:
+
+```html
+bg-white/10
+backdrop-blur-xl
+border border-white/10
+```
+
+---
+
+# ✨ GLASSMORPHISM YANG DIINGINKAN
+
+Hasil akhirnya harus terasa:
+
+* Modern
+* Clean
+* Premium
+* Minimalist
+* Translucent
+* Soft
+* Elegant
+* Tidak terlalu ramai
+* Tidak terlalu banyak efek
+* Tetap mudah dibaca
+
+Glassmorphism harus menjadi **styling layer**, bukan redesign.
+
+---
+
+# 📐 ATURAN LAYOUT
+
+Sebelum melakukan perubahan, pahami terlebih dahulu layout yang sudah ada.
+
+Misalnya:
+
+```text
+Navbar
+↓
+Hero
+↓
+Search
+↓
+Cards
+↓
+Content
+↓
+Footer
+```
+
+Setelah perubahan:
+
+```text
+Navbar
+↓
+Hero
+↓
+Search
+↓
+Cards
+↓
+Content
+↓
+Footer
+```
+
+**Struktur harus tetap sama.**
+
+Yang berubah hanya:
+
+```text
+Visual Style
+```
+
+---
+
+# ❌ CONTOH PERUBAHAN YANG TIDAK BOLEH
+
+JANGAN melakukan:
+
+```text
+Card 3 kolom → Card 4 kolom
+```
+
+```text
+Sidebar kiri → Sidebar kanan
+```
+
+```text
+Navbar horizontal → Navbar floating
+```
+
+```text
+Button kecil → Button besar
+```
+
+```text
+Search bar → Search modal
+```
+
+```text
+Grid → Carousel
+```
+
+```text
+Section → Section baru
+```
+
+```text
+Card → Floating card dengan posisi baru
+```
+
+```text
+Desktop layout → Layout baru
+```
+
+Semua itu termasuk **layout redesign** dan dilarang.
+
+---
+
+# ✅ CONTOH YANG BOLEH
+
+Sebelumnya:
+
+```html
+<div class="bg-gray-800 rounded-xl shadow-md">
+```
+
+Boleh menjadi:
+
+```html
+<div class="bg-white/10 backdrop-blur-md rounded-xl border border-white/10 shadow-lg">
+```
+
+Karena:
+
+* `rounded-xl` tetap
+* ukuran tetap
+* posisi tetap
+* layout tetap
+* hanya visual style yang berubah
+
+---
+
+# 🔍 WORKFLOW WAJIB
+
+Sebelum mengedit:
+
+### STEP 1 — Analisis
+
+Identifikasi:
+
+* Struktur layout
+* Komponen
+* Spacing
+* Ukuran
+* Responsive behavior
+* Warna saat ini
+* Existing Tailwind classes
+
+### STEP 2 — Tandai
+
+Pisahkan:
+
+```text
+LAYOUT / STRUCTURE
+```
+
+dan
+
+```text
+VISUAL STYLE
+```
+
+**Jangan menyentuh bagian layout/structure.**
+
+### STEP 3 — Restyle
+
+Ubah hanya:
+
+```text
+colors
+opacity
+background
+border
+shadow
+blur
+hover
+focus
+text colors
+glass effect
+```
+
+### STEP 4 — Preserve
+
+Pastikan:
+
+```text
+HTML structure = tetap
+Layout = tetap
+Position = tetap
+Size = tetap
+Spacing = tetap
+Functionality = tetap
+Responsive = tetap
+```
+
+### STEP 5 — Final Check
+
+Bandingkan tampilan sebelum dan sesudah.
+
+Jika terdapat perubahan bentuk atau layout:
+
+> Kembalikan perubahan tersebut.
+
+---
+
+# 🧠 RULE OF THUMB
+
+Jika ragu apakah sebuah perubahan termasuk layout atau style:
+
+**JANGAN UBAH.**
+
+Prioritaskan mempertahankan tampilan sebelumnya.
+
+Lebih baik Glassmorphism terlihat sedikit lebih sederhana daripada mengubah layout yang sudah ada.
+
+---
+
+# 🎯 HASIL YANG DIHARAPKAN
+
+Saya ingin hasil akhir seperti:
+
+> **"Tampilan yang sama seperti sebelumnya, tetapi diberikan skin/style Glassmorphism."**
 
 Bukan:
 
-data.message
+> "Website lama dibuat ulang menjadi desain Glassmorphism."
 
-Namun jika backend saat ini masih mempunyai format berbeda, sesuaikan Controller agar response final konsisten dengan format:
+Jadi sekali lagi:
 
-{
-    "status": "success",
-    "response": "..."
-}
+## STYLE ONLY — NO REDESIGN
 
-==================================================
-BACKEND — ChatController.php
-==================================================
-
-Pertahankan method yang sudah ada.
-
-Saat ini struktur controller kurang lebih:
-
-public function index()
-{
-    return view('chat');
-}
-
-public function sendMessage(Request $request)
-{
-    $request->validate([
-        'message' => 'required|string',
-    ]);
-
-    $agent = new DirectionAgent();
-
-    $response = $agent->prompt($request->message);
-
-    return response()->json([
-        'status' => 'success',
-        'message' => (string) $response,
-    ]);
-}
-
-Perbaiki agar response berhasil menjadi:
-
-return response()->json([
-    'status' => 'success',
-    'response' => (string) $response,
-]);
-
-Gunakan try/catch agar error tidak menyebabkan frontend mendapatkan error yang tidak jelas.
-
-Jika Gemini mengalami:
-- overload
-- timeout
-- API error
-- invalid response
-- connection error
-
-berikan JSON error yang konsisten.
-
-Contoh:
-
-{
-    "status": "error",
-    "message": "Gemini sedang sibuk. Silakan coba lagi beberapa saat."
-}
-
-Gunakan HTTP status yang sesuai.
-
-Jangan membocorkan API key atau credential ke frontend.
-
-==================================================
-GEMINI / DirectionAgent.php
-==================================================
-
-DirectionAgent adalah agent yang digunakan untuk memproses pesan chatbot.
-
-WAJIB:
-- Gunakan konfigurasi Gemini yang SUDAH digunakan project.
-- Jangan mengganti package AI tanpa alasan.
-- Jangan mengarang API/package yang tidak ada di project.
-- Jangan mengubah dependency composer.
-- Jangan membuat file konfigurasi baru.
-- Periksa implementasi DirectionAgent yang sekarang sebelum melakukan perubahan.
-
-Saya sebelumnya mendapatkan error:
-
-AI provider [gemini] is overloaded.
-
-Artinya request sudah sampai ke provider Gemini, tetapi provider dapat mengalami overload.
-
-Tangani error tersebut dengan baik.
-
-Jika library/package yang digunakan mendukung retry, gunakan retry yang aman untuk error sementara seperti overload atau timeout.
-
-Jangan melakukan retry tanpa batas.
-
-Gunakan maksimal beberapa percobaan dengan delay yang wajar.
-
-Jika tetap gagal, return error yang mudah dipahami user.
-
-==================================================
-SYSTEM PROMPT / PERILAKU AI
-==================================================
-
-DirectionAgent harus berfungsi sebagai chatbot yang membantu user.
-
-AI harus:
-- menjawab secara natural
-- memahami konteks pertanyaan
-- memberikan jawaban yang jelas
-- tidak terlalu panjang jika pertanyaan sederhana
-- menggunakan Bahasa Indonesia jika user menggunakan Bahasa Indonesia
-- menggunakan bahasa user jika user menggunakan bahasa lain
-- tidak mengarang informasi jika tidak mengetahui jawabannya
-
-Jika chatbot ini berkaitan dengan project Sudirection, pertahankan konteks dan tujuan Sudirection yang sudah ada di project.
-
-Jangan mengubah identitas/tujuan aplikasi tanpa alasan.
-
-Jika ada system prompt yang sudah ada di DirectionAgent, pertahankan informasi pentingnya dan tingkatkan hanya jika diperlukan.
-
-==================================================
-LOADING STATE
-==================================================
-
-Saat user mengirim pesan:
-
-1. Pesan user langsung muncul.
-2. Input sementara dinonaktifkan.
-3. Tombol send dinonaktifkan.
-4. Tampilkan indikator AI sedang mengetik/proses.
-5. Setelah response diterima:
-   - hapus loading
-   - tampilkan jawaban AI
-   - aktifkan kembali input dan tombol send.
-
-Jika request gagal:
-- hapus loading
-- tampilkan pesan error yang ramah
-- aktifkan kembali input.
-
-==================================================
-CHAT UX
-==================================================
-
-Buat pengalaman chat seperti aplikasi modern.
-
-Contoh:
-
-User:
-[pesan user]
-
-AI:
-[jawaban AI]
-
-AI loading:
-[animated typing indicator]
-
-Pastikan scroll otomatis ke bawah ketika pesan baru muncul.
-
-Jika chat-box memiliki tinggi tertentu, jangan sampai halaman rusak ketika pesan semakin banyak.
-
-==================================================
-RESPONSIVE
-==================================================
-
-Desktop:
-- gunakan layout yang luas dan rapi
-- chat container tidak terlalu melebar
-- input chat nyaman digunakan
-
-Tablet:
-- sesuaikan spacing dan ukuran container
-
-Mobile:
-- chat memenuhi hampir seluruh layar
-- input tetap nyaman digunakan
-- tombol send tidak terpotong
-- tidak ada horizontal overflow
-- typography tetap terbaca
-
-Gunakan breakpoint Tailwind.
-
-==================================================
-REUSABLE LAYOUT — PENTING
-==================================================
-
-Saya ingin struktur tampilan dibuat reusable dan rapi.
-
-NAMUN kamu hanya boleh mengubah chat.blade.php.
-
-Karena kamu TIDAK BOLEH membuat file layout/component baru, jangan membuat:
-- resources/views/layouts/chat.blade.php
-- components/chat-message.blade.php
-- partials/chat.blade.php
-- file Blade lainnya.
-
-Jika sudah ada layout utama project, gunakan layout tersebut tanpa mengubah file layout.
-
-Di dalam chat.blade.php:
-- gunakan struktur Blade yang rapi
-- gunakan data/array untuk elemen yang berulang
-- gunakan @foreach jika ada elemen UI berulang
-- hindari mengulang markup yang sama jika bisa dibuat lebih rapi
-- gunakan class Tailwind yang konsisten
-- gunakan naming class yang jelas jika custom CSS diperlukan
-
-Pisahkan secara jelas bagian:
-- header
-- chat area
-- message
-- loading
-- input
-- JavaScript
-
-Tetapi semuanya tetap berada di chat.blade.php.
-
-==================================================
-KEAMANAN
-==================================================
-
-WAJIB:
-- gunakan CSRF token
-- validasi input
-- jangan expose GEMINI_API_KEY
-- jangan memasukkan API key ke JavaScript
-- jangan memasukkan credential ke HTML
-- jangan menggunakan innerHTML untuk menampilkan input user jika bisa menyebabkan XSS
-
-Untuk pesan yang berasal dari user, gunakan textContent atau metode yang aman.
-
-Jika response AI perlu mendukung Markdown, pastikan implementasinya tidak menyebabkan XSS.
-
-==================================================
-KOMPATIBILITAS
-==================================================
-
-Sebelum mengubah kode:
-
-1. Baca isi ketiga file.
-2. Pahami struktur project.
-3. Pahami bagaimana DirectionAgent saat ini memanggil Gemini.
-4. Pahami route yang sudah digunakan.
-5. Jangan mengubah route.
-6. Jangan mengubah package.
-7. Jangan mengubah file lain.
-
-Jangan mengganti teknologi hanya karena kamu lebih terbiasa dengan teknologi lain.
-
-==================================================
-ATURAN PENTING SAAT CODING
-==================================================
-
-Jangan melakukan perubahan besar yang tidak diperlukan.
-
-Pertahankan kode yang sudah bekerja.
-
-Perbaiki hanya bagian yang memang diperlukan.
-
-Jangan menghapus fitur existing kecuali memang rusak dan harus diperbaiki.
-
-Jangan mengubah nama method:
-- index()
-- sendMessage()
-
-kecuali benar-benar diperlukan oleh struktur project yang sudah ada.
-
-Jangan membuat route baru.
-
-Jangan membuat controller baru.
-
-Jangan membuat DirectionAgent baru jika file tersebut sudah ada.
-
-==================================================
-HASIL AKHIR YANG SAYA INGINKAN
-==================================================
-
-Saya ingin hasil akhirnya:
-
-1. Chatbot dapat mengirim pesan.
-2. Gemini dapat memproses pesan.
-3. Response AI tampil dengan benar.
-4. Tidak ada lagi "AI: undefined".
-5. Error Gemini ditangani dengan baik.
-6. Loading state tersedia.
-7. Error state tersedia.
-8. UI mengikuti 2 screenshot yang saya berikan.
-9. UI menggunakan Tailwind CSS.
-10. Responsive.
-11. Aman dari XSS.
-12. CSRF tetap digunakan.
-13. API key tetap rahasia.
-14. Struktur kode rapi.
-15. Hanya 3 file yang boleh berubah:
-    - chat.blade.php
-    - ChatController.php
-    - DirectionAgent.php
-
-==================================================
-PROSES KERJA
-==================================================
-
-JANGAN langsung menulis kode sebelum membaca ketiga file tersebut.
-
-Pertama:
-- inspect ketiga file
-- identifikasi masalah
-- cocokkan dengan screenshot
-- pahami library Gemini yang digunakan
-
-Kemudian lakukan implementasi.
-
-Setelah selesai:
-- tampilkan ringkasan perubahan
-- sebutkan hanya 3 file yang diubah
-- jelaskan masalah yang diperbaiki
-- jelaskan cara mengetes chatbot
-
-JANGAN mengubah file lain.
-
-Jika kamu menemukan masalah yang membutuhkan file lain, JANGAN mengubah file tersebut. Cari solusi yang masih dapat dilakukan hanya melalui 3 file yang diizinkan.
-
-Jika ada informasi yang benar-benar tidak tersedia, tanyakan terlebih dahulu daripada mengarang struktur project.
+Pertahankan seluruh bentuk tampilan sebelumnya dan hanya ubah visual styling menggunakan Tailwind CSS Glassmorphism.

@@ -19,7 +19,7 @@
                 </p>
             </div>
 
-            <div class="w-full max-w-sm bg-white/10 backdrop-blur-2xl border border-white/25 rounded-[40px] p-8 shadow-2xl">
+            <div class="w-full max-w-sm glass-ios rounded-[40px] p-8">
                 <form method="POST" action="/register" class="space-y-4">
                     @csrf
 
@@ -48,7 +48,7 @@
                     </div>
 
                     <button type="submit"
-                        class="btn-shimmer w-full py-4 rounded-full bg-white/60 hover:bg-white/75 text-gray-800 font-semibold transition">
+                        class="btn-shimmer w-full py-4 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/20 text-white font-semibold transition shadow-lg">
                         Login
                     </button>
                 </form>

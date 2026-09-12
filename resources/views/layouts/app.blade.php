@@ -18,7 +18,7 @@
 
     {{-- Header Start--}}
     <header
-        class="sticky mix-blend-difference top-0 z-50 w-full backdrop-blur-md bg-transparent border-b border-white/10 shadow-lg">
+        class="sticky mix-blend-difference top-0 z-50 w-full glass-nav">
         @include('layouts.partials.header')
     </header>
     {{-- Header End --}}

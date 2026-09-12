@@ -8,6 +8,9 @@
         "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
+
+    --shadow-glass: 0 8px 32px rgba(15, 23, 42, 0.18), 0 2px 8px rgba(15, 23, 42, 0.1);
+    --shadow-glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.22), 0 8px 32px rgba(15, 23, 42, 0.18);
 }
 
 @layer components {
@@ -22,6 +25,72 @@
     .glass {
         @apply bg-white/20 
            backdrop-blur-md 
-           backdrop-saturate-150;
+           backdrop-saturate-150
+           border border-white/10;
+        box-shadow: var(--shadow-glass-highlight);
+    }
+
+    .glass-ios {
+        @apply bg-white/10 
+           backdrop-blur-2xl 
+           backdrop-saturate-150 
+           border border-white/15;
+        box-shadow: var(--shadow-glass-highlight);
+    }
+
+    .glass-panel {
+        @apply bg-white/10 
+           backdrop-blur-2xl 
+           backdrop-saturate-150 
+           border border-white/15;
+        box-shadow: var(--shadow-glass-highlight);
+    }
+
+    .glass-input {
+        @apply bg-white/5 
+           backdrop-blur-md 
+           border border-white/10 
+           transition-all;
+    }
+
+    .glass-btn {
+        @apply bg-white/10 
+           backdrop-blur-lg 
+           border border-white/20 
+           hover:bg-white/20 
+           transition-all;
+        box-shadow: var(--shadow-glass);
+    }
+
+    .glass-chip {
+        @apply bg-white/10 
+           backdrop-blur-md 
+           border border-white/15 
+           transition-colors;
+        box-shadow: var(--shadow-glass);
+    }
+
+    .glass-nav {
+        @apply bg-white/5 
+           backdrop-blur-2xl 
+           backdrop-saturate-150 
+           border-b border-white/10;
+        box-shadow: var(--shadow-glass);
+    }
+
+    .glass-avatar {
+        @apply bg-white/10 
+           backdrop-blur-md 
+           border border-white/20;
+    }
+
+    .glass-overlay {
+        @apply bg-black/30 
+           backdrop-blur-sm;
+    }
+
+    .ambience-glow {
+        background: radial-gradient(60% 60% at 20% 10%, rgba(56, 189, 248, 0.18), transparent 70%),
+            radial-gradient(50% 50% at 85% 85%, rgba(14, 165, 233, 0.16), transparent 70%);
     }
 }

@@ -1,12 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="min-h-screen bg-[#070b19] text-white p-8 md:p-12 font-sans">
+    <div class="relative overflow-hidden min-h-screen bg-[#070b19] text-white p-8 md:p-12 font-sans">
 
-        <div class="max-w-7xl mx-auto space-y-12">
+        <div class="ambience-glow pointer-events-none absolute inset-0 z-0"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto space-y-12">
 
             <div
-                class="relative w-full rounded-2xl bg-[#393e4d] overflow-hidden min-h-90 flex flex-col items-center justify-center border border-white/5 shadow-2xl">
+                class="relative w-full rounded-2xl bg-white/5 overflow-hidden min-h-90 flex flex-col items-center justify-center border border-white/10 shadow-2xl backdrop-blur-2xl backdrop-saturate-150">
 
                 <div class="flex flex-col items-center justify-center space-y-4 text-center z-10 p-6">
                     <div class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-md">
@@ -20,7 +22,7 @@
                     </div>
 
                     <button type="button"
-                        class="btn-shimmer px-6 py-2.5 bg-white text-slate-900 rounded-full font-bold text-xs hover:bg-slate-200 transition-all shadow-md">
+                        class="btn-shimmer px-6 py-2.5 glass-btn text-white rounded-full font-bold text-xs transition-all shadow-md">
                         Upload Main Image
                     </button>
 
@@ -61,7 +63,7 @@
                                 Place Name
                             </label>
                             <input type="text" placeholder="e.g. Sunset Villa Santorini"
-                                class="w-full px-4 py-3.5 bg-[#121829] border border-white/5 rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
+                                class="w-full px-4 py-3.5 glass-input rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
                         </div>
 
                         <div class="space-y-2">
@@ -70,7 +72,7 @@
                             </label>
                             <div class="relative">
                                 <input type="text" placeholder="Search for destination..."
-                                    class="w-full pl-4 pr-10 py-3.5 bg-[#121829] border border-white/5 rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
+                                    class="w-full pl-4 pr-10 py-3.5 glass-input rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                     class="w-4 h-4 text-gray-400 absolute right-4 top-1/2 -translate-y-1/2" fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor">
@@ -91,13 +93,13 @@
                                 Description
                             </label>
                             <textarea rows="9" placeholder="Tell travelers about your unique place..."
-                                class="w-full p-4 bg-[#121829] border border-white/5 rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all resize-none flex-1"></textarea>
+                                class="w-full p-4 glass-input rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all resize-none flex-1"></textarea>
                         </div>
 
                     </div>
                     <div class="lg:col-span-2 flex justify-end">
                         <button type="submit"
-                            class="btn-shimmer px-15 py-4 bg-cyan-500 text-md text-white rounded-full font-bold btn-shimmer">
+                            class="btn-shimmer px-15 py-4 bg-cyan-500/85 text-md text-white rounded-full font-bold border border-cyan-400/30 backdrop-blur-md shadow-lg shadow-cyan-500/25">
                             Edit Place
                         </button>
                     </div>

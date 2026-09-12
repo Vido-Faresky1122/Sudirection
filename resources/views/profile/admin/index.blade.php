@@ -11,7 +11,7 @@
         <div class="relative z-10 w-full max-w-5xl flex flex-col md:flex-row items-stretch justify-center gap-12">
 
             <div
-                class="w-full max-w-md bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[40px] px-8 md:px-10 py-12 shadow-2xl flex flex-col justify-between">
+                class="w-full max-w-md glass-ios rounded-[40px] px-8 md:px-10 py-12 flex flex-col justify-between">
 
                 <div class="flex items-center gap-5">
                     <div
@@ -59,7 +59,7 @@
             </div>
 
             <div
-                class="w-full max-w-md bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[40px] px-8 md:px-10 py-12 shadow-2xl flex flex-col justify-between">
+                class="w-full max-w-md glass-ios rounded-[40px] px-8 md:px-10 py-12 flex flex-col justify-between">
 
                 <div>
                     <div class="text-center pb-6 mb-6 border-b border-white/10">

@@ -1,12 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="min-h-screen bg-[#070b19] text-white p-8 md:p-12 font-sans">
+    <div class="relative overflow-hidden min-h-screen bg-[#070b19] text-white p-8 md:p-12 font-sans">
 
-        <div class="max-w-7xl mx-auto space-y-12">
+        <div class="ambience-glow pointer-events-none absolute inset-0 z-0"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto space-y-12">
 
             <div
-                class="relative w-full rounded-2xl bg-[#393e4d] overflow-hidden min-h-90 flex flex-col items-center justify-center border border-white/5 shadow-2xl">
+                class="relative w-full rounded-2xl bg-white/5 overflow-hidden min-h-90 flex flex-col items-center justify-center border border-white/10 shadow-2xl backdrop-blur-2xl backdrop-saturate-150">
 
                 <div class="flex flex-col items-center justify-center space-y-4 text-center z-10 p-6">
                     <div class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-md">
@@ -20,7 +22,7 @@
                     </div>
 
                     <button type="button"
-                        class="btn-shimmer px-6 py-2.5 bg-white text-slate-900 rounded-full font-bold text-xs hover:bg-slate-200 transition-all shadow-md">
+                        class="btn-shimmer px-6 py-2.5 glass-btn text-white rounded-full font-bold text-xs transition-all shadow-md">
                         Upload Main Image
                     </button>
 
@@ -61,9 +63,9 @@
                                 Accommodation Name
                             </label>
                             <input type="text" placeholder="e.g. Sunset Villa Santorini"
-                                class="w-full px-4 py-3.5 bg-[#121829] border border-white/5 rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
+                                class="w-full px-4 py-3.5 glass-input rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
                             <input type="text" placeholder="Tagline"
-                                class="w-full px-4 py-3.5 bg-[#121829] border border-white/5 rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
+                                class="w-full px-4 py-3.5 glass-input rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
                         </div>
 
                         <div class="space-y-2">
@@ -72,13 +74,13 @@
                             </label>
                             <div class="relative">
                                 <select
-                                    class="w-full px-4 py-3.5 bg-[#121829] border border-white/5 rounded-xl text-sm text-gray-300 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all appearance-none cursor-pointer">
+                                    class="w-full px-4 py-3.5 glass-input rounded-xl text-sm text-gray-300 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all appearance-none cursor-pointer">
                                     <option value="" disabled selected class="text-gray-500">Select accommodation type...
                                     </option>
-                                    <option value="hotel" class="bg-[#121829] text-white">Hotel</option>
-                                    <option value="resort" class="bg-[#121829] text-white">Resort</option>
-                                    <option value="villas" class="bg-[#121829] text-white">Villas</option>
-                                    <option value="apartment" class="bg-[#121829] text-white">Apartment</option>
+                                    <option value="hotel" class="bg-slate-800 text-white">Hotel</option>
+                                    <option value="resort" class="bg-slate-800 text-white">Resort</option>
+                                    <option value="villas" class="bg-slate-800 text-white">Villas</option>
+                                    <option value="apartment" class="bg-slate-800 text-white">Apartment</option>
                                 </select>
                                 <svg class="w-4 h-4 text-gray-400 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"
                                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -94,11 +96,11 @@
                             </label>
                             <div class="relative">
                                 <input type="text" placeholder="Country"
-                                    class="w-full pl-4 pr-10 py-3.5 bg-[#121829] border border-white/5 rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
+                                    class="w-full pl-4 pr-10 py-3.5 glass-input rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
                                 <input type="text" placeholder="City"
-                                    class="w-full pl-4 pr-10 py-3.5 bg-[#121829] border border-white/5 rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
+                                    class="w-full pl-4 pr-10 py-3.5 glass-input rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
                                 <input type="text" placeholder="Search for destination..."
-                                    class="w-full pl-4 pr-10 py-3.5 bg-[#121829] border border-white/5 rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
+                                    class="w-full pl-4 pr-10 py-3.5 glass-input rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                     class="w-4 h-4 text-gray-400 absolute right-4 top-1/2 -translate-y-1/2" fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor">
@@ -117,7 +119,7 @@
                             <div class="relative">
                                 <span class="absolute left-4 top-1/2 -translate-y-1/2 text-sm text-gray-400">$</span>
                                 <input type="text" placeholder="0.00"
-                                    class="w-full pl-8 pr-4 py-3.5 bg-[#121829] border border-white/5 rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
+                                    class="w-full pl-8 pr-4 py-3.5 glass-input rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
                             </div>
                         </div>
 
@@ -126,9 +128,9 @@
                                 Contact Information
                             </label>
                             <input type="email" placeholder="Email address"
-                                class="w-full px-4 py-3.5 bg-[#121829] border border-white/5 rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
+                                class="w-full px-4 py-3.5 glass-input rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
                             <input type="tel" placeholder="Phone number"
-                                class="w-full px-4 py-3.5 bg-[#121829] border border-white/5 rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
+                                class="w-full px-4 py-3.5 glass-input rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
                         </div>
 
                     </div>
@@ -140,7 +142,7 @@
                                 Description
                             </label>
                             <textarea rows="9" placeholder="Tell travelers about your unique place..."
-                                class="w-full p-4 bg-[#121829] border border-white/5 rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all resize-none flex-1"></textarea>
+                                class="w-full p-4 glass-input rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all resize-none flex-1"></textarea>
                         </div>
 
                         <div class="space-y-4 pt-2">
@@ -152,17 +154,17 @@
                                 <div class="space-y-3">
                                     <label class="flex items-center space-x-3 cursor-pointer select-none">
                                         <input type="checkbox"
-                                            class="w-4 h-4 rounded border-gray-700 bg-[#121829] text-cyan-500 focus:ring-0 focus:ring-offset-0" />
+                                            class="w-4 h-4 rounded border-gray-700 bg-slate-800 text-cyan-500 focus:ring-0 focus:ring-offset-0" />
                                         <span>Infinity Pool</span>
                                     </label>
                                     <label class="flex items-center space-x-3 cursor-pointer select-none">
                                         <input type="checkbox"
-                                            class="w-4 h-4 rounded border-gray-700 bg-[#121829] text-cyan-500 focus:ring-0 focus:ring-offset-0" />
+                                            class="w-4 h-4 rounded border-gray-700 bg-slate-800 text-cyan-500 focus:ring-0 focus:ring-offset-0" />
                                         <span>Sea View</span>
                                     </label>
                                     <label class="flex items-center space-x-3 cursor-pointer select-none">
                                         <input type="checkbox"
-                                            class="w-4 h-4 rounded border-gray-700 bg-[#121829] text-cyan-500 focus:ring-0 focus:ring-offset-0" />
+                                            class="w-4 h-4 rounded border-gray-700 bg-slate-800 text-cyan-500 focus:ring-0 focus:ring-offset-0" />
                                         <span>Private Kitchen</span>
                                     </label>
                                 </div>
@@ -170,17 +172,17 @@
                                 <div class="space-y-3">
                                     <label class="flex items-center space-x-3 cursor-pointer select-none">
                                         <input type="checkbox"
-                                            class="w-4 h-4 rounded border-gray-700 bg-[#121829] text-cyan-500 focus:ring-0 focus:ring-offset-0" />
+                                            class="w-4 h-4 rounded border-gray-700 bg-slate-800 text-cyan-500 focus:ring-0 focus:ring-offset-0" />
                                         <span>Free Wi-Fi</span>
                                     </label>
                                     <label class="flex items-center space-x-3 cursor-pointer select-none">
                                         <input type="checkbox"
-                                            class="w-4 h-4 rounded border-gray-700 bg-[#121829] text-cyan-500 focus:ring-0 focus:ring-offset-0" />
+                                            class="w-4 h-4 rounded border-gray-700 bg-slate-800 text-cyan-500 focus:ring-0 focus:ring-offset-0" />
                                         <span>Air Conditioning</span>
                                     </label>
                                     <label class="flex items-center space-x-3 cursor-pointer select-none">
                                         <input type="checkbox"
-                                            class="w-4 h-4 rounded border-gray-700 bg-[#121829] text-cyan-500 focus:ring-0 focus:ring-offset-0" />
+                                            class="w-4 h-4 rounded border-gray-700 bg-slate-800 text-cyan-500 focus:ring-0 focus:ring-offset-0" />
                                         <span>Parking Space</span>
                                     </label>
                                 </div>
@@ -190,7 +192,7 @@
                     </div>
                     <div class="lg:col-span-2 flex justify-end">
                         <button type="submit"
-                            class="btn-shimmer px-15 py-4 bg-cyan-500 text-md text-white rounded-full font-bold">
+                            class="btn-shimmer px-15 py-4 bg-cyan-500/85 text-md text-white rounded-full font-bold border border-cyan-400/30 backdrop-blur-md shadow-lg shadow-cyan-500/25">
                             Create Accommodation
                         </button>
                     </div>

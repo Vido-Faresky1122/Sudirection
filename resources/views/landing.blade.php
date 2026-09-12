@@ -128,7 +128,7 @@
 
                     {{-- KARTU 1: DISCOVER --}}
                     <div
-                        class="relative w-full max-w-65 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white flex flex-col justify-between items-center h-135 shadow-2xl overflow-hidden p-2">
+                        class="relative w-full max-w-65 glass-ios rounded-full text-white flex flex-col justify-between items-center h-135 overflow-hidden p-2">
                         {{-- Judul Vertikal --}}
                         <div class="pt-8 text-center">
                             <h3
@@ -139,7 +139,7 @@
 
                         {{-- Inner Box Merah (Kurus & Rounded Full) --}}
                         <div
-                            class="w-full bg-red-600 rounded-full p-6 text-center text-white shadow-lg flex flex-col items-center justify-center min-h-70 z-10">
+                            class="w-full bg-red-600/80 backdrop-blur-md border border-red-400/25 rounded-full p-6 text-center text-white shadow-lg flex flex-col items-center justify-center min-h-70 z-10">
                             <p class="text-[9px] tracking-widest text-white/80 uppercase font-semibold mb-2">TRAVEL THE
                                 WONDERS</p>
                             <h4 class="font-extrabold text-xs mb-2 leading-tight">Explore Amazing Places</h4>
@@ -150,7 +150,7 @@
 
                     {{-- KARTU 2: LOCAL GUIDE --}}
                     <div
-                        class="relative w-full max-w-65 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white flex flex-col justify-between items-center h-135 shadow-2xl overflow-hidden p-2">
+                        class="relative w-full max-w-65 glass-ios rounded-full text-white flex flex-col justify-between items-center h-135 overflow-hidden p-2">
                         {{-- Judul Vertikal --}}
                         <div class="pt-8 text-center">
                             <h3 class="text-2xl font-bold tracking-wider [writing-mode:vertical-lr] rotate-180 mx-auto">
@@ -160,7 +160,7 @@
 
                         {{-- Inner Box Oranye (Kurus & Rounded Full) --}}
                         <div
-                            class="w-full bg-amber-500 rounded-full p-6 text-center text-slate-900 shadow-lg flex flex-col items-center justify-center min-h-70 z-10">
+                            class="w-full bg-amber-500/85 backdrop-blur-md border border-amber-300/30 rounded-full p-6 text-center text-slate-900 shadow-lg flex flex-col items-center justify-center min-h-70 z-10">
                             <h4 class="font-extrabold text-xs mb-2 leading-tight">Experience the Local Culture</h4>
                             <p class="text-[10px] text-slate-900/90 font-medium leading-relaxed">Discover traditional food,
                                 culture, and the best places loved by locals.</p>
@@ -173,7 +173,7 @@
 
                     {{-- KARTU 3: PLAN YOUR JOURNEY --}}
                     <div
-                        class="relative w-full max-w-65 bg-lime-500 rounded-full text-slate-900 flex flex-col justify-between items-center h-135 shadow-2xl overflow-hidden p-6">
+                        class="relative w-full max-w-65 bg-lime-500/85 backdrop-blur-md border border-lime-300/30 rounded-full text-slate-900 flex flex-col justify-between items-center h-135 shadow-2xl overflow-hidden p-6">
                         {{-- Judul Vertikal --}}
                         <div class="pt-6 text-center">
                             <h3
@@ -330,7 +330,7 @@
 
                 <div class="mt-10 text-center">
                     <button
-                        class="px-8 py-3 rounded-full bg-sky-400 hover:bg-sky-500 text-white font-medium text-xs tracking-wider uppercase transition-all shadow-md hover:shadow-sky-300/50 active:scale-95">
+                        class="px-8 py-3 rounded-full bg-sky-400/80 hover:bg-sky-500/80 text-white font-medium text-xs tracking-wider uppercase transition-all shadow-md hover:shadow-sky-300/50 active:scale-95 backdrop-blur-md border border-sky-300/30">
                         Find Places & Accommodations
                     </button>
                 </div>
@@ -379,7 +379,7 @@
                             <h3 class="font-bold text-xl group-hover:text-sky-300 transition-colors">BALI</h3>
                             <p class="text-xs text-slate-300">Indonesia</p>
                             <span
-                                class="inline-block mt-2 text-[10px] bg-white/20 backdrop-blur-md px-3 py-1 rounded-full group-hover:bg-sky-500 transition-colors">3,5M
+                                class="inline-block mt-2 text-[10px] bg-white/20 backdrop-blur-md px-3 py-1 rounded-full group-hover:bg-sky-500/80 transition-colors">3,5M
                                 visits/year</span>
                         </div>
                     </a>
@@ -393,7 +393,7 @@
                             <h3 class="font-bold text-xl group-hover:text-sky-300 transition-colors">PARIS</h3>
                             <p class="text-xs text-slate-300">France</p>
                             <span
-                                class="inline-block mt-2 text-[10px] bg-white/20 backdrop-blur-md px-3 py-1 rounded-full group-hover:bg-sky-500 transition-colors">7,8M
+                                class="inline-block mt-2 text-[10px] bg-white/20 backdrop-blur-md px-3 py-1 rounded-full group-hover:bg-sky-500/80 transition-colors">7,8M
                                 visits/year</span>
                         </div>
                     </a>
@@ -407,7 +407,7 @@
                             <h3 class="font-bold text-xl group-hover:text-sky-300 transition-colors">TOKYO</h3>
                             <p class="text-xs text-slate-300">Japan</p>
                             <span
-                                class="inline-block mt-2 text-[10px] bg-white/20 backdrop-blur-md px-3 py-1 rounded-full group-hover:bg-sky-500 transition-colors">5,2M
+                                class="inline-block mt-2 text-[10px] bg-white/20 backdrop-blur-md px-3 py-1 rounded-full group-hover:bg-sky-500/80 transition-colors">5,2M
                                 visits/year</span>
                         </div>
                     </a>
@@ -421,7 +421,7 @@
                             <h3 class="font-bold text-xl group-hover:text-sky-300 transition-colors">SANTORINI</h3>
                             <p class="text-xs text-slate-300">Greece</p>
                             <span
-                                class="inline-block mt-2 text-[10px] bg-white/20 backdrop-blur-md px-3 py-1 rounded-full group-hover:bg-sky-500 transition-colors">2,1M
+                                class="inline-block mt-2 text-[10px] bg-white/20 backdrop-blur-md px-3 py-1 rounded-full group-hover:bg-sky-500/80 transition-colors">2,1M
                                 visits/year</span>
                         </div>
                     </a>
@@ -435,7 +435,7 @@
                             <h3 class="font-bold text-xl group-hover:text-sky-300 transition-colors">DUBAI</h3>
                             <p class="text-xs text-slate-300">UAE</p>
                             <span
-                                class="inline-block mt-2 text-[10px] bg-white/20 backdrop-blur-md px-3 py-1 rounded-full group-hover:bg-sky-500 transition-colors">6,4M
+                                class="inline-block mt-2 text-[10px] bg-white/20 backdrop-blur-md px-3 py-1 rounded-full group-hover:bg-sky-500/80 transition-colors">6,4M
                                 visits/year</span>
                         </div>
                     </a>
@@ -449,7 +449,7 @@
                             <h3 class="font-bold text-xl group-hover:text-sky-300 transition-colors">MALDIVES</h3>
                             <p class="text-xs text-slate-300">Sri Lanka</p>
                             <span
-                                class="inline-block mt-2 text-[10px] bg-white/20 backdrop-blur-md px-3 py-1 rounded-full group-hover:bg-sky-500 transition-colors">1,8M
+                                class="inline-block mt-2 text-[10px] bg-white/20 backdrop-blur-md px-3 py-1 rounded-full group-hover:bg-sky-500/80 transition-colors">1,8M
                                 visits/year</span>
                         </div>
                     </a>
@@ -457,7 +457,7 @@
 
                 <div class="mt-10 text-center md:ml-8 relative z-20">
                     <button
-                        class="px-8 py-3 rounded-full bg-sky-400 hover:bg-sky-500 text-white font-medium text-xs tracking-wider uppercase transition-all shadow-md hover:shadow-sky-300/50 active:scale-95">
+                        class="px-8 py-3 rounded-full bg-sky-400/80 hover:bg-sky-500/80 text-white font-medium text-xs tracking-wider uppercase transition-all shadow-md hover:shadow-sky-300/50 active:scale-95 backdrop-blur-md border border-sky-300/30">
                         View All Places
                     </button>
                 </div>
