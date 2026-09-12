@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('hide_footer', true)
+
 @section('content')
     <div class="relative min-h-screen w-full flex items-center justify-center p-8 bg-cover bg-center overflow-hidden font-sans text-white"
         style="background-image: url('{{ asset('assets/images/admin-bg.png') }}');">

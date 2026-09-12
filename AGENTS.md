@@ -1,153 +1,466 @@
-<laravel-boost-guidelines>
-=== foundation rules ===
+Saya sedang mengembangkan fitur CHATBOT AI pada project Laravel.
 
-# Laravel Boost Guidelines
+TUGAS UTAMA:
+Saya ingin kamu memperbaiki dan mengembangkan chatbot ini secara menyeluruh, baik dari sisi BACKEND maupun FRONTEND, dengan tetap mengikuti struktur project yang sudah ada.
 
-The Laravel Boost guidelines are specifically curated by Laravel maintainers for this application. These guidelines should be followed closely to ensure the best experience when building Laravel applications.
+==================================================
+BATASAN FILE — SANGAT PENTING
+==================================================
 
-## Foundational Context
+Kamu HANYA BOLEH membuat perubahan pada 3 file berikut:
 
-This application is a Laravel application running on PHP 8.5. You are an expert with the Laravel ecosystem. Always use the APIs that match the installed major version of each package — do not assume a version.
+1. chat.blade.php
+2. ChatController.php
+3. DirectionAgent.php
 
-Before relying on a package's API, confirm its installed version:
-- PHP packages: run `composer show --direct` to list direct dependencies with versions, or `composer show <vendor/package>` for a single package.
-- JS packages: check `package.json` for the installed versions.
+JANGAN mengubah, membuat, menghapus, atau memindahkan file lain.
 
-## Skills Activation
+JANGAN membuat:
+- file CSS baru
+- file JavaScript baru
+- layout Blade baru
+- component Blade baru
+- controller baru
+- route baru
+- migration baru
+- model baru
+- config baru
+- middleware baru
+- file .env baru
 
-This project has domain-specific skills available in `**/skills/**`. You MUST activate the relevant skill whenever you work in that domain—don't wait until you're stuck.
+Jika ada sesuatu yang biasanya membutuhkan file lain, implementasikan di dalam 3 file yang diizinkan atau gunakan fitur yang SUDAH tersedia di project.
 
-## Conventions
+Jika project sudah mempunyai layout Blade yang dapat digunakan, gunakan layout tersebut TANPA mengubah file layout-nya.
 
-- You must follow all existing code conventions used in this application. When creating or editing a file, check sibling files for the correct structure, approach, and naming.
-- Use descriptive names for variables and methods. For example, `isRegisteredForDiscounts`, not `discount()`.
-- Check for existing components to reuse before writing a new one.
+==================================================
+REFERENSI DESAIN
+==================================================
 
-## Verification Scripts
+Saya akan memberikan 2 foto/screenshot sebagai referensi desain.
 
-- Do not create verification scripts or tinker when tests cover that functionality and prove they work. Unit and feature tests are more important.
+WAJIB:
+- Analisis kedua gambar terlebih dahulu.
+- Gunakan gambar sebagai acuan utama tampilan.
+- Jangan sekadar meniru secara kasar.
+- Perhatikan:
+  - layout
+  - spacing
+  - typography
+  - ukuran elemen
+  - border radius
+  - warna
+  - card
+  - navbar/header
+  - chat bubble
+  - input chat
+  - tombol
+  - icon
+  - background
+  - responsive behavior
+  - hierarchy visual
 
-## Application Structure & Architecture
+Tujuan akhirnya adalah membuat halaman chatbot yang terlihat modern, bersih, profesional, dan konsisten dengan referensi yang saya berikan.
 
-- Stick to existing directory structure; don't create new base folders without approval.
-- Do not change the application's dependencies without approval.
+Jangan menggunakan desain generik AI chatbot jika tidak sesuai dengan screenshot.
 
-## Frontend Bundling
+==================================================
+TEKNOLOGI FRONTEND
+==================================================
 
-- If the user doesn't see a frontend change reflected in the UI, it could mean they need to run `npm run build`, `npm run dev`, or `composer run dev`. Ask them.
+Gunakan:
 
-## Documentation Files
+- Laravel Blade
+- Tailwind CSS
+- Vanilla JavaScript
 
-- You must only create documentation files if explicitly requested by the user.
+Jangan menggunakan framework frontend tambahan seperti:
+- React
+- Vue
+- Angular
+- Alpine.js
 
-## Replies
+kecuali project yang sudah ada memang menggunakan Alpine dan benar-benar diperlukan.
 
-- Be concise in your explanations - focus on what's important rather than explaining obvious details.
+Prioritaskan utility class Tailwind.
 
-=== boost rules ===
+Jangan membuat file CSS eksternal.
 
-# Laravel Boost
+Jika membutuhkan CSS khusus, gunakan <style> di dalam chat.blade.php.
 
-## Tools
+==================================================
+CHATBOT FRONTEND
+==================================================
 
-- Laravel Boost is an MCP server with tools designed specifically for this application. Prefer Boost tools over manual alternatives like shell commands or file reads.
-- Use `database-query` to run read-only queries against the database instead of writing raw SQL in tinker.
-- Use `database-schema` to inspect table structure before writing migrations or models.
-- Use `get-absolute-url` to resolve the correct scheme, domain, and port for project URLs. Always use this before sharing a URL with the user.
-- Use `browser-logs` to read browser logs, errors, and exceptions. Only recent logs are useful, ignore old entries.
+Chatbot harus mempunyai:
 
-## Searching Documentation (IMPORTANT)
+1. Area chat
+2. Pesan user
+3. Pesan AI
+4. Input message
+5. Tombol send
+6. Loading state ketika AI sedang memproses
+7. Error state
+8. Auto scroll ke pesan terbaru
+9. Enter untuk mengirim pesan
+10. Shift + Enter untuk membuat baris baru jika menggunakan textarea
+11. Tombol send disabled ketika request sedang diproses
+12. Tampilan responsive untuk:
+    - desktop
+    - tablet
+    - mobile
 
-- Use `search-docs` before changes that depend on Laravel ecosystem APIs, behavior, configuration, or version-specific syntax. Skip it for copy-only edits and other changes where package documentation is irrelevant. Reuse sufficient results already in context instead of searching again.
-- Pass a `packages` array to scope results when you know which packages are relevant.
-- Use multiple broad, topic-based queries: `['rate limiting', 'routing rate limiting', 'routing']`. Expect the most relevant results first.
-- Do not add package names to queries because package info is already shared. Use `test resource table`, not `filament 4 test resource table`.
+Pesan user dan AI harus mempunyai visual yang berbeda.
 
-### Search Syntax
+Jangan menampilkan:
 
-1. Use words for auto-stemmed AND logic: `rate limit` matches both "rate" AND "limit".
-2. Use `"quoted phrases"` for exact position matching: `"infinite scroll"` requires adjacent words in order.
-3. Combine words and phrases for mixed queries: `middleware "rate limit"`.
-4. Use multiple queries for OR logic: `queries=["authentication", "middleware"]`.
+AI: undefined
 
-## Project Rules
+Jika response kosong, tampilkan fallback yang masuk akal.
 
-- This project contains committed, area-grouped rules in `.ai/rules` when that directory exists (settled decisions, non-obvious traps, standing constraints). Framework and package guidelines that only apply to specific paths (testing, frontend, components) also live there, under `.ai/rules/boost` — this is not just recorded decisions, it is load-bearing guidance you have not seen inline. Before you enter plan mode or create/edit any file, you MUST first: open @.ai/rules/index.md (it maps file globs to rule files), read every rule file whose globs cover the path(s) in scope, and run `grep -rin 'keyword' .ai/rules` to catch what a path match alone misses. Do not write code until you have read and are following every matching rule. If `.ai/rules` does not exist, continue without it.
-- Record durable rules with `record-rule` so the next agent or teammate inherits them instead of working them out again. Pass a `glob` (e.g. `app/Http/Controllers/**`), a short `title`, and a few-line `note`. Always use `record-rule`, never your native memory or notes tool — native memory is personal and session-scoped; only `.ai/rules` is shared with the team and persists in the repo.
+==================================================
+JAVASCRIPT CHAT
+==================================================
 
-## Artisan
+Gunakan fetch() untuk mengirim request ke backend yang SUDAH digunakan project.
 
-- Run Artisan commands directly via the command line (e.g., `php artisan route:list`). Use `php artisan list` to discover available commands and `php artisan [command] --help` to check parameters.
-- Inspect routes with `php artisan route:list`. Filter with: `--method=GET`, `--name=users`, `--path=api`, `--except-vendor`, `--only-vendor`.
-- Read configuration values using dot notation: `php artisan config:show app.name`, `php artisan config:show database.default`. Or read config files directly from the `config/` directory.
+Jangan mengubah route yang sudah ada hanya karena ingin membuat struktur baru.
 
-## Tinker
+Request harus mengirim:
 
-- Execute PHP in app context for debugging and testing code. Do not create models without user approval, prefer tests with factories instead. Prefer existing Artisan commands over custom tinker code.
-- Always use single quotes to prevent shell expansion: `php artisan tinker --execute 'Your::code();'`
-  - Double quotes for PHP strings inside: `php artisan tinker --execute 'User::where("active", true)->count();'`
+{
+    message: "pesan user"
+}
 
-=== php rules ===
+Response backend saat berhasil menggunakan format:
 
-# PHP
+{
+    "status": "success",
+    "response": "jawaban AI"
+}
 
-- Always use curly braces for control structures, even for single-line bodies.
-- Use PHP 8 constructor property promotion: `public function __construct(public GitHub $github) { }`. Do not leave empty zero-parameter `__construct()` methods unless the constructor is private.
-- Use explicit return type declarations and type hints for all method parameters: `function isAccessible(User $user, ?string $path = null): bool`
-- Use TitleCase for Enum keys: `FavoritePerson`, `BestLake`, `Monthly`.
-- Prefer PHPDoc blocks over inline comments. Only add inline comments for exceptionally complex logic.
-- Use array shape type definitions in PHPDoc blocks.
+Frontend WAJIB membaca:
 
-=== deployments rules ===
+data.response
 
-# Deployment
+Bukan:
 
-- Laravel can be deployed using [Laravel Cloud](https://cloud.laravel.com/), which is the fastest way to deploy and scale production Laravel applications.
+data.message
 
-=== laravel/core rules ===
+Namun jika backend saat ini masih mempunyai format berbeda, sesuaikan Controller agar response final konsisten dengan format:
 
-# Do Things the Laravel Way
+{
+    "status": "success",
+    "response": "..."
+}
 
-- Use `php artisan make:` commands to create new files (i.e. migrations, controllers, models, etc.). You can list available Artisan commands using `php artisan list` and check their parameters with `php artisan [command] --help`.
-- If you're creating a generic PHP class, use `php artisan make:class`.
-- Pass `--no-interaction` to all Artisan commands to ensure they work without user input. You should also pass the correct `--options` to ensure correct behavior.
+==================================================
+BACKEND — ChatController.php
+==================================================
 
-### Model Creation
+Pertahankan method yang sudah ada.
 
-- When creating new models, create useful factories and seeders for them too. Ask the user if they need any other things, using `php artisan make:model --help` to check the available options.
+Saat ini struktur controller kurang lebih:
 
-## APIs & Eloquent Resources
+public function index()
+{
+    return view('chat');
+}
 
-- For APIs, default to using Eloquent API Resources and API versioning unless existing API routes do not, then you should follow existing application convention.
+public function sendMessage(Request $request)
+{
+    $request->validate([
+        'message' => 'required|string',
+    ]);
 
-## URL Generation
+    $agent = new DirectionAgent();
 
-- When generating links to other pages, prefer named routes and the `route()` function.
+    $response = $agent->prompt($request->message);
 
-## Testing
+    return response()->json([
+        'status' => 'success',
+        'message' => (string) $response,
+    ]);
+}
 
-- When creating models for tests, use the factories for the models. Check if the factory has custom states that can be used before manually setting up the model.
-- Faker: Use methods such as `$this->faker->word()` or `fake()->randomDigit()`. Follow existing conventions whether to use `$this->faker` or `fake()`.
-- When creating tests, make use of `php artisan make:test [options] {name}` to create a feature test, and pass `--unit` to create a unit test. Most tests should be feature tests.
+Perbaiki agar response berhasil menjadi:
 
-## Vite Error
+return response()->json([
+    'status' => 'success',
+    'response' => (string) $response,
+]);
 
-- If you receive an "Illuminate\Foundation\ViteException: Unable to locate file in Vite manifest" error, you can run `npm run build` or ask the user to run `npm run dev` or `composer run dev`.
+Gunakan try/catch agar error tidak menyebabkan frontend mendapatkan error yang tidak jelas.
 
-=== pint/core rules ===
+Jika Gemini mengalami:
+- overload
+- timeout
+- API error
+- invalid response
+- connection error
 
-# Laravel Pint Code Formatter
+berikan JSON error yang konsisten.
 
-- If you have modified any PHP files, you must run `vendor/bin/pint --dirty --format agent` before finalizing changes to ensure your code matches the project's expected style.
-- Do not run `vendor/bin/pint --test --format agent`, simply run `vendor/bin/pint --format agent` to fix any formatting issues.
+Contoh:
 
-=== pest/core rules ===
+{
+    "status": "error",
+    "message": "Gemini sedang sibuk. Silakan coba lagi beberapa saat."
+}
 
-## Pest
+Gunakan HTTP status yang sesuai.
 
-- This project uses Pest for testing. Create tests: `php artisan make:test --pest {name}`.
-- The `{name}` argument should not include the test suite directory. Use `php artisan make:test --pest SomeFeatureTest` instead of `php artisan make:test --pest Feature/SomeFeatureTest`.
-- Run tests: `php artisan test --compact` or filter: `php artisan test --compact --filter=testName`.
-- Do NOT delete tests without approval.
+Jangan membocorkan API key atau credential ke frontend.
 
-</laravel-boost-guidelines>
+==================================================
+GEMINI / DirectionAgent.php
+==================================================
+
+DirectionAgent adalah agent yang digunakan untuk memproses pesan chatbot.
+
+WAJIB:
+- Gunakan konfigurasi Gemini yang SUDAH digunakan project.
+- Jangan mengganti package AI tanpa alasan.
+- Jangan mengarang API/package yang tidak ada di project.
+- Jangan mengubah dependency composer.
+- Jangan membuat file konfigurasi baru.
+- Periksa implementasi DirectionAgent yang sekarang sebelum melakukan perubahan.
+
+Saya sebelumnya mendapatkan error:
+
+AI provider [gemini] is overloaded.
+
+Artinya request sudah sampai ke provider Gemini, tetapi provider dapat mengalami overload.
+
+Tangani error tersebut dengan baik.
+
+Jika library/package yang digunakan mendukung retry, gunakan retry yang aman untuk error sementara seperti overload atau timeout.
+
+Jangan melakukan retry tanpa batas.
+
+Gunakan maksimal beberapa percobaan dengan delay yang wajar.
+
+Jika tetap gagal, return error yang mudah dipahami user.
+
+==================================================
+SYSTEM PROMPT / PERILAKU AI
+==================================================
+
+DirectionAgent harus berfungsi sebagai chatbot yang membantu user.
+
+AI harus:
+- menjawab secara natural
+- memahami konteks pertanyaan
+- memberikan jawaban yang jelas
+- tidak terlalu panjang jika pertanyaan sederhana
+- menggunakan Bahasa Indonesia jika user menggunakan Bahasa Indonesia
+- menggunakan bahasa user jika user menggunakan bahasa lain
+- tidak mengarang informasi jika tidak mengetahui jawabannya
+
+Jika chatbot ini berkaitan dengan project Sudirection, pertahankan konteks dan tujuan Sudirection yang sudah ada di project.
+
+Jangan mengubah identitas/tujuan aplikasi tanpa alasan.
+
+Jika ada system prompt yang sudah ada di DirectionAgent, pertahankan informasi pentingnya dan tingkatkan hanya jika diperlukan.
+
+==================================================
+LOADING STATE
+==================================================
+
+Saat user mengirim pesan:
+
+1. Pesan user langsung muncul.
+2. Input sementara dinonaktifkan.
+3. Tombol send dinonaktifkan.
+4. Tampilkan indikator AI sedang mengetik/proses.
+5. Setelah response diterima:
+   - hapus loading
+   - tampilkan jawaban AI
+   - aktifkan kembali input dan tombol send.
+
+Jika request gagal:
+- hapus loading
+- tampilkan pesan error yang ramah
+- aktifkan kembali input.
+
+==================================================
+CHAT UX
+==================================================
+
+Buat pengalaman chat seperti aplikasi modern.
+
+Contoh:
+
+User:
+[pesan user]
+
+AI:
+[jawaban AI]
+
+AI loading:
+[animated typing indicator]
+
+Pastikan scroll otomatis ke bawah ketika pesan baru muncul.
+
+Jika chat-box memiliki tinggi tertentu, jangan sampai halaman rusak ketika pesan semakin banyak.
+
+==================================================
+RESPONSIVE
+==================================================
+
+Desktop:
+- gunakan layout yang luas dan rapi
+- chat container tidak terlalu melebar
+- input chat nyaman digunakan
+
+Tablet:
+- sesuaikan spacing dan ukuran container
+
+Mobile:
+- chat memenuhi hampir seluruh layar
+- input tetap nyaman digunakan
+- tombol send tidak terpotong
+- tidak ada horizontal overflow
+- typography tetap terbaca
+
+Gunakan breakpoint Tailwind.
+
+==================================================
+REUSABLE LAYOUT — PENTING
+==================================================
+
+Saya ingin struktur tampilan dibuat reusable dan rapi.
+
+NAMUN kamu hanya boleh mengubah chat.blade.php.
+
+Karena kamu TIDAK BOLEH membuat file layout/component baru, jangan membuat:
+- resources/views/layouts/chat.blade.php
+- components/chat-message.blade.php
+- partials/chat.blade.php
+- file Blade lainnya.
+
+Jika sudah ada layout utama project, gunakan layout tersebut tanpa mengubah file layout.
+
+Di dalam chat.blade.php:
+- gunakan struktur Blade yang rapi
+- gunakan data/array untuk elemen yang berulang
+- gunakan @foreach jika ada elemen UI berulang
+- hindari mengulang markup yang sama jika bisa dibuat lebih rapi
+- gunakan class Tailwind yang konsisten
+- gunakan naming class yang jelas jika custom CSS diperlukan
+
+Pisahkan secara jelas bagian:
+- header
+- chat area
+- message
+- loading
+- input
+- JavaScript
+
+Tetapi semuanya tetap berada di chat.blade.php.
+
+==================================================
+KEAMANAN
+==================================================
+
+WAJIB:
+- gunakan CSRF token
+- validasi input
+- jangan expose GEMINI_API_KEY
+- jangan memasukkan API key ke JavaScript
+- jangan memasukkan credential ke HTML
+- jangan menggunakan innerHTML untuk menampilkan input user jika bisa menyebabkan XSS
+
+Untuk pesan yang berasal dari user, gunakan textContent atau metode yang aman.
+
+Jika response AI perlu mendukung Markdown, pastikan implementasinya tidak menyebabkan XSS.
+
+==================================================
+KOMPATIBILITAS
+==================================================
+
+Sebelum mengubah kode:
+
+1. Baca isi ketiga file.
+2. Pahami struktur project.
+3. Pahami bagaimana DirectionAgent saat ini memanggil Gemini.
+4. Pahami route yang sudah digunakan.
+5. Jangan mengubah route.
+6. Jangan mengubah package.
+7. Jangan mengubah file lain.
+
+Jangan mengganti teknologi hanya karena kamu lebih terbiasa dengan teknologi lain.
+
+==================================================
+ATURAN PENTING SAAT CODING
+==================================================
+
+Jangan melakukan perubahan besar yang tidak diperlukan.
+
+Pertahankan kode yang sudah bekerja.
+
+Perbaiki hanya bagian yang memang diperlukan.
+
+Jangan menghapus fitur existing kecuali memang rusak dan harus diperbaiki.
+
+Jangan mengubah nama method:
+- index()
+- sendMessage()
+
+kecuali benar-benar diperlukan oleh struktur project yang sudah ada.
+
+Jangan membuat route baru.
+
+Jangan membuat controller baru.
+
+Jangan membuat DirectionAgent baru jika file tersebut sudah ada.
+
+==================================================
+HASIL AKHIR YANG SAYA INGINKAN
+==================================================
+
+Saya ingin hasil akhirnya:
+
+1. Chatbot dapat mengirim pesan.
+2. Gemini dapat memproses pesan.
+3. Response AI tampil dengan benar.
+4. Tidak ada lagi "AI: undefined".
+5. Error Gemini ditangani dengan baik.
+6. Loading state tersedia.
+7. Error state tersedia.
+8. UI mengikuti 2 screenshot yang saya berikan.
+9. UI menggunakan Tailwind CSS.
+10. Responsive.
+11. Aman dari XSS.
+12. CSRF tetap digunakan.
+13. API key tetap rahasia.
+14. Struktur kode rapi.
+15. Hanya 3 file yang boleh berubah:
+    - chat.blade.php
+    - ChatController.php
+    - DirectionAgent.php
+
+==================================================
+PROSES KERJA
+==================================================
+
+JANGAN langsung menulis kode sebelum membaca ketiga file tersebut.
+
+Pertama:
+- inspect ketiga file
+- identifikasi masalah
+- cocokkan dengan screenshot
+- pahami library Gemini yang digunakan
+
+Kemudian lakukan implementasi.
+
+Setelah selesai:
+- tampilkan ringkasan perubahan
+- sebutkan hanya 3 file yang diubah
+- jelaskan masalah yang diperbaiki
+- jelaskan cara mengetes chatbot
+
+JANGAN mengubah file lain.
+
+Jika kamu menemukan masalah yang membutuhkan file lain, JANGAN mengubah file tersebut. Cari solusi yang masih dapat dilakukan hanya melalui 3 file yang diizinkan.
+
+Jika ada informasi yang benar-benar tidak tersedia, tanyakan terlebih dahulu daripada mengarang struktur project.

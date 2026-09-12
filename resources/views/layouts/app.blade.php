@@ -11,7 +11,6 @@
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: #0f172a;
         }
-
     </style>
 </head>
 
@@ -31,10 +30,12 @@
     {{-- Content End --}}
 
     {{-- Footer Start --}}
-    <footer class="relative w-full text-white overflow-hidden bg-cover bg-center min-h-125 "
-        style="background-image: url('{{ asset('assets/images/mount-footer.png') }}');">
-        @include('layouts.partials.footer')
-    </footer>
+    @unless(View::hasSection('hide_footer'))
+        <footer class="relative w-full text-white overflow-hidden bg-cover bg-center min-h-125 "
+            style="background-image: url('{{ asset('assets/images/mount-footer.png') }}');">
+            @include('layouts.partials.footer')
+        </footer>
+    @endunless
     {{-- Footer End --}}
 
 </body>

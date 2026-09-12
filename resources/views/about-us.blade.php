@@ -6,7 +6,7 @@
     class="relative bg-cover bg-center bg-fixed"
     style="background-image: url('{{ asset('assets/images/about-us-bg1.png') }}');"
 >
-    <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/50 to-white"></div>
+    <div class="absolute inset-0 bg-linear-to-b from-black/50 via-black/50 to-white"></div>
  
     <div class="relative z-10 px-6 md:px-10 pt-16 pb-32">
  
@@ -52,7 +52,7 @@
         </div>
  
         {{-- What We Offer --}}
-        <div class="max-w-4xl mx-auto bg-white/10 backdrop-blur-2xl border border-white/20 rounded-[32px] p-10 md:p-14 shadow-2xl">
+        <div class="max-w-4xl mx-auto bg-white/10 backdrop-blur-2xl border border-white/20 rounded-4xl p-10 md:p-14 shadow-2xl">
  
             <div class="text-center mb-12">
                 <h2 class="text-white text-3xl font-bold mb-3">What We Offer</h2>
@@ -123,7 +123,7 @@
  
             @foreach ($team as $member)
                 <div class="text-center">
-                    <div class="rounded-3xl overflow-hidden bg-gradient-to-b from-sky-100 to-sky-400 mb-4 aspect-[3/4] shadow-lg">
+                    <div class="rounded-3xl overflow-hidden bg-linear-to-b from-sky-100 to-sky-400 mb-4 aspect-3/4 shadow-lg">
                         <img
                             src="{{ asset('assets/images/' . $member['photo']) }}"
                             alt="{{ $member['name'] }}"
@@ -155,7 +155,7 @@
         </p>
         <a
             href="/join"
-            class="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-sky-400 to-sky-600 text-white font-semibold shadow-lg hover:opacity-90 transition"
+            class="inline-block px-8 py-3 rounded-full bg-linear-to-r from-sky-400 to-sky-600 text-white font-semibold shadow-lg hover:opacity-90 transition"
         >
             Join the Journey
         </a>
