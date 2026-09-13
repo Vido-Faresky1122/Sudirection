@@ -262,7 +262,7 @@
                     <div>
                         <h2 class="text-2xl md:text-3xl font-black uppercase tracking-wider text-slate-700">ACCOMMODATION
                         </h2>
-                        <p class="text-sm text-slate-400 font-medium mt-1">Rediscover yourself in accomodations across the
+                        <p class="text-sm text-black font-medium mt-1">Rediscover yourself in accomodations across the
                             world</p>
                     </div>
                 </div>
@@ -355,9 +355,9 @@
                 {{-- GARIS DOTTED & PESAWAT 2 --}}
                 <div class="absolute left-4 md:left-8 top-10 bottom-10 z-10 pointer-events-none hidden md:block w-8">
                     <div
-                        class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 border-r-2 border-dashed border-sky-400/60">
+                        class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 border-r-2 border-dashed border-white/60">
                     </div>
-                    <div id="plane-2" class="absolute left-1/2 top-0 -translate-x-1/2 text-sky-500 pointer-events-none">
+                    <div id="plane-2" class="absolute left-1/2 top-0 -translate-x-1/2 text-white pointer-events-none">
                         <svg class="w-7 h-7 transform rotate-180 drop-shadow-md" fill="currentColor" viewBox="0 0 24 24">
                             <path
                                 d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" />
@@ -366,7 +366,7 @@
                 </div>
 
                 <div class="flex items-start gap-4 mb-10 md:ml-8 relative z-20">
-                    <div class="p-3 bg-sky-400/10 rounded-full text-sky-500">
+                    <div class="p-3 bg-sky-400/10 rounded-full text-sky-400">
                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                             <path
                                 d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
@@ -377,7 +377,7 @@
                         <h2 class="inline-block text-2xl md:text-3xl font-black text-slate-700 relative pb-1">
                             Tourist Attraction
                         </h2>
-                        <p class="text-sm text-slate-400 font-medium mt-1">Explore the most visited and unforgettable
+                        <p class="text-sm text-black font-medium mt-1">Explore the most visited and unforgettable
                             destinations.</p>
                     </div>
                 </div>
