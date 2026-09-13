@@ -259,7 +259,7 @@
                                 </span>
                                 <div
                                     class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
-                                    View Stay âž”
+                                    View Stay ➔
                                 </div>
                             </div>
                         </div>
@@ -298,7 +298,7 @@
                                 </span>
                                 <div
                                     class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
-                                    View Stay âž”
+                                    View Stay ➔
                                 </div>
                             </div>
                         </div>
@@ -337,7 +337,7 @@
                                 </span>
                                 <div
                                     class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
-                                    View Stay âž”
+                                    View Stay ➔
                                 </div>
                             </div>
                         </div>
@@ -376,7 +376,7 @@
                                 </span>
                                 <div
                                     class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
-                                    View Stay âž”
+                                    View Stay ➔
                                 </div>
                             </div>
                         </div>
@@ -415,7 +415,7 @@
                                 </span>
                                 <div
                                     class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
-                                    View Stay âž”
+                                    View Stay ➔
                                 </div>
                             </div>
                         </div>
@@ -454,7 +454,7 @@
                                 </span>
                                 <div
                                     class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
-                                    View Stay âž”
+                                    View Stay ➔
                                 </div>
                             </div>
                         </div>

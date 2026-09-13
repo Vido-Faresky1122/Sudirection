@@ -74,7 +74,7 @@
                             </div>
                             <div
                                 class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-xs group-hover:bg-cyan-400 group-hover:text-black transition-all">
-                                âž”</div>
+                                ➔</div>
                         </div>
                     </a>
 
@@ -92,7 +92,7 @@
                             </div>
                             <div
                                 class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-xs group-hover:bg-cyan-400 group-hover:text-black transition-all">
-                                âž”</div>
+                                ➔</div>
                         </div>
                     </a>
 
@@ -110,7 +110,7 @@
                             </div>
                             <div
                                 class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-xs group-hover:bg-cyan-400 group-hover:text-black transition-all">
-                                âž”</div>
+                                ➔</div>
                         </div>
                     </a>
 
@@ -128,7 +128,7 @@
                             </div>
                             <div
                                 class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-xs group-hover:bg-cyan-400 group-hover:text-black transition-all">
-                                âž”</div>
+                                ➔</div>
                         </div>
                     </a>
 
@@ -146,7 +146,7 @@
                             </div>
                             <div
                                 class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-xs group-hover:bg-cyan-400 group-hover:text-black transition-all">
-                                âž”</div>
+                                ➔</div>
                         </div>
                     </a>
 
@@ -164,7 +164,7 @@
                             </div>
                             <div
                                 class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-xs group-hover:bg-cyan-400 group-hover:text-black transition-all">
-                                âž”</div>
+                                ➔</div>
                         </div>
                     </a>
 
@@ -182,7 +182,7 @@
                             </div>
                             <div
                                 class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-xs group-hover:bg-cyan-400 group-hover:text-black transition-all">
-                                âž”</div>
+                                ➔</div>
                         </div>
                     </a>
 
@@ -200,7 +200,7 @@
                             </div>
                             <div
                                 class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-xs group-hover:bg-cyan-400 group-hover:text-black transition-all">
-                                âž”</div>
+                                ➔</div>
                         </div>
                     </a>
 
@@ -260,7 +260,7 @@
                                 </span>
                                 <div
                                     class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
-                                    View Stay âž”
+                                    View Stay ➔
                                 </div>
                             </div>
                         </div>
@@ -299,7 +299,7 @@
                                 </span>
                                 <div
                                     class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
-                                    View Stay âž”
+                                    View Stay ➔
                                 </div>
                             </div>
                         </div>
@@ -338,7 +338,7 @@
                                 </span>
                                 <div
                                     class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
-                                    View Stay âž”
+                                    View Stay ➔
                                 </div>
                             </div>
                         </div>
@@ -377,7 +377,7 @@
                                 </span>
                                 <div
                                     class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
-                                    View Stay âž”
+                                    View Stay ➔
                                 </div>
                             </div>
                         </div>
@@ -416,7 +416,7 @@
                                 </span>
                                 <div
                                     class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
-                                    View Stay âž”
+                                    View Stay ➔
                                 </div>
                             </div>
                         </div>
@@ -455,7 +455,7 @@
                                 </span>
                                 <div
                                     class="w-full py-2 rounded-lg bg-black/20 group-hover:bg-black/40 text-[10px] font-semibold text-center block transition-all">
-                                    View Stay âž”
+                                    View Stay ➔
                                 </div>
                             </div>
                         </div>
