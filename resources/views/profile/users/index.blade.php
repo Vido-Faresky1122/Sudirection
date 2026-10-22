@@ -24,7 +24,8 @@
 
                     <div>
                         <h2 class="text-xl font-medium tracking-wide text-white">
-                            {{ auth()->user()->name ?? 'Vido Faresky' }}</h2>
+                            {{ auth()->user()->name ?? 'Vido Faresky' }}
+                        </h2>
                         <p class="text-xs text-slate-300 font-light">{{ auth()->user()->role ?? 'Common user' }}</p>
                     </div>
                 </div>
@@ -56,24 +57,33 @@
                     </button>
                 </div>
 
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <div>
+                        <button
+                            class="w-full py-3.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-normal text-sm btn-shimmer shadow-md text-center">
+                            Logout
+                        </button>
+                    </div>
+                </form>
+
             </div>
 
             <div class="relative w-full max-w-md h-[480px] shrink-0">
 
-                <a href="{{ route('profile.users.index', ['tab' => 'favorites', 'type' => request('type', 'accommodations')]) }}"
+                <a href="{{ route('profile.users.index', ['id' => $user?->id ?? auth()->id(), 'tab' => 'favorites', 'type' => request('type', 'accommodations')],) }}"
                     class="absolute -top-16 left-0 right-0 w-full py-3.5 rounded-full border text-white font-normal text-sm text-center transition-all shadow-md block z-20 {{ request('tab', 'favorites') === 'favorites' ? 'bg-black/40 border-white/40' : 'bg-white/10 backdrop-blur-md border-white/20 btn-shimmer' }}">
                     Favorites
                 </a>
 
-                <div
-                    class="w-full h-full glass-ios rounded-[40px] px-8 md:px-10 py-12 block overflow-hidden">
+                <div class="w-full h-full glass-ios rounded-[40px] px-8 md:px-10 py-12 block overflow-hidden">
 
                     <div class="flex border-b border-white/20 mb-6">
-                        <a href="{{ route('profile.users.index', ['tab' => request('tab', 'favorites'), 'type' => 'accommodations']) }}"
+                        <a href="{{ route('profile.users.index', ['id' => $user?->id ?? auth()->id(), 'tab' => request('tab', 'favorites'), 'type' => 'accommodations']) }}"
                             class="flex-1 py-3 text-center text-sm font-medium transition-all {{ request('type', 'accommodations') === 'accommodations' ? 'text-white border-b-2 border-white bg-white/10' : 'text-white/60 hover:text-white' }}">
                             Accommodations
                         </a>
-                        <a href="{{ route('profile.users.index', ['tab' => request('tab', 'favorites'), 'type' => 'places']) }}"
+                        <a href="{{ route('profile.users.index', ['id' => $user?->id ?? auth()->id(), 'tab' => request('tab', 'favorites'), 'type' => 'places']) }}"
                             class="flex-1 py-3 text-center text-sm font-medium transition-all {{ request('type') === 'places' ? 'text-white border-b-2 border-white bg-white/10' : 'text-white/60 hover:text-white' }}">
                             Places
                         </a>
@@ -90,7 +100,7 @@
 
                 </div>
 
-                <a href="{{ route('profile.users.index', ['tab' => 'histories', 'type' => request('type', 'accommodations')]) }}"
+                <a href="{{ route('profile.users.index', ['id' => $user?->id ?? auth()->id(), 'tab' => 'histories', 'type' => request('type', 'accommodations')]) }}"
                     class="absolute -bottom-16 left-0 right-0 w-full py-3.5 rounded-full border text-white font-normal text-sm text-center transition-all shadow-md block z-20 {{ request('tab') === 'histories' ? 'bg-black/40 border-white/40' : 'bg-white/10 backdrop-blur-md border-white/20 btn-shimmer' }}">
                     Histories
                 </a>

@@ -2,13 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use Auth;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function show(Request $request)
+    public function show(Request $request, $id)
     {
-        $title = 'User Profile - Sudirection';
+        $user = User::select('role')->where('id', $id)->first();
+
+        $titleUsers = 'User Profile - Sudirection';
+        $titleAdmin = 'Admin Profile - Sudirection';
         $tab = $request->query('tab', 'favorites');
         $type = $request->query('type', 'accommodations');
 
@@ -31,11 +36,24 @@ class UserController extends Controller
             default => [],
         };
 
+
+        if ($user->role === 'admin') {
+            return view('profile.admin.index', [
+                'title' => $titleAdmin,
+                'tab' => $tab,
+                'type' => $type,
+                'items' => $items,
+                'user' => $user,
+            ]);
+        }
+
+
         return view('profile.users.index', [
-            'title' => $title,
+            'title' => $titleUsers,
             'tab' => $tab,
             'type' => $type,
             'items' => $items,
+            'user' => $user,
         ]);
     }
 }

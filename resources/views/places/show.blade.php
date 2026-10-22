@@ -51,8 +51,7 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-                <div
-                    class="lg:col-span-2 glass-ios rounded-2xl p-6 md:p-8 space-y-4">
+                <div class="lg:col-span-2 glass-ios rounded-2xl p-6 md:p-8 space-y-4">
                     <div class="flex flex-wrap items-center gap-2 text-xs font-semibold text-cyan-400">
                         <span>Island</span>
                         <span>•</span>
@@ -73,8 +72,7 @@
                     </div>
                 </div>
 
-                <div
-                    class="glass-ios rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                <div class="glass-ios rounded-2xl p-6 flex flex-col justify-between space-y-4">
                     <div class="space-y-3">
                         <h3 class="text-sm font-semibold text-slate-300">Ready to explore?</h3>
                         <a href="#"
@@ -101,8 +99,7 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-                <div
-                    class="lg:col-span-3 glass-ios rounded-2xl p-6 md:p-8 space-y-4">
+                <div class="lg:col-span-3 glass-ios rounded-2xl p-6 md:p-8 space-y-4">
                     <h3 class="text-lg font-bold text-white">About Santorini</h3>
                     <p class="text-xs md:text-sm text-slate-300 leading-relaxed">
                         Santorini is one of the Cyclades islands in the Aegean Sea. It was devastated by a volcanic eruption
@@ -124,6 +121,36 @@
                         </div>
                     </div>
                 </div>
+                @if (auth()->check())
+                    @if (auth()->user()->role === 'admin')
+                        <div class="flex items-center gap-2">
+                            {{-- Button Edit --}}
+                            <a href="{{ route('places.edit', ['id' => $place->id]) }}"
+                                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-600 text-xs font-semibold transition-all duration-200 border border-amber-500/30 hover:border-amber-500 active:scale-95">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                </svg>
+                                Edit
+                            </a>
+
+                            {{-- Button Delete --}}
+                            <form action="{{ route('places.destroy', ['id' => $place->id]) }}" method="POST" class="inline"
+                                onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit"
+                                    class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-rose-500/10 hover:bg-rose-500/20 text-rose-600 text-xs font-semibold transition-all duration-200 border border-rose-500/30 hover:border-rose-500 active:scale-95">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                    </svg>
+                                    Delete
+                                </button>
+                            </form>
+                        </div>
+                    @endif
+                @endif
 
             </div>
 

@@ -1,581 +1,251 @@
-# Glassmorphism UI Restyling — STYLE ONLY
+# MASTER PROMPT — Laravel Route Refactoring & Profile Role Routing
 
-## 🎯 TUJUAN UTAMA
+## 1. Peran AI Agent
 
-Saya ingin mengubah **style visual** dari tampilan website yang sudah ada menjadi **Glassmorphism**.
+Bertindaklah sebagai Senior Laravel Developer yang berpengalaman dalam Laravel, Blade Template, Routing, Middleware, Authentication, dan Role-Based Access Control (RBAC).
 
-### ⚠️ ATURAN PALING PENTING
+Tugas utama adalah melakukan perbaikan terbatas pada sistem routing link dan navigasi halaman profil di proyek Laravel yang sudah ada.
 
-> **JANGAN MENGUBAH BENTUK, LAYOUT, STRUKTUR, POSISI, ATAU UKURAN TAMPILAN YANG SUDAH ADA.**
+Kerjakan langsung pada source code proyek, lakukan pemeriksaan menyeluruh, dan pertahankan seluruh struktur serta perilaku aplikasi yang sudah berjalan.
 
-Yang boleh diubah **HANYA VISUAL STYLE-NYA**.
+## 2. Tujuan Utama
 
-Artinya, hasil akhir harus tetap memiliki **bentuk dan layout yang sama persis seperti sebelumnya**, tetapi tampilannya terasa seperti UI Glassmorphism modern.
+Ada dua tugas yang harus diselesaikan:
 
----
+### A. Mengubah seluruh link hardcoded menjadi named route Laravel
 
-# 🚫 DILARANG MENGUBAH
+Cari seluruh atribut `href` pada file Blade yang menggunakan URL internal secara hardcoded, misalnya:
 
-Jangan melakukan perubahan terhadap:
-
-* Layout halaman
-* Struktur HTML/Blade
-* Urutan elemen
-* Posisi elemen
-* Ukuran elemen
-* Width / height yang sudah ada
-* Padding utama
-* Margin utama
-* Gap antar elemen
-* Grid structure
-* Flex structure
-* Jumlah kolom
-* Sidebar
-* Navbar
-* Header
-* Footer
-* Posisi tombol
-* Posisi input
-* Posisi card
-* Bentuk section
-* Flow halaman
-* Responsive breakpoint yang sudah ada
-* Responsive behavior
-* Functionality
-* JavaScript logic
-* Controller
-* Route
-* Database
-* API
-* Data yang ditampilkan
-* Nama variable
-* Nama component
-* Nama route
-* Business logic
-
-### Jangan melakukan redesign.
-
-Jangan menganggap tugas ini sebagai kesempatan untuk membuat UI baru.
-
-**Tampilan lama adalah acuan utama.**
-
----
-
-# ✅ YANG BOLEH DIUBAH
-
-Fokus hanya pada:
-
-* Background color
-* Background gradient
-* Transparency
-* Opacity
-* `backdrop-blur`
-* Border color
-* Border opacity
-* Box shadow
-* Text color
-* Placeholder color
-* Button color
-* Card surface
-* Input surface
-* Hover color
-* Focus color
-* Glow effect yang sangat ringan
-* Blur effect
-* Glass effect
-* Subtle gradient
-* Visual hierarchy melalui warna dan efek
-
-Jika memungkinkan, gunakan **Tailwind CSS utility classes**.
-
----
-
-# 🪟 GLASSMORPHISM STYLE
-
-Gunakan karakteristik Glassmorphism berikut:
-
-### 1. Transparent Surface
-
-Gunakan background semi-transparent.
-
-Contoh:
-
-```html
-bg-white/10
-bg-white/5
-bg-black/10
-bg-black/20
+```blade
+<a href="/dashboard">Dashboard</a>
+<a href="/profile">Profile</a>
+<a href="/admin/users">Users</a>
+<a href="/admin/settings">Settings</a>
 ```
 
-Sesuaikan dengan background dan tema yang sudah digunakan oleh website.
+Ubah menjadi named route berdasarkan definisi yang benar-benar tersedia di `routes/web.php`.
 
----
+Contoh, jika `web.php` berisi:
 
-### 2. Backdrop Blur
+```php
+Route::get('/dashboard', [DashboardController::class, 'index'])
+    ->name('dashboard');
 
-Gunakan:
+Route::get('/profile', [ProfileController::class, 'index'])
+    ->name('profile');
 
-```html
-backdrop-blur
-backdrop-blur-sm
-backdrop-blur-md
-backdrop-blur-lg
+Route::get('/admin/users', [UserController::class, 'index'])
+    ->name('admin.users.index');
 ```
 
-Prioritaskan:
+Maka hasilnya:
 
-```html
-backdrop-blur-md
+```blade
+<a href="{{ route('dashboard') }}">Dashboard</a>
+<a href="{{ route('profile') }}">Profile</a>
+<a href="{{ route('admin.users.index') }}">Users</a>
 ```
 
-atau
+**Aturan wajib:**
+- Gunakan nama route yang benar-benar terdaftar di proyek.
+- Jangan menebak atau membuat nama route sendiri.
+- Jangan mengubah URL menjadi `route('nama-route')` sebelum memastikan named route tersebut tersedia.
+- Jika route belum memiliki nama, laporkan kepada pengguna dan jangan mengubah definisi route secara otomatis.
+- Jangan mengubah teks link, class CSS, atribut HTML, ikon, struktur elemen, kondisi Blade, atau styling.
+- Pertahankan parameter route jika diperlukan.
+- Pertahankan seluruh query parameter, fragment URL, dan perilaku navigasi yang sudah ada.
+- Jangan mengubah link eksternal, seperti `https://example.com`, `mailto:`, `tel:`, `javascript:`, maupun link anchor seperti `#section`.
+- Jangan mengubah URL asset seperti gambar, CSS, JavaScript, favicon, atau file unduhan.
+- Jangan mengubah URL yang memang merupakan endpoint eksternal atau endpoint API yang tidak menggunakan named route untuk navigasi halaman.
+- Jangan mengganti URL yang digunakan oleh JavaScript, formulir, atau mekanisme lain apabila hal tersebut berada di luar cakupan perubahan atribut `href`.
 
-```html
-backdrop-blur-lg
+### B. Memperbaiki navigasi halaman profil berdasarkan role
+
+Periksa sistem profil yang sudah tersedia, termasuk:
+- Tombol atau menu Profile.
+- Dropdown profil pengguna.
+- Sidebar dan navbar.
+- Route profil dalam `routes/web.php`.
+- Controller yang menangani halaman profil.
+- Mekanisme role pengguna yang sudah digunakan oleh aplikasi.
+
+Pastikan navigasi profil mengarahkan pengguna ke halaman yang sesuai dengan role-nya.
+
+Aturan navigasi:
+
+| Role pengguna | Tujuan navigasi |
+|---|---|
+| `admin` | Halaman profil khusus admin yang sudah tersedia di proyek |
+| `user` | Halaman profil khusus user yang sudah tersedia di proyek |
+
+Gunakan route yang benar-benar terdaftar pada `web.php`, bukan nama route berdasarkan asumsi.
+
+Contoh ilustrasi apabila proyek memiliki dua named route:
+
+```php
+Route::get('/admin/profile', [AdminProfileController::class, 'index'])
+    ->name('admin.profile');
+
+Route::get('/user/profile', [UserProfileController::class, 'index'])
+    ->name('user.profile');
 ```
 
-Tetapi jangan berlebihan.
+Maka navigasi profil dapat disesuaikan seperti berikut:
 
----
-
-### 3. Glass Border
-
-Gunakan border transparan tipis.
-
-Contoh:
-
-```html
-border border-white/10
+```blade
+@if (auth()->user()->role === 'admin')
+    <a href="{{ route('admin.profile') }}">Profile</a>
+@elseif (auth()->user()->role === 'user')
+    <a href="{{ route('user.profile') }}">Profile</a>
+@endif
 ```
 
-atau:
+Kode di atas hanya contoh. Gunakan controller, route, nama role, dan struktur yang sudah ada pada proyek.
 
-```html
-border border-white/20
-```
+**Aturan wajib sistem profil:**
+- Role `admin` diarahkan ke halaman profil admin.
+- Role `user` diarahkan ke halaman profil user.
+- Jangan mengubah role yang sudah digunakan oleh sistem.
+- Jangan mengasumsikan bahwa nama field role adalah `role` sebelum memeriksa model dan kode autentikasi.
+- Jangan mengubah sistem login, registrasi, session, autentikasi, middleware, atau database.
+- Jangan mengubah izin akses halaman atau menambahkan fitur baru.
+- Jika kedua halaman profil belum tersedia, jangan membuat halaman atau route baru. Laporkan kondisi tersebut.
+- Jika terdapat role lain, pertahankan perilaku sebelumnya dan laporkan jika penanganannya tidak jelas.
+- Jangan hanya mengandalkan penyembunyian link di Blade untuk keamanan. Namun, jangan melakukan perubahan middleware atau authorization karena berada di luar cakupan tugas ini.
 
-Border harus terlihat halus dan tidak terlalu mencolok.
+## 3. Batasan Perubahan — Sangat Ketat
 
----
+Agent hanya diizinkan mengubah:
 
-### 4. Soft Shadow
+1. Nilai atribut `href` pada link internal yang harus menggunakan named route.
+2. Logika navigasi link profil yang menentukan tujuan berdasarkan role admin atau user, termasuk kondisi Blade minimal yang diperlukan.
 
-Gunakan shadow yang lembut.
+Agent dilarang mengubah hal-hal berikut:
 
-Contoh:
+- Controller, kecuali tidak ada alasan untuk menyentuhnya karena perbaikan ini seharusnya dilakukan pada navigasi.
+- Model dan migration.
+- Database dan struktur tabel.
+- Routes dalam `routes/web.php`.
+- Middleware dan konfigurasi autentikasi.
+- Service, helper, event, listener, dan job.
+- JavaScript, CSS, Tailwind CSS, dan komponen UI selain perubahan yang benar-benar diperlukan pada link profil.
+- Teks, ikon, desain, layout, struktur halaman, dan responsive behavior.
+- Nama variabel, fungsi, class, atau file.
+- Dependensi Composer atau NPM.
+- File konfigurasi lingkungan.
+- Kode yang tidak berkaitan langsung dengan dua tugas utama.
 
-```html
-shadow-lg
-shadow-xl
-```
+Jangan melakukan refactoring, optimasi, formatting massal, atau perbaikan bug lain yang ditemukan selama pemeriksaan.
 
-Jika diperlukan, gunakan shadow dengan opacity rendah.
+**Prinsip utama: perubahan sekecil mungkin, tanpa efek samping, dan hanya sesuai ruang lingkup yang ditentukan.**
 
-Hindari shadow yang terlalu berat.
+## 4. Prosedur Kerja Wajib
 
----
+### Tahap 1 — Audit proyek
 
-### 5. Rounded Corners
+Sebelum mengedit kode:
 
-**JANGAN mengubah tingkat rounded yang sudah ada.**
+1. Periksa `routes/web.php`.
+2. Identifikasi semua named route yang terdaftar.
+3. Periksa struktur direktori `resources/views`.
+4. Cari seluruh atribut `href` pada file Blade.
+5. Identifikasi URL internal hardcoded dan cocokkan dengan named route yang tersedia.
+6. Temukan seluruh link profil dan dropdown pengguna.
+7. Periksa bagaimana role disimpan dan dibaca dalam sistem.
+8. Tentukan file yang benar-benar membutuhkan perubahan.
 
-Jika elemen sebelumnya menggunakan:
+Jangan melakukan perubahan sebelum proses pencocokan route dan role selesai.
 
-```html
-rounded-lg
-```
+### Tahap 2 — Buat pemetaan link
 
-tetap gunakan:
+Susun pemetaan internal berikut sebelum mengedit:
 
-```html
-rounded-lg
-```
+| URL lama | Named route yang terdaftar | File | Status |
+|---|---|---|---|
+| `/dashboard` | `dashboard` | File Blade terkait | Siap diubah |
+| `/profile` | Sesuai hasil audit | File Blade terkait | Perlu verifikasi |
+| `/admin/users` | Sesuai hasil audit | File Blade terkait | Perlu verifikasi |
 
-Jika sebelumnya:
+Tabel tersebut merupakan contoh format, bukan daftar route yang harus diasumsikan tersedia.
 
-```html
-rounded-xl
-```
+Jangan mengubah URL jika nama route atau pemetaan tujuannya belum dapat dipastikan.
 
-tetap:
+### Tahap 3 — Terapkan perubahan minimal
 
-```html
-rounded-xl
-```
+1. Ubah hanya atribut `href` yang sesuai dengan ruang lingkup.
+2. Gunakan helper `route()` dengan nama route yang sudah terdaftar.
+3. Pertahankan parameter dinamis, query string, dan fragment apabila ada.
+4. Perbaiki kondisi navigasi profil berdasarkan role.
+5. Pertahankan seluruh kode di luar bagian yang diizinkan.
 
-Jangan mengganti bentuk elemen hanya demi Glassmorphism.
+Jangan mengedit file secara keseluruhan apabila hanya satu atau beberapa baris yang perlu diubah.
 
----
+### Tahap 4 — Verifikasi
 
-# 🎨 PRINSIP WARNA
+Setelah perubahan selesai:
 
-Jangan mengganti identitas warna utama website secara ekstrem.
+1. Jalankan `php artisan route:list` untuk memeriksa nama route yang tersedia.
+2. Periksa kembali link internal yang telah diubah.
+3. Pastikan tidak ada pemanggilan `route()` dengan nama route yang tidak terdaftar.
+4. Pastikan link eksternal, anchor, asset, dan endpoint yang dikecualikan tidak berubah.
+5. Pastikan navigasi profil admin mengarah ke halaman admin.
+6. Pastikan navigasi profil user mengarah ke halaman user.
+7. Periksa diff Git untuk memastikan tidak ada perubahan di luar cakupan.
+8. Jalankan pemeriksaan syntax atau pengujian yang relevan jika memungkinkan tanpa mengubah konfigurasi proyek.
 
-Jika website sudah memiliki warna utama:
+Jangan menyatakan pengujian berhasil apabila perintah atau pemeriksaan tersebut belum benar-benar dijalankan.
 
-* Pertahankan warna tersebut.
-* Gunakan warna tersebut dalam versi transparent.
-* Gunakan opacity untuk menciptakan efek glass.
-* Gunakan gradient hanya jika membantu menciptakan efek Glassmorphism.
+Jika ditemukan route yang tidak memiliki named route, jangan menambahkannya secara otomatis. Catat URL dan file terkait dalam laporan.
 
-Contoh:
+## 5. Kriteria Keberhasilan
 
-```html
-bg-blue-500/10
-border-blue-400/20
-text-blue-100
-```
+Tugas dianggap selesai jika:
 
-Bukan mengganti seluruh tema menjadi warna baru.
+- Semua `href` internal yang memenuhi kriteria telah menggunakan `route()` sesuai named route di `web.php`.
+- Tidak ada nama route yang dikarang atau tidak terdaftar.
+- Navigasi profil admin dan user mengarah ke tujuan yang benar.
+- Link eksternal, asset, anchor, dan URL yang dikecualikan tetap utuh.
+- Tidak ada perubahan desain, konten, fitur, autentikasi, middleware, database, atau file lain yang tidak diizinkan.
+- Diff perubahan hanya menunjukkan perubahan yang diperlukan.
+- Semua masalah yang tidak bisa diperbaiki tanpa melanggar batasan dilaporkan dengan jelas.
 
----
+## 6. Format Laporan Akhir
 
-# 🧩 TAILWIND COMPONENT STYLE
+Setelah pekerjaan selesai, berikan laporan dengan format:
 
-Jika terdapat komponen yang digunakan berulang kali, prioritaskan penggunaan style/component yang reusable.
+### Ringkasan
+- Status pengerjaan.
+- Jumlah file yang diperiksa.
+- Jumlah link yang berhasil diubah.
+- Jumlah link yang belum dapat diubah karena named route tidak tersedia.
 
-Contoh konsep:
+### Perubahan File
+Untuk setiap file yang diubah, jelaskan:
+- Path file.
+- Jenis perubahan.
+- Contoh sebelum dan sesudah.
 
-```html
-<div class="glass-panel">
-```
+### Navigasi Profil
+- Route tujuan role admin.
+- Route tujuan role user.
+- Cara penentuan role yang digunakan.
+- Hasil verifikasi masing-masing navigasi.
 
-dengan style:
+### Verifikasi
+- Hasil `php artisan route:list`.
+- Hasil pemeriksaan named route.
+- Hasil pemeriksaan diff Git.
+- Hasil pengujian yang benar-benar dilakukan.
 
-```css
-.glass-panel {
-    @apply bg-white/10 backdrop-blur-md border border-white/10 shadow-lg;
-}
-```
+### Masalah yang Ditemukan
+Cantumkan semua link atau route yang tidak dapat diperbaiki tanpa mengubah bagian di luar ruang lingkup.
 
-Namun:
+## 7. Instruksi Eksekusi Final
 
-> Jangan membuat perubahan arsitektur besar hanya untuk membuat component tersebut.
+Mulai dengan mengaudit source code proyek yang tersedia, bukan dengan membuat kode contoh baru.
 
-Jika project menggunakan Blade dan sudah memiliki component system, gunakan component yang sudah tersedia.
+Kerjakan seluruh perubahan yang dapat dipastikan aman dan benar secara mandiri. Jangan meminta konfirmasi untuk setiap link yang pemetaannya sudah jelas.
 
-Jika tidak ada component system, cukup gunakan utility class Tailwind secara langsung atau buat utility sederhana jika benar-benar diperlukan.
+Jika ada ambiguitas yang tidak dapat diselesaikan dari source code, jangan menebak dan jangan melakukan perubahan yang berisiko.
 
----
-
-# 🧱 PRIORITAS KOMPONEN
-
-Terapkan Glassmorphism secara konsisten pada:
-
-### Cards
-
-Contoh:
-
-```html
-bg-white/10
-backdrop-blur-md
-border
-border-white/10
-shadow-lg
-```
-
-### Input
-
-Contoh:
-
-```html
-bg-white/5
-backdrop-blur-sm
-border
-border-white/10
-```
-
-Focus:
-
-```html
-focus:border-white/30
-focus:ring-1
-focus:ring-white/20
-```
-
-### Button
-
-Tetap mempertahankan:
-
-* ukuran
-* posisi
-* bentuk
-* padding
-
-Hanya ubah visual style.
-
-Contoh:
-
-```html
-bg-white/10
-backdrop-blur-md
-border border-white/10
-hover:bg-white/20
-```
-
-### Navigation
-
-Tetap pertahankan layout navbar.
-
-Tambahkan visual:
-
-```html
-bg-white/5
-backdrop-blur-lg
-border-b border-white/10
-```
-
-### Modal / Overlay
-
-Jika sudah ada modal, jangan mengubah ukuran atau posisinya.
-
-Gunakan:
-
-```html
-bg-black/40
-backdrop-blur-sm
-```
-
-Untuk panel modal:
-
-```html
-bg-white/10
-backdrop-blur-xl
-border border-white/10
-```
-
----
-
-# ✨ GLASSMORPHISM YANG DIINGINKAN
-
-Hasil akhirnya harus terasa:
-
-* Modern
-* Clean
-* Premium
-* Minimalist
-* Translucent
-* Soft
-* Elegant
-* Tidak terlalu ramai
-* Tidak terlalu banyak efek
-* Tetap mudah dibaca
-
-Glassmorphism harus menjadi **styling layer**, bukan redesign.
-
----
-
-# 📐 ATURAN LAYOUT
-
-Sebelum melakukan perubahan, pahami terlebih dahulu layout yang sudah ada.
-
-Misalnya:
-
-```text
-Navbar
-↓
-Hero
-↓
-Search
-↓
-Cards
-↓
-Content
-↓
-Footer
-```
-
-Setelah perubahan:
-
-```text
-Navbar
-↓
-Hero
-↓
-Search
-↓
-Cards
-↓
-Content
-↓
-Footer
-```
-
-**Struktur harus tetap sama.**
-
-Yang berubah hanya:
-
-```text
-Visual Style
-```
-
----
-
-# ❌ CONTOH PERUBAHAN YANG TIDAK BOLEH
-
-JANGAN melakukan:
-
-```text
-Card 3 kolom → Card 4 kolom
-```
-
-```text
-Sidebar kiri → Sidebar kanan
-```
-
-```text
-Navbar horizontal → Navbar floating
-```
-
-```text
-Button kecil → Button besar
-```
-
-```text
-Search bar → Search modal
-```
-
-```text
-Grid → Carousel
-```
-
-```text
-Section → Section baru
-```
-
-```text
-Card → Floating card dengan posisi baru
-```
-
-```text
-Desktop layout → Layout baru
-```
-
-Semua itu termasuk **layout redesign** dan dilarang.
-
----
-
-# ✅ CONTOH YANG BOLEH
-
-Sebelumnya:
-
-```html
-<div class="bg-gray-800 rounded-xl shadow-md">
-```
-
-Boleh menjadi:
-
-```html
-<div class="bg-white/10 backdrop-blur-md rounded-xl border border-white/10 shadow-lg">
-```
-
-Karena:
-
-* `rounded-xl` tetap
-* ukuran tetap
-* posisi tetap
-* layout tetap
-* hanya visual style yang berubah
-
----
-
-# 🔍 WORKFLOW WAJIB
-
-Sebelum mengedit:
-
-### STEP 1 — Analisis
-
-Identifikasi:
-
-* Struktur layout
-* Komponen
-* Spacing
-* Ukuran
-* Responsive behavior
-* Warna saat ini
-* Existing Tailwind classes
-
-### STEP 2 — Tandai
-
-Pisahkan:
-
-```text
-LAYOUT / STRUCTURE
-```
-
-dan
-
-```text
-VISUAL STYLE
-```
-
-**Jangan menyentuh bagian layout/structure.**
-
-### STEP 3 — Restyle
-
-Ubah hanya:
-
-```text
-colors
-opacity
-background
-border
-shadow
-blur
-hover
-focus
-text colors
-glass effect
-```
-
-### STEP 4 — Preserve
-
-Pastikan:
-
-```text
-HTML structure = tetap
-Layout = tetap
-Position = tetap
-Size = tetap
-Spacing = tetap
-Functionality = tetap
-Responsive = tetap
-```
-
-### STEP 5 — Final Check
-
-Bandingkan tampilan sebelum dan sesudah.
-
-Jika terdapat perubahan bentuk atau layout:
-
-> Kembalikan perubahan tersebut.
-
----
-
-# 🧠 RULE OF THUMB
-
-Jika ragu apakah sebuah perubahan termasuk layout atau style:
-
-**JANGAN UBAH.**
-
-Prioritaskan mempertahankan tampilan sebelumnya.
-
-Lebih baik Glassmorphism terlihat sedikit lebih sederhana daripada mengubah layout yang sudah ada.
-
----
-
-# 🎯 HASIL YANG DIHARAPKAN
-
-Saya ingin hasil akhir seperti:
-
-> **"Tampilan yang sama seperti sebelumnya, tetapi diberikan skin/style Glassmorphism."**
-
-Bukan:
-
-> "Website lama dibuat ulang menjadi desain Glassmorphism."
-
-Jadi sekali lagi:
-
-## STYLE ONLY — NO REDESIGN
-
-Pertahankan seluruh bentuk tampilan sebelumnya dan hanya ubah visual styling menggunakan Tailwind CSS Glassmorphism.
+**Prioritas tertinggi adalah menjaga seluruh kode dan perilaku aplikasi tetap sama, kecuali perubahan atribut `href` dan navigasi profil berdasarkan role yang secara eksplisit diizinkan.**

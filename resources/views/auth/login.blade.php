@@ -20,17 +20,8 @@
             </div>
 
             <div class="w-full max-w-sm glass-ios rounded-[40px] p-8">
-                <form method="POST" action="/register" class="space-y-4">
+                <form method="POST" action="{{ route('login.post') }}" class="space-y-4">
                     @csrf
-
-                    <div>
-                        <input type="text" name="name" placeholder="name..." value="{{ old('name') }}" required autofocus
-                            class="w-full px-5 py-4 rounded-full bg-white/25 text-white placeholder-white/80 outline-none focus:bg-white/40 transition">
-                        @error('name')
-                            <p class="text-red-200 text-xs mt-1 ml-4">{{ $message }}</p>
-                        @enderror
-                    </div>
-
                     <div>
                         <input type="email" name="email" placeholder="email..." value="{{ old('email') }}" required
                             class="w-full px-5 py-4 rounded-full bg-white/25 text-white placeholder-white/80 outline-none focus:bg-white/40 transition">
@@ -54,8 +45,8 @@
                 </form>
 
                 <p class="text-center text-white text-xs mt-4">
-                    Don't have an account? Sign in
-                    <a href="/login" class="font-bold hover:underline">Log in</a>
+                    Don't have an account? 
+                    <a href="{{ route('register.view') }}" class="font-bold hover:underline">Register</a>
                 </p>
 
                 <div class="text-center text-white text-xl my-5">OR</div>
