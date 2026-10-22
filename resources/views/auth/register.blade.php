@@ -19,7 +19,7 @@
             </div>
 
             <div class="w-full max-w-sm glass-ios rounded-[40px] p-8">
-                <form method="POST" action="/register" class="space-y-4">
+                <form method="POST" action="{{ route('register.post') }}" class="space-y-4">
                     @csrf
 
                     <div>
@@ -59,7 +59,7 @@
 
                 <p class="text-center text-white text-xs mt-4">
                     Already have an account?
-                    <a href="/login" class="font-bold hover:underline">Log in</a>
+                    <a href="{{ route('login.view') }}" class="font-bold hover:underline">Log in</a>
                 </p>
 
                 <div class="text-center text-white text-xl my-5">OR</div>

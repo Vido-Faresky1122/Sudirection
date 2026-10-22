@@ -10,8 +10,7 @@
 
         <div class="relative z-10 w-full max-w-5xl flex flex-col md:flex-row items-stretch justify-center gap-12">
 
-            <div
-                class="w-full max-w-md glass-ios rounded-[40px] px-8 md:px-10 py-12 flex flex-col justify-between">
+            <div class="w-full max-w-md glass-ios rounded-[40px] px-8 md:px-10 py-12 flex flex-col justify-between">
 
                 <div class="flex items-center gap-5">
                     <div
@@ -51,15 +50,25 @@
 
                 <div>
                     <a href="/admin/profile/customize"
-                        class="block w-full py-3.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-normal text-sm hover:bg-white/20 transition-all shadow-md text-center">
+                        class="btn-shimmer block w-full py-3.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-normal text-sm hover:bg-white/20 transition-all shadow-md text-center">
                         Customize
                     </a>
                 </div>
 
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <div>
+                        <button
+                            class="w-full py-3.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-normal text-sm btn-shimmer shadow-md text-center">
+                            Logout
+                        </button>
+                    </div>
+                </form>
+
+
             </div>
 
-            <div
-                class="w-full max-w-md glass-ios rounded-[40px] px-8 md:px-10 py-12 flex flex-col justify-between">
+            <div class="w-full max-w-md glass-ios rounded-[40px] px-8 md:px-10 py-12 flex flex-col justify-between">
 
                 <div>
                     <div class="text-center pb-6 mb-6 border-b border-white/10">
@@ -94,7 +103,7 @@
 
                 <div class="pt-8">
                     <a href="/admin/users"
-                        class="block w-full py-3.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-normal text-sm hover:bg-white/20 transition-all shadow-md text-center">
+                        class="btn-shimmer block w-full py-3.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-normal text-sm hover:bg-white/20 transition-all shadow-md text-center">
                         See All
                     </a>
                 </div>

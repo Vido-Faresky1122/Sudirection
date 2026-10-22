@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Place;
 use Illuminate\Http\Request;
 
 class PlaceController extends Controller
@@ -33,8 +34,11 @@ class PlaceController extends Controller
     {
         $title = 'Place Details - Sudirection';
 
+        $place = Place::findOrFail($id);
+
         return view('places.show', [
-            'title' => $title
+            'title' => $title,
+            'place' => $place
         ]);
     }
 
