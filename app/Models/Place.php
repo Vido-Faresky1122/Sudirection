@@ -11,5 +11,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Place extends Model
 {
-    //
+    public function accommodations()
+    {
+        return $this->hasMany(Accomodation::class, 'place_id', 'id');
+    }
 }

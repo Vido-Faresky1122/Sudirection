@@ -12,9 +12,9 @@ return new class extends Migration {
     {
         Schema::create('accomodations', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('place_id')->constrained('places')->onDelete('cascade');
+            $table->foreignId('place_id')->constrained('places');
             $table->string('name');
-            $table->string('image');
+            $table->longText('image');
             $table->timestamps();
         });
     }

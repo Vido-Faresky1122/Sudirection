@@ -156,7 +156,7 @@
             "The world is a book, and those who do not travel read only one page."
         </p>
         <a
-            href="/join"
+            href="{{ route('register.view') }}"
             class="inline-block px-8 py-3 rounded-full bg-linear-to-r from-sky-400/85 to-sky-600/85 backdrop-blur-md border border-white/20 text-white font-semibold shadow-lg hover:opacity-90 transition"
         >
             Join the Journey

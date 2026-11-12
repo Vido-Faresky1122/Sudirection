@@ -21,18 +21,18 @@
             <h3 class="text-xl font-bold mb-2">Partnership</h3>
 
             <div class="w-64 space-y-3">
-                <a href="#"
+                <a href="https://www.traveloka.com/" target="_blank"
                     class="btn-shimmer block w-full py-2.5 px-6 text-center text-sm font-semibold tracking-wider uppercase rounded-full backdrop-blur-md bg-white/10 border border-white/20 shadow-lg hover:bg-white/20">TRAVELOKA</a>
-                <a href="#"
+                <a href="https://www.airbnb.com/" target="_blank"
                     class="btn-shimmer block w-full py-2.5 px-6 text-center text-sm font-semibold tracking-wider uppercase rounded-full backdrop-blur-md bg-white/10 border border-white/20 shadow-lg hover:bg-white/20">AIRBNB</a>
-                <a href="#"
+                <a href="https://maps.google.com/" target="_blank"
                     class="btn-shimmer block w-full py-2.5 px-6 text-center text-sm font-semibold tracking-wider uppercase rounded-full backdrop-blur-md bg-white/10 border border-white/20 shadow-lg hover:bg-white/20">GOOGLE
                     MAPS</a>
-                <a href="#"
+                <a href="https://www.apple.com/maps/" target="_blank"
                     class="btn-shimmer block w-full py-2.5 px-6 text-center text-sm font-semibold tracking-wider uppercase rounded-full backdrop-blur-md bg-white/10 border border-white/20 shadow-lg hover:bg-white/20">APPLE
                     MAPS</a>
-                <a href="#"
-                    class="btn-shimmer block w-full py-2.5 px-6 text-center text-sm font-semibold tracking-wider uppercase rounded-full backdrop-blur-md bg-white/10 border border-white/20 shadow-lg hover:bg-white/20">OPEN
+                <a href="https://gemini.google.com/" target="_blank"
+                    class="btn-shimmer block w-full py-2.5 px-6 text-center text-sm font-semibold tracking-wider uppercase rounded-full backdrop-blur-md bg-white/10 border border-white/20 shadow-lg hover:bg-white/20">GEMINI
                     AI</a>
             </div>
         </div>
@@ -43,7 +43,7 @@
             <div class="w-0,5 h-28 border-r-2 border-dashed border-white/70"></div>
 
             <div class="flex flex-col space-y-2 font-bold tracking-wider text-base">
-                <a href="#" class="link-shimmer">ABOUT US</a>
+                <a href="{{ route('about-us') }}" class="link-shimmer">ABOUT US</a>
                 <a href="#" class="link-shimmer">CONTACT</a>
                 <a href="#" class="link-shimmer">PRIVACY POLICY</a>
             </div>

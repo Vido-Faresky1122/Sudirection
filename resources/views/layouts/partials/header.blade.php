@@ -8,7 +8,7 @@
         <a href="{{ route('chat.index') }}" class="link-shimmer text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">DIRECTIONAI</a>
         @if (auth()->check())
             @if (auth()->user()->role === 'admin')
-                <a href="{{ route('profile.admin') }}" class="link-shimmer text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">PROFILE</a>
+                <a href="{{ route('profile.admin', ['id' => auth()->user()->id]) }}" class="link-shimmer text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">PROFILE</a>
             @elseif (auth()->user()->role === 'user')
                 <a href="{{ route('profile.users.index', ['id' => auth()->user()->id]) }}" class="link-shimmer text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">PROFILE</a>
             @endif

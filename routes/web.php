@@ -46,9 +46,9 @@ Route::middleware('auth')->prefix('accommodations')->name('accommodations.')->gr
 
 Route::middleware('auth')->get('/profile/user/{id}', [UserController::class, 'show'])->name('profile.users.index')->middleware('role:user');
 
-Route::middleware('auth')->get('/about-us', [AboutUsController::class, 'index'])->name('about-us');
+Route::get('/about-us', [AboutUsController::class, 'index'])->name('about-us');
 
-Route::middleware('auth')->get('/profile/admin', [AdminController::class, 'index'])->name('profile.admin')->middleware('role:admin');
+Route::middleware('auth')->get('/profile/admin/{id}', [AdminController::class, 'index'])->name('profile.admin')->middleware('role:admin');
 
 Route::middleware('guest')->prefix('login')->name('login.')->group(function () {
     Route::get('/', [AuthController::class, 'loginView'])->name('view');

@@ -10,7 +10,6 @@ use Laravel\Ai\Attributes\Timeout;
 use Laravel\Ai\Contracts\Agent;
 use Laravel\Ai\Contracts\Conversational;
 use Laravel\Ai\Contracts\HasTools;
-use Laravel\Ai\Contracts\Tool;
 use Laravel\Ai\Enums\Lab;
 use Laravel\Ai\Messages\Message;
 use Laravel\Ai\Promptable;
@@ -73,7 +72,7 @@ class DirectionAgent implements Agent, Conversational, HasTools
           "last_query": "kata kunci pencarian"
         }
 
-        3. Jika pertanyaan berupa percakapan umum biasa (bukan rekomendasi tempat), jawablah seperti biasa menggunakan teks biasa yang ramah, sopan, dan profesional.';
+        3. Jika pertanyaan berupa pertanyaan yang berada di luar konteks dari navigasi, lokasi, atau rekomendasi tempat, jawab "Mohon maaf kami hanya melayani layanan terkait navigasi, lokasi atau rekomendasi tempat!".';
     }
 
     /**

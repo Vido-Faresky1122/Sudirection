@@ -342,10 +342,12 @@
                 </div>
 
                 <div class="mt-10 text-center">
-                    <button
-                        class="px-8 py-3 rounded-full bg-sky-400/80 hover:bg-sky-500/80 text-white font-medium text-xs tracking-wider uppercase transition-all shadow-md hover:shadow-sky-300/50 active:scale-95 backdrop-blur-md border border-sky-300/30">
-                        Find Places & Accommodations
-                    </button>
+                    <a href="{{ route('accommodations.index') }}" class="inline-block">
+                        <button
+                            class="btn-shimmer px-8 py-3 rounded-full bg-sky-400/80 text-white font-medium text-xs tracking-wider uppercase transition-all shadow-md hover:shadow-sky-300/50 active:scale-95 backdrop-blur-md border border-sky-300/30">
+                            Find Places & Accommodations
+                        </button>
+                    </a>
                 </div>
             </section>
 
@@ -354,8 +356,7 @@
 
                 {{-- GARIS DOTTED & PESAWAT 2 --}}
                 <div class="absolute left-4 md:left-8 top-10 bottom-10 z-10 pointer-events-none hidden md:block w-8">
-                    <div
-                        class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 border-r-2 border-dashed border-white/60">
+                    <div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 border-r-2 border-dashed border-white/60">
                     </div>
                     <div id="plane-2" class="absolute left-1/2 top-0 -translate-x-1/2 text-white pointer-events-none">
                         <svg class="w-7 h-7 transform rotate-180 drop-shadow-md" fill="currentColor" viewBox="0 0 24 24">
@@ -475,10 +476,12 @@
                 </div>
 
                 <div class="mt-10 text-center md:ml-8 relative z-20">
-                    <button
-                        class="px-8 py-3 rounded-full bg-sky-400/80 hover:bg-sky-500/80 text-white font-medium text-xs tracking-wider uppercase transition-all shadow-md hover:shadow-sky-300/50 active:scale-95 backdrop-blur-md border border-sky-300/30">
-                        View All Places
-                    </button>
+                    <a href="{{ route('places.index') }}">
+                        <button
+                            class="btn-shimmer px-8 py-3 rounded-full bg-sky-400/80 text-white font-medium text-xs tracking-wider uppercase transition-all shadow-md hover:shadow-sky-300/50 active:scale-95 backdrop-blur-md border border-sky-300/30">
+                            View All Places
+                        </button>
+                    </a>
                 </div>
             </section>
 
