@@ -22,9 +22,9 @@
                     </div>
 
                     <div>
-                        <h2 class="text-xl font-medium tracking-wide text-white">{{ $admin->name ?? 'Sudianto Faresky' }}
+                        <h2 class="text-xl font-medium tracking-wide text-white">{{ $user->name }}
                         </h2>
-                        <p class="text-xs text-slate-300 font-light">{{ $admin->role ?? 'Admin' }}</p>
+                        <p class="text-xs text-slate-300 font-light">{{ $user->role }}</p>
                     </div>
                 </div>
 
@@ -32,13 +32,13 @@
                     <div class="flex items-center">
                         <span class="w-28 shrink-0">Username</span>
                         <span class="w-6 text-center">:</span>
-                        <span class="font-normal text-white">{{ $admin->username ?? 'Amos Mikhael' }}</span>
+                        <span class="font-normal text-white">{{ $user->name }}</span>
                     </div>
 
                     <div class="flex items-center">
                         <span class="w-28 shrink-0">Email</span>
                         <span class="w-6 text-center">:</span>
-                        <span class="font-normal text-white">{{ $admin->email ?? 'Amosganteng@gmail.com' }}</span>
+                        <span class="font-normal text-white">{{ $user->email }}</span>
                     </div>
 
                     <div class="flex items-center">
@@ -49,21 +49,23 @@
                 </div>
 
                 <div>
-                    <a href="/admin/profile/customize"
-                        class="btn-shimmer block w-full py-3.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-normal text-sm hover:bg-white/20 transition-all shadow-md text-center">
-                        Customize
-                    </a>
-                </div>
-
-                <form action="{{ route('logout') }}" method="POST">
-                    @csrf
                     <div>
-                        <button
-                            class="w-full py-3.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-normal text-sm btn-shimmer shadow-md text-center">
-                            Logout
-                        </button>
+                        <a href="/admin/profile/customize"
+                            class="btn-shimmer block w-full py-3.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-normal text-sm hover:bg-white/20 transition-all shadow-md text-center">
+                            Customize
+                        </a>
                     </div>
-                </form>
+
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <div>
+                            <button
+                                class="w-full py-3.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-normal text-sm btn-shimmer shadow-md text-center">
+                                Logout
+                            </button>
+                        </div>
+                    </form>
+                </div>
 
 
             </div>
@@ -76,11 +78,7 @@
                     </div>
 
                     <div class="space-y-6">
-                        @forelse ($otherUsers ?? [
-                                ['name' => 'Vido Faresky', 'role' => 'Developer'],
-                                ['name' => 'Davin Aurelio Yu', 'role' => 'President'],
-                                ['name' => 'Amos Mikhael', 'role' => 'Kacung'],
-                            ] as $user)
+                        @forelse ($users as $user)
                             <div class="flex items-center gap-5">
                                 <div
                                     class="w-12 h-12 rounded-full bg-white/20 border border-white/30 flex items-center justify-center shrink-0">
@@ -91,8 +89,8 @@
                                 </div>
 
                                 <div>
-                                    <p class="text-sm font-normal text-white">{{ $user['name'] }}</p>
-                                    <p class="text-xs text-slate-300 font-light">{{ $user['role'] }}</p>
+                                    <p class="text-sm font-normal text-white">{{ $user->name }}</p>
+                                    <p class="text-xs text-slate-300 font-light">{{ $user->role }}</p>
                                 </div>
                             </div>
                         @empty

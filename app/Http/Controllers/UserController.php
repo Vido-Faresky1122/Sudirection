@@ -10,14 +10,12 @@ class UserController extends Controller
 {
     public function show(Request $request, $id)
     {
-        $user = User::select('role')->where('id', $id)->first();
+        $user = User::get()->where('id', $id)->first();
 
-        $titleUsers = 'User Profile - Sudirection';
-        $titleAdmin = 'Admin Profile - Sudirection';
+        $title = 'User Profile - Sudirection';
         $tab = $request->query('tab', 'favorites');
         $type = $request->query('type', 'accommodations');
 
-        // Dummy sementara
         $items = match ("{$tab}_{$type}") {
             'favorites_accommodations' => [
                 ['image' => asset('assets/images/hhi.png'), 'title' => 'Marina Bay Sands', 'location' => 'Singapore', 'rating' => '4.7', 'isFavorite' => true],
@@ -37,19 +35,9 @@ class UserController extends Controller
         };
 
 
-        if ($user->role === 'admin') {
-            return view('profile.admin.index', [
-                'title' => $titleAdmin,
-                'tab' => $tab,
-                'type' => $type,
-                'items' => $items,
-                'user' => $user,
-            ]);
-        }
-
 
         return view('profile.users.index', [
-            'title' => $titleUsers,
+            'title' => $title,
             'tab' => $tab,
             'type' => $type,
             'items' => $items,
