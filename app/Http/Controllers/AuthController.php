@@ -60,4 +60,13 @@ class AuthController extends Controller
 
         return redirect()->route('login.view');
     }
+
+    public function edit ()
+    {
+        $title = 'Edit Profile - Sudirection';
+
+        return view('profile.edit', [
+            'title' => $title,
+        ]);
+    }
 }

@@ -50,6 +50,8 @@ Route::get('/about-us', [AboutUsController::class, 'index'])->name('about-us');
 
 Route::middleware('auth')->get('/profile/admin/{id}', [AdminController::class, 'index'])->name('profile.admin')->middleware('role:admin');
 
+Route::middleware('auth')->get('/profile/edit/{id}', [AuthController::class, 'edit'])->name('profile.edit');
+
 Route::middleware('guest')->prefix('login')->name('login.')->group(function () {
     Route::get('/', [AuthController::class, 'loginView'])->name('view');
 
