@@ -71,3 +71,6 @@ Route::middleware('auth')->prefix('chat')->name('chat.')->group(function () {
 
     Route::post('/send', [ChatController::class, 'sendMessage'])->name('send');
 });
+
+Route::patch('/profile/update/{id}', [AuthController::class, 'update'])
+    ->name('profile.update');
