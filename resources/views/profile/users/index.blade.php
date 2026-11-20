@@ -24,9 +24,9 @@
 
                     <div>
                         <h2 class="text-xl font-medium tracking-wide text-white">
-                            {{ auth()->user()->name ?? 'Vido Faresky' }}
+                            {{ $user->name }}
                         </h2>
-                        <p class="text-xs text-slate-300 font-light">{{ auth()->user()->role ?? 'Common user' }}</p>
+                        <p class="text-xs text-slate-300 font-light">{{ $user->role }}</p>
                     </div>
                 </div>
 
@@ -34,13 +34,13 @@
                     <div class="flex items-center">
                         <span class="w-28 shrink-0">Username</span>
                         <span class="w-6 text-center">:</span>
-                        <span class="font-normal text-white">{{ auth()->user()->username ?? 'Vido Faresky' }}</span>
+                        <span class="font-normal text-white">{{ $user->name }}</span>
                     </div>
 
                     <div class="flex items-center">
                         <span class="w-28 shrink-0">Email</span>
                         <span class="w-6 text-center">:</span>
-                        <span class="font-normal text-white">{{ auth()->user()->email ?? 'Vidoganteng@gmail.com' }}</span>
+                        <span class="font-normal text-white">{{ $user->email }}</span>
                     </div>
 
                     <div class="flex items-center">

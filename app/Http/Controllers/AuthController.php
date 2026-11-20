@@ -61,7 +61,7 @@ class AuthController extends Controller
         return redirect()->route('login.view');
     }
 
-    public function edit ()
+    public function edit()
     {
         $title = 'Edit Profile - Sudirection';
 
