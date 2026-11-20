@@ -48,7 +48,7 @@
                     </div>
                 </div>
 
-                <div>
+                <div class="flex gap-4 flex-col">
                     <div>
                         <a href="/admin/profile/customize"
                             class="btn-shimmer block w-full py-3.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-normal text-sm hover:bg-white/20 transition-all shadow-md text-center">

@@ -72,7 +72,7 @@ class DirectionAgent implements Agent, Conversational, HasTools
           "last_query": "kata kunci pencarian"
         }
 
-        3. Jika pertanyaan berupa pertanyaan yang berada di luar konteks dari navigasi, lokasi, atau rekomendasi tempat, jawab "Mohon maaf kami hanya melayani layanan terkait navigasi, lokasi atau rekomendasi tempat!".';
+        3. Jika pertanyaan berupa pertanyaan yang berada di luar konteks dari navigasi, lokasi, atau rekomendasi tempat (untuk tanya rute itu diperbolehkan, tetapi tidak perlu memberi lokasi, berikan dalam bentuk teks saja), jawab "Mohon maaf kami hanya melayani layanan terkait navigasi, lokasi atau rekomendasi tempat!".';
     }
 
     /**
