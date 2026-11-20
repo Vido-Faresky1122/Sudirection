@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AccommodationController extends Controller
@@ -9,9 +10,11 @@ class AccommodationController extends Controller
     public function index()
     {
         $title = 'Accommodations - Sudirection';
+        $user = auth()->user();
 
-        return view('accommodations.index',[
-            'title' => $title
+        return view('accommodations.index', [
+            'title' => $title,
+            'user'=> $user
         ]);
     }
 
@@ -32,9 +35,12 @@ class AccommodationController extends Controller
     public function show($id)
     {
         $title = 'Accommodation Details - Sudirection';
+        $user = auth()->user();
+
 
         return view('accommodations.show', [
-            'title' => $title
+            'title' => $title,
+            'user' => $user
         ]);
     }
 

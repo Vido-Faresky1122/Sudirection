@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Place;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class PlaceController extends Controller
@@ -10,9 +11,11 @@ class PlaceController extends Controller
     public function index()
     {
         $title = 'Places - Sudirection';
+        $user = auth()->user();
 
         return view('places.index', [
-            'title' => $title
+            'title' => $title,
+            'user'=> $user,
         ]);
     }
 
@@ -33,12 +36,13 @@ class PlaceController extends Controller
     public function show($id)
     {
         $title = 'Place Details - Sudirection';
-
+        $user = auth()->user();
         $place = Place::findOrFail($id);
 
         return view('places.show', [
             'title' => $title,
-            'place' => $place
+            'place' => $place,
+            'user' => $user
         ]);
     }
 
@@ -53,11 +57,11 @@ class PlaceController extends Controller
 
     public function update($id)
     {
-        
+
     }
 
     public function destroy($id)
     {
-        
+
     }
 }
