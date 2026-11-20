@@ -53,7 +53,8 @@
                     Create New Accommodation
                 </h1>
 
-                <form class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+                <form action="{{ route('accommodations.store') }}" class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12"
+                    method="POST" enctype="multipart/form-data">
                     @csrf
 
                     <div class="space-y-6">
@@ -62,10 +63,18 @@
                             <label class="block text-[11px] font-bold tracking-wider uppercase text-gray-400">
                                 Accommodation Name
                             </label>
-                            <input type="text" placeholder="e.g. Sunset Villa Santorini"
+                            <input type="text" placeholder="e.g. Sunset Villa Santorini" name="name" id="name"
+                                value="{{ old('name') }}"
                                 class="w-full px-4 py-3.5 glass-input rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
-                            <input type="text" placeholder="Tagline"
+                            @error('name')
+                                <p class="text-red-500 pt-2">{{ $message }}</p>
+                            @enderror
+                            <input type="text" placeholder="Tagline" name="tagline" id="tagline"
+                                value="{{ old('tagline') }}"
                                 class="w-full px-4 py-3.5 glass-input rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
+                            @error('tagline')
+                                <p class="text-red-500 pt-2">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <div class="space-y-2">
@@ -73,7 +82,7 @@
                                 Accommodation Type
                             </label>
                             <div class="relative">
-                                <select
+                                <select id="type" name="type" value="{{ old('type') }}"
                                     class="w-full px-4 py-3.5 glass-input rounded-xl text-sm text-gray-300 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all appearance-none cursor-pointer">
                                     <option value="" disabled selected class="text-gray-500">Select accommodation type...
                                     </option>
@@ -82,6 +91,9 @@
                                     <option value="villas" class="bg-slate-800 text-white">Villas</option>
                                     <option value="apartment" class="bg-slate-800 text-white">Apartment</option>
                                 </select>
+                                @error('type')
+                                    <p class="text-red-500 pt-2">{{ $message }}</p>
+                                @enderror
                                 <svg class="w-4 h-4 text-gray-400 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"
                                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -95,12 +107,12 @@
                                 Location
                             </label>
                             <div class="relative">
-                                <input type="text" placeholder="Country"
+                                <input type="text" placeholder="Country" id="place_id" name="place_id"
+                                    value="{{ old('place_id') }}"
                                     class="w-full pl-4 pr-10 py-3.5 glass-input rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
-                                <input type="text" placeholder="City"
-                                    class="w-full pl-4 pr-10 py-3.5 glass-input rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
-                                <input type="text" placeholder="Search for destination..."
-                                    class="w-full pl-4 pr-10 py-3.5 glass-input rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
+                                @error('place_id')
+                                    <p class="text-red-500 pt-2">{{ $message }}</p>
+                                @enderror
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                     class="w-4 h-4 text-gray-400 absolute right-4 top-1/2 -translate-y-1/2" fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor">
@@ -118,8 +130,11 @@
                             </label>
                             <div class="relative">
                                 <span class="absolute left-4 top-1/2 -translate-y-1/2 text-sm text-gray-400">$</span>
-                                <input type="text" placeholder="0.00"
+                                <input type="text" placeholder="0.00" id="price" name="price" value="{{ old('price') }}"
                                     class="w-full pl-8 pr-4 py-3.5 glass-input rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
+                                @error('price')
+                                    <p class="text-red-500 pt-2">{{ $message }}</p>
+                                @enderror
                             </div>
                         </div>
 
@@ -127,10 +142,18 @@
                             <label class="block text-[11px] font-bold tracking-wider uppercase text-gray-400">
                                 Contact Information
                             </label>
-                            <input type="email" placeholder="Email address"
+                            <input type="email" placeholder="Email address" id="email" name="email"
+                                value="{{ old('email') }}"
                                 class="w-full px-4 py-3.5 glass-input rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
-                            <input type="tel" placeholder="Phone number"
+                            @error('email')
+                                <p class="text-red-500 pt-2">{{ $message }}</p>
+                            @enderror
+                            <input type="tel" placeholder="Phone number" id="phone_number" name="phone_number"
+                                value="{{ old('phone_number') }}"
                                 class="w-full px-4 py-3.5 glass-input rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all" />
+                            @error('phone_number')
+                                <p class="text-red-500 pt-2">{{ $message }}</p>
+                            @enderror
                         </div>
 
                     </div>
@@ -141,8 +164,12 @@
                             <label class="block text-[11px] font-bold tracking-wider uppercase text-gray-400">
                                 Description
                             </label>
-                            <textarea rows="9" placeholder="Tell travelers about your unique place..."
+                            <textarea rows="9" placeholder="Tell travelers about your unique place..." id="description"
+                                name="description" value="{{ old('description') }}"
                                 class="w-full p-4 glass-input rounded-xl text-sm placeholder-gray-500 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all resize-none flex-1"></textarea>
+                            @error('description')
+                                <p class="text-red-500 pt-2">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <div class="space-y-4 pt-2">

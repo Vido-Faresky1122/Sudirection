@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Place;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PlaceController extends Controller
 {
@@ -15,7 +16,7 @@ class PlaceController extends Controller
 
         return view('places.index', [
             'title' => $title,
-            'user'=> $user,
+            'user' => $user,
         ]);
     }
 
@@ -28,9 +29,23 @@ class PlaceController extends Controller
         ]);
     }
 
-    public function store()
+    public function store(Request $request)
     {
+        $validatedRequest = $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'country' => ['required', 'string', 'max:255'],
+            'tagline' => ['required', 'string', 'max:255'],
+            'description' => ['required', 'string'],
+            'image' => ['required', 'image', 'mimes:jpeg,png,jpg,webp', 'max:2048'],
+        ]);
 
+        if ($request->hasFile('image')) {
+            $validatedRequest['image'] = $request->file('image')->store('places', 'public');
+        }
+
+        Place::create($validatedRequest);
+
+        return redirect()->route('places.index');
     }
 
     public function show($id)
@@ -55,13 +70,43 @@ class PlaceController extends Controller
         ]);
     }
 
-    public function update($id)
+    public function update(Request $request, $id)
     {
+        $place = Place::findOrFail($id);
 
+        $validatedRequest = $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'country' => ['required', 'string', 'max:255'],
+            'tagline' => ['required', 'string', 'max:255'],
+            'description' => ['required', 'string'],
+            'image' => ['nullable', 'image', 'mimes:jpeg,png,jpg,webp', 'max:2048'],
+        ]);
+
+        if ($request->hasFile('image')) {
+            if ($place->image && Storage::disk('public')->exists($place->image)) {
+                Storage::disk('public')->delete($place->image);
+            }
+
+            $validatedRequest['image'] = $request->file('image')->store('places', 'public');
+        } else {
+            unset($validatedRequest['image']);
+        }
+
+        $place->update($validatedRequest);
+
+        return redirect()->route('places.index');
     }
 
     public function destroy($id)
     {
+        $place = Place::findOrFail($id);
 
+        if ($place->image && Storage::disk('public')->exists($place->image)) {
+            Storage::disk('public')->delete($place->image);
+        }
+
+        $place->delete();
+
+        return redirect()->route('places.index');
     }
 }
