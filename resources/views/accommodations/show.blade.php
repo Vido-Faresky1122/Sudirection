@@ -51,8 +51,7 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-                <div
-                    class="lg:col-span-2 glass-ios rounded-2xl p-6 md:p-8 space-y-4">
+                <div class="lg:col-span-2 glass-ios rounded-2xl p-6 md:p-8 space-y-4">
                     <div class="flex flex-wrap items-center gap-2 text-xs font-semibold text-cyan-400">
                         <span>Luxury Hotel</span>
                         <span>•</span>
@@ -99,8 +98,7 @@
                     </div>
                 </div>
 
-                <div
-                    class="glass-ios rounded-2xl p-6 flex flex-col justify-between space-y-4">
+                <div class="glass-ios rounded-2xl p-6 flex flex-col justify-between space-y-4">
                     <div class="space-y-3">
                         <h3 class="text-sm font-semibold text-slate-300">Ready to explore?</h3>
                         <a href="#"
@@ -127,8 +125,7 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-                <div
-                    class="lg:col-span-2 glass-ios rounded-2xl p-6 md:p-8 space-y-4">
+                <div class="lg:col-span-2 glass-ios rounded-2xl p-6 md:p-8 space-y-4">
                     <h3 class="text-lg font-bold text-white">About Grace Hotel</h3>
                     <p class="text-xs md:text-sm text-slate-300 leading-relaxed">
                         Grace Hotel is one of the Cyclades islands in the Aegean Sea. It was devastated by a volcanic
@@ -217,6 +214,25 @@
 
             </div>
 
+            @if(isset($user) && $user->role === 'admin')
+                <div class="my-8 flex flex-wrap items-center justify-start gap-4">
+                    <a href="#"
+                        class="btn-shimmer inline-flex items-center justify-center px-10 py-3 rounded-full bg-amber-600/80 hover:bg-amber-600 text-white text-sm font-medium tracking-wider uppercase transition-all duration-200 border-t border-amber-400/50 shadow-sm active:scale-95">
+                        EDIT
+                    </a>
+
+                    <form action="#" method="POST" class="inline"
+                        onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit"
+                            class="btn-shimmer inline-flex items-center justify-center px-10 py-3 rounded-full bg-[#8B1E2B] hover:bg-[#a12332] text-white text-sm font-medium tracking-wider uppercase transition-all duration-200 border-t border-rose-400/40 shadow-sm active:scale-95">
+                            DELETE
+                        </button>
+                    </form>
+                </div>
+            @endif
+
             <div class="pt-8 space-y-6">
                 <div class="space-y-1">
                     <span class="text-[11px] uppercase tracking-wider font-semibold text-cyan-400">Explore More
@@ -234,7 +250,8 @@
                                 alt="Marina Bay Sanda">
                             <div class="glass-photo absolute inset-0"></div>
                         </div>
-                        <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
+                        <div
+                            class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
                                 class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -273,7 +290,8 @@
                                 alt="Four Seasons Resort">
                             <div class="glass-photo absolute inset-0"></div>
                         </div>
-                        <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
+                        <div
+                            class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
                                 class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -312,7 +330,8 @@
                                 alt="The Ritz">
                             <div class="glass-photo absolute inset-0"></div>
                         </div>
-                        <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
+                        <div
+                            class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
                                 class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -351,7 +370,8 @@
                                 alt="Marina Bay Sanda">
                             <div class="glass-photo absolute inset-0"></div>
                         </div>
-                        <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
+                        <div
+                            class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
                                 class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -390,7 +410,8 @@
                                 alt="Four Seasons Resort">
                             <div class="glass-photo absolute inset-0"></div>
                         </div>
-                        <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
+                        <div
+                            class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
                                 class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -429,7 +450,8 @@
                                 alt="The Ritz">
                             <div class="glass-photo absolute inset-0"></div>
                         </div>
-                        <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
+                        <div
+                            class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
                                 class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

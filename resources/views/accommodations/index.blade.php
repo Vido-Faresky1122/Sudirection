@@ -235,7 +235,8 @@
                                 alt="Marina Bay Sanda">
                             <div class="glass-photo absolute inset-0"></div>
                         </div>
-                        <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
+                        <div
+                            class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
                                 class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -274,7 +275,8 @@
                                 alt="Four Seasons Resort">
                             <div class="glass-photo absolute inset-0"></div>
                         </div>
-                        <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
+                        <div
+                            class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
                                 class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -313,7 +315,8 @@
                                 alt="The Ritz">
                             <div class="glass-photo absolute inset-0"></div>
                         </div>
-                        <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
+                        <div
+                            class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
                                 class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -352,7 +355,8 @@
                                 alt="Marina Bay Sanda">
                             <div class="glass-photo absolute inset-0"></div>
                         </div>
-                        <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
+                        <div
+                            class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
                                 class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -391,7 +395,8 @@
                                 alt="Four Seasons Resort">
                             <div class="glass-photo absolute inset-0"></div>
                         </div>
-                        <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
+                        <div
+                            class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
                                 class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -430,7 +435,8 @@
                                 alt="The Ritz">
                             <div class="glass-photo absolute inset-0"></div>
                         </div>
-                        <div class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
+                        <div
+                            class="w-1/2 bg-[#0099d8]/75 backdrop-blur-md p-4 flex flex-col justify-between text-white relative">
                             <button type="button" onclick="event.stopPropagation();"
                                 class="absolute top-3 right-3 text-white/80 hover:text-white z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -469,6 +475,15 @@
                         View all stays
                     </button>
                 </div>
+
+                @if(isset($user) && $user->role === 'admin')
+                    <div class="mt-6 w-full">
+                        <a href="{{ route('accommodations.create') }}"
+                            class="btn-shimmer flex items-center justify-center w-full py-3.5 px-6 rounded-full bg-linear-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white text-sm font-semibold tracking-wider uppercase transition-all duration-200 border-t border-cyan-300/50 shadow-lg shadow-cyan-500/20 active:scale-[0.99]">
+                            + CREATE NEW STAY
+                        </a>
+                    </div>
+                @endif
         </section>
 
         <section class="relative w-full py-16 bg-white/10 backdrop-blur-xl border-t border-white/10 text-white">
@@ -486,7 +501,8 @@
 
                     <a href="#"
                         class="flex items-center gap-3 px-6 py-4 rounded-full bg-linear-to-r from-[#295b96]/85 to-[#1e3e68]/85 backdrop-blur-md border border-white/20 hover:from-[#336cb2]/90 hover:to-[#254d80]/90 text-white shadow-md transition-all transform hover:-translate-y-0.5">
-                        <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center shrink-0">
+                        <div
+                            class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center shrink-0">
                             <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -497,7 +513,8 @@
 
                     <a href="#"
                         class="flex items-center gap-3 px-6 py-4 rounded-full bg-linear-to-r from-[#59784e]/85 to-[#2c473b]/85 backdrop-blur-md border border-white/20 hover:from-[#698e5c]/90 hover:to-[#365749]/90 text-white shadow-md transition-all transform hover:-translate-y-0.5">
-                        <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center shrink-0">
+                        <div
+                            class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center shrink-0">
                             <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M12 3v18m-6-6l6 6 6-6M5 9c2-2 5-3 7-3s5 1 7 3" />
@@ -508,7 +525,8 @@
 
                     <a href="#"
                         class="flex items-center gap-3 px-6 py-4 rounded-full bg-linear-to-r from-[#875932]/85 to-[#402b1f]/85 backdrop-blur-md border border-white/20 hover:from-[#9c673a]/90 hover:to-[#4e3526]/90 text-white shadow-md transition-all transform hover:-translate-y-0.5">
-                        <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center shrink-0">
+                        <div
+                            class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center shrink-0">
                             <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
@@ -519,7 +537,8 @@
 
                     <a href="#"
                         class="flex items-center gap-3 px-6 py-4 rounded-full bg-linear-to-r from-[#4d4c8b]/85 to-[#252454]/85 backdrop-blur-md border border-white/20 hover:from-[#5b5a9e]/90 hover:to-[#2e2d66]/90 text-white shadow-md transition-all transform hover:-translate-y-0.5">
-                        <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center shrink-0">
+                        <div
+                            class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center shrink-0">
                             <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
